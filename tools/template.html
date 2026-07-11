@@ -74,10 +74,25 @@ body.lang-en .ja{display:none!important}
 }
 h1.title-ja{
   font-size:clamp(2.5rem,9vw,4.6rem);
-  font-weight:800;letter-spacing:.04em;line-height:1.32;
+  font-weight:800;letter-spacing:.02em;line-height:1.32;
   margin:1rem 0 .6rem;
 }
 h1 .q{color:var(--shu)}
+/* hand-lettered wobble, like the exhibition logo */
+h1 .c{display:inline-block}
+h1 .c:nth-child(2){transform:rotate(-5deg) translateY(-4px)}
+h1 .c:nth-child(3){transform:rotate(4deg) translateY(4px) scale(1.06)}
+h1 .c:nth-child(4){transform:rotate(-3.5deg) translateY(-2px) scale(.95)}
+h1 .c:nth-child(5){transform:rotate(6deg) translateY(-5px)}
+h1 .c:nth-child(6){transform:rotate(-8deg) translateY(6px) scale(.84)}
+h1 .c:nth-child(7){transform:rotate(4deg) translateY(-3px) scale(.94)}
+h1 .c:nth-child(8){transform:rotate(-5deg) translateY(4px) scale(1.08)}
+h1 .c:nth-child(9){transform:rotate(10deg) translateY(-4px) scale(1.1)}
+h1 .brk{color:var(--ink-soft);font-weight:600}
+.title-sub{
+  font-size:clamp(1.5rem,4.6vw,2.4rem);font-weight:700;letter-spacing:.34em;
+  margin-top:.2rem;
+}
 .title-en{
   font-family:var(--serif-en);font-style:italic;font-size:clamp(1rem,2.7vw,1.25rem);
   letter-spacing:.07em;color:var(--ink-soft);
@@ -109,6 +124,82 @@ h1 .q{color:var(--shu)}
 /* wave divider */
 .wave-band{height:34px;overflow:hidden;line-height:0;opacity:.5}
 .wave-band svg{width:100%;height:34px}
+
+/* ============ greeting ============ */
+.greet{max-width:1060px;margin:0 auto;padding:3rem 1.4rem 1rem}
+.greet-in{max-width:42em;margin:0 auto}
+.greet-head{display:flex;align-items:center;gap:1rem;justify-content:center;margin-bottom:2rem}
+.greet-head .gt{font-size:1.5rem;font-weight:800;letter-spacing:.6em;text-indent:.6em}
+.greet-head .ge{font-family:var(--serif-en);font-style:italic;color:var(--mute);font-size:1rem}
+.greet-head::before,.greet-head::after{
+  content:"";flex:1;max-width:6rem;height:1px;background:var(--hair);
+}
+.greet p{
+  font-size:.98rem;line-height:2.35;text-align:justify;margin-bottom:1.5em;
+  color:var(--ink);
+}
+.greet .gsign{
+  text-align:right;font-size:1.1rem;font-weight:700;letter-spacing:.5em;margin-top:1.5rem;
+  display:flex;align-items:center;justify-content:flex-end;gap:.9rem;
+}
+.greet .gsign .seal{
+  width:2.1rem;height:2.1rem;background:var(--shu);border-radius:2px;color:#f7f2e6;
+  display:grid;place-items:center;font-size:.62rem;font-weight:700;letter-spacing:0;
+  writing-mode:vertical-rl;transform:rotate(-2deg);line-height:1.15;
+}
+.greet .en-note{
+  font-family:var(--serif-en);color:var(--mute);font-size:.95rem;line-height:1.9;
+  border-left:2px solid var(--hair);padding-left:1.1em;margin-top:1rem;
+}
+/* 宴の衆 icon row */
+.banquet-row{display:flex;justify-content:center;gap:1.7rem;padding:1.8rem 0 .6rem;opacity:.75}
+.banquet-row svg{width:26px;height:26px;stroke:var(--ink-soft);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.banquet-row .shu-i{stroke:var(--shu)}
+/* unagi divider */
+.unagi{max-width:1060px;margin:0 auto;padding:.6rem 1.4rem 0;opacity:.8}
+.unagi svg{width:100%;height:44px;display:block}
+
+/* ============ floor map ============ */
+.fmap{max-width:1060px;margin:0 auto;padding:2.6rem 1.4rem 1.4rem}
+.fmap-head{display:flex;align-items:baseline;gap:1rem;border-bottom:2px solid var(--ink);padding-bottom:.5rem;margin-bottom:1.6rem}
+.fmap-head .ft{font-size:1.25rem;font-weight:800;letter-spacing:.3em}
+.fmap-head .fe{font-family:var(--serif-en);color:var(--mute);font-size:.9rem;letter-spacing:.1em}
+.fmap-grid{display:grid;grid-template-columns:3fr 2fr;gap:1.6rem;align-items:end}
+.fmap figure{background:var(--paper-deep);border:1px solid var(--hair);border-radius:3px;padding:1rem}
+.fmap figcaption{font-size:.78rem;letter-spacing:.2em;color:var(--mute);margin-top:.5rem;text-align:center}
+.fmap svg{width:100%;height:auto;display:block}
+.fmap svg a{cursor:pointer}
+.fmap svg a text:hover{fill:var(--shu-deep)}
+.fmap-note{font-size:.78rem;color:var(--mute);margin-top:.9rem;letter-spacing:.08em}
+@media (max-width:680px){.fmap-grid{grid-template-columns:1fr}}
+
+/* ============ AR banner ============ */
+.arband{max-width:1060px;margin:2.4rem auto 0;padding:0 1.4rem}
+.arband-in{
+  background:var(--ink);color:#efe9da;border-radius:4px;
+  padding:1.8rem 1.7rem 1.7rem;position:relative;overflow:hidden;
+}
+.arband-in::after{
+  content:"";position:absolute;right:-40px;top:-60px;width:220px;height:220px;
+  border:2px solid rgba(166,59,38,.55);border-radius:50%;
+}
+.arband-in::before{
+  content:"";position:absolute;right:-10px;top:-30px;width:120px;height:120px;
+  border:1px solid rgba(156,152,145,.4);border-radius:50%;
+}
+.ar-kicker{font-family:var(--serif-en);letter-spacing:.3em;font-size:.72rem;color:var(--gin);text-transform:uppercase}
+.ar-title{font-size:1.3rem;font-weight:700;letter-spacing:.1em;margin:.4rem 0 .2rem}
+.ar-title .en{font-family:var(--serif-en);font-style:italic;font-weight:400;font-size:1rem;color:var(--gin)}
+.ar-desc{font-size:.86rem;line-height:2;color:#cfc8b8;max-width:38em;margin-top:.4rem}
+.ar-desc .en{font-family:var(--serif-en)}
+.ar-cta{
+  display:inline-block;margin-top:1.1rem;
+  border:1px solid var(--shu);color:#f4ede0;background:var(--shu);
+  text-decoration:none;font-size:.88rem;letter-spacing:.14em;
+  padding:.55rem 1.3rem;border-radius:2px;
+}
+.ar-cta:hover{background:var(--shu-deep)}
+.ar-url{font-family:var(--serif-en);font-size:.78rem;color:var(--gin);margin-top:.6rem;letter-spacing:.06em}
 
 /* ================= NAV ================= */
 nav{
@@ -260,7 +351,7 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
   <div class="hero-mid">
     <div class="title-block">
       <div class="wordmark">TENSO&#1048;</div>
-      <h1 class="title-ja">「天孫帰るってよ<span class="q">？</span>」<br>作品解説</h1>
+      <h1 class="title-ja"><span class="c brk">「</span><span class="c">天</span><span class="c">孫</span><span class="c">帰</span><span class="c">る</span><span class="c">っ</span><span class="c">て</span><span class="c">よ</span><span class="c q">？</span><span class="c brk">」</span><br><span class="title-sub">作品解説</span></h1>
       <div class="title-en">Heard the Divine Kid&rsquo;s Heading Home? &mdash; Full Captions</div>
     </div>
   </div>
@@ -298,7 +389,7 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <nav>
   <div class="nav-in">
     <div class="zones">
-      <span class="zl">MAP</span>
+      <a href="#floormap" style="font-family:var(--serif-ja);font-size:.78rem;letter-spacing:.1em">地図</a>
       <a href="#secA">A</a><a href="#secB">B</a><a href="#secC">C</a><a href="#secD">D</a><a href="#secE">E</a><a href="#secF">F</a>
     </div>
     <div class="langs">
@@ -308,6 +399,117 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 </nav>
 
 <main>
+
+<section class="greet" id="greeting">
+  <div class="greet-in">
+    <div class="greet-head"><span class="gt">ご挨拶</span><span class="ge en">Greetings</span></div>
+    <p class="ja">この一年，鹿児島を巡っていた．夏に島津斉彬の集成館にて印影鏡に出会い，郡山八幡神社の柱に大工が残した日本最古の「焼酎」の落書きに笑い，冬には美山の沈壽官窯で薩摩焼四百年の火の前に立った．春には霧島神宮の柱に巻きつく龍を見上げ，網膜に焼きつけた．六月，高千穂峰に登った．山頂に，天孫降臨の印だという天逆鉾が，ほんとうに突き立っていた．翌々日には，日置の泥田にいた．せっぺとべ——白装束の二才たちが焼酎を飲み，泥田で精一杯跳ぶ御田植祭．僕も跳んだ．川で泥を落とし，温泉に浸かりながら思った．祭りに意味はない，祭りは意味を与える．跳んで，飲んで，笑って，土に塗れながら意味が生まれる．現象は意味に先立つ．</p>
+    <p class="ja">賢い人（ホモ・サピエンス）の語源のsapereは，もともと「味わう」でもあった．考える人である前に，僕らは味を知る人だった．神様と同じ膳を分けて食う直会（なおらい）のように，猫と，きのこと，遊牧民と，蝶と，火山と，計算機と，焼酎を同じ杯で酌んで暮らせばいい．人はもう賢くないが，賢さは人のちょっとしたおまけだから気にしなくても良いのだ．計算機自然の饗宴に身を委ねれば，現象は意味を超えて転がっていく．</p>
+    <p class="ja">霧島アートの森は，天孫の降りた高千穂のふもとではなく，連山のほとんど反対側，栗野岳の中腹にある．噂話は，中心から少し離れたところのほうが，よく聞こえる．天孫，帰るってよ？——ほんとうのところは，誰も知らない．だからここには，計算機自然と一緒に育てた十年分の作品と，鹿児島の山の上と泥のなかで見つけてきたものを並べた．天逆鉾も，九千五百年前の上野原の壺も，紙の上のプラチナとガラスの板の上の銀に灼きつけて連れてきた．私の旅路が発酵させた計算機自然は，霧の中の山でどう蒸留されてどんな風に皆様の感覚に届くのだろうか．</p>
+    <p class="ja">さよならホモサピエンス．どこでもなくてどこにでもある，いまでもなくていつでもあるーー時間も物語も手放した先にあるホモ・コンヴィヴィウム（饗宴する人）．天孫，高天原の実家に帰るってよ？　有史以来の引っ越しで，積もり積もった荷物も多くて大変だ，古事記から手長脚長も手伝いに来ている．出発前に八岐の龍神を囲って，宴会を開こう．器が空になったら，また会う日まで．騒即是寂の一服を極め，鳥居を抜けてアメノミナカヌシノカミの座すリキッドユニバースの向こうへ．神仏習合の果ての一炊の夢，胡蝶の舞うﾇﾙが広がっている．</p>
+    <p class="ja">皆様はるばる霧島の地にお越しいただきありがとうございます．農耕の果てに辿り着きつつある計算機自然に，ふらっと高天原に帰省した天孫の後日談はまたどこかで語れる日がくるかもしれない．またどこかでお会いしましょう．</p>
+    <p class="en en-note">For a year the artist wandered Kagoshima — meeting the In&rsquo;eiky&omacr; mirror at Sh&omacr;ko Sh&umacr;seikan, laughing at Japan&rsquo;s oldest &ldquo;sh&omacr;ch&umacr;&rdquo; graffiti at K&omacr;riyama Hachiman Shrine, climbing Mt.&nbsp;Takachiho to find the Ama-no-Sakahoko truly planted at its summit, and leaping in the mud of the Seppetobe festival. Phenomena precede meaning: festivals do not have meaning, they give it. Before the Divine Kid moves back home to Takamagahara — the greatest house-move since history began — let us hold a farewell banquet, sharing the same cup with cats, mushrooms, butterflies, volcanoes, and computers. Farewell, Homo sapiens; here&rsquo;s to Homo Convivium. (The full greeting is presented in Japanese.)</p>
+    <div class="gsign"><span class="seal" aria-hidden="true">落合</span>落合陽一</div>
+  </div>
+  <div class="banquet-row" aria-hidden="true">
+    <!-- 猫 -->
+    <svg viewBox="0 0 24 24"><path d="M5 10 L4 4 L9 7"/><path d="M19 10 L20 4 L15 7"/><circle cx="12" cy="13" r="8"/><circle cx="9.4" cy="12.4" r=".7" fill="currentColor" stroke="none"/><circle cx="14.6" cy="12.4" r=".7" fill="currentColor" stroke="none"/><path d="M10.7 15.4 Q12 16.4 13.3 15.4"/></svg>
+    <!-- きのこ -->
+    <svg viewBox="0 0 24 24" class="shu-i"><path d="M3 12 Q3 4 12 4 Q21 4 21 12 Z"/><path d="M9 12 L8.4 19 Q12 20.6 15.6 19 L15 12"/><circle cx="8" cy="8.6" r=".8"/><circle cx="13" cy="6.8" r=".8"/><circle cx="16.6" cy="9.4" r=".8"/></svg>
+    <!-- 蝶 -->
+    <svg viewBox="0 0 24 24"><path d="M12 6 L12 18"/><path d="M11 9 Q4 3 3.4 8 Q3 12 11 13"/><path d="M13 9 Q20 3 20.6 8 Q21 12 13 13"/><path d="M11 13.6 Q5.6 15 6.6 18.4 Q7.6 21 11 16.4"/><path d="M13 13.6 Q18.4 15 17.4 18.4 Q16.4 21 13 16.4"/><path d="M10.4 5 L12 6.6 L13.6 5"/></svg>
+    <!-- ブラウン管 -->
+    <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2.4"/><rect x="6" y="9" width="9" height="7" rx="1"/><circle cx="18.2" cy="11" r=".8"/><circle cx="18.2" cy="14" r=".8"/><path d="M8 3 L12 6 L16 2.4"/></svg>
+    <!-- 鰻 -->
+    <svg viewBox="0 0 24 24" class="shu-i"><path d="M3 16 Q6 10 9.5 13.5 Q13 17 16 13 Q18.4 10 20.6 12"/><circle cx="20.4" cy="11.4" r="1.5"/><circle cx="20.8" cy="11" r=".4" fill="currentColor" stroke="none"/></svg>
+  </div>
+</section>
+
+<div class="unagi" aria-hidden="true">
+  <svg viewBox="0 0 700 44" preserveAspectRatio="none">
+    <path d="M6 26 C 60 4, 110 44, 170 24 S 290 2 350 26 S 470 46 530 24 S 640 6 676 22"
+      fill="none" stroke="#a63b26" stroke-width="2.4" stroke-linecap="round" opacity=".7"/>
+    <circle cx="678" cy="21" r="4.6" fill="none" stroke="#a63b26" stroke-width="2.2" opacity=".8"/>
+    <circle cx="680" cy="19.6" r="1.1" fill="#a63b26"/>
+  </svg>
+</div>
+
+<section class="fmap" id="floormap">
+  <div class="fmap-head">
+    <span class="ft">会場図</span>
+    <span class="fe">Floor Map <span class="ja">（簡略図・文字をタップでその区画へ）</span><span class="en">(schematic — tap a letter to jump)</span></span>
+  </div>
+  <div class="fmap-grid">
+    <figure>
+      <svg viewBox="0 0 420 300" role="img" aria-label="1st floor map">
+        <g fill="none" stroke="#1f1b15" stroke-width="2">
+          <path d="M60 40 H400 V280 H60 V212 M60 172 V110"/>
+          <path d="M60 110 L38 110 L38 172 L60 172" stroke-width="1.4"/>
+        </g>
+        <g font-family="'Shippori Mincho B1',serif" font-size="11" fill="#7c7263" letter-spacing="2">
+          <text x="14" y="136">入口</text>
+          <text x="14" y="150" font-size="8" font-family="'EB Garamond',serif" letter-spacing="1">ENTER</text>
+          <text x="66" y="236" font-size="10">出口 EXIT</text>
+        </g>
+        <path d="M42 141 h26 M62 136 l7 5 -7 5" stroke="#a63b26" stroke-width="1.6" fill="none"/>
+        <!-- stairs to 2F -->
+        <g stroke="#9c9891" stroke-width="1.2">
+          <path d="M354 128 h38 M354 134 h38 M354 140 h38 M354 146 h38 M354 152 h38"/>
+        </g>
+        <text x="352" y="121" font-size="8.5" font-family="'EB Garamond',serif" fill="#7c7263" letter-spacing="1">TO 2F</text>
+        <!-- EV -->
+        <rect x="196" y="176" width="26" height="24" fill="none" stroke="#9c9891" stroke-width="1.2"/>
+        <text x="201" y="192" font-size="9" font-family="'EB Garamond',serif" fill="#7c7263">EV</text>
+        <!-- zones -->
+        <g font-family="'EB Garamond',serif" font-weight="600" fill="#a63b26" text-anchor="middle">
+          <a href="#secA"><text x="105" y="120" font-size="30">A</text><text x="105" y="138" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">1–2</text></a>
+          <a href="#secB"><text x="190" y="86" font-size="30">B</text><text x="190" y="104" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">3–13</text></a>
+          <a href="#secC"><text x="330" y="86" font-size="30">C</text><text x="330" y="104" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">14–51</text></a>
+          <a href="#secD"><text x="300" y="222" font-size="30">D</text><text x="300" y="240" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">52–104・113–114</text></a>
+          <a href="#secF"><text x="105" y="256" font-size="30">F</text><text x="105" y="272" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">115–116</text></a>
+        </g>
+        <text x="228" y="158" font-size="9.5" font-family="'Shippori Mincho B1',serif" fill="#7c7263" text-anchor="middle" letter-spacing="1">90–103</text>
+      </svg>
+      <figcaption>1階 / 1st Floor</figcaption>
+    </figure>
+    <figure>
+      <svg viewBox="0 0 420 190" role="img" aria-label="2nd floor map">
+        <g fill="none" stroke="#1f1b15" stroke-width="2">
+          <circle cx="105" cy="95" r="62"/>
+          <path d="M164 78 H398 M164 112 H398 M398 78 V112"/>
+          <rect x="252" y="112" width="30" height="26" stroke-width="1.4"/>
+        </g>
+        <g stroke="#9c9891" stroke-width="1.2">
+          <path d="M352 84 v22 M360 84 v22 M368 84 v22 M376 84 v22 M384 84 v22"/>
+        </g>
+        <text x="348" y="72" font-size="8.5" font-family="'EB Garamond',serif" fill="#7c7263" letter-spacing="1">TO 1F</text>
+        <text x="258" y="130" font-size="9" font-family="'EB Garamond',serif" fill="#7c7263">EV</text>
+        <g font-family="'EB Garamond',serif" font-weight="600" fill="#a63b26" text-anchor="middle">
+          <a href="#secE"><text x="105" y="100" font-size="30">E</text><text x="105" y="118" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">105–112</text></a>
+        </g>
+      </svg>
+      <figcaption>2階 / 2nd Floor</figcaption>
+    </figure>
+  </div>
+  <div class="fmap-note">
+    <span class="ja">※ 実際の間取りを簡略化したものです。詳細は会場配布マップをご覧ください。</span>
+    <span class="en" style="font-family:var(--serif-en)">A simplified schematic; please refer to the printed map for details.</span>
+  </div>
+</section>
+
+<div class="arband">
+  <div class="arband-in">
+    <div class="ar-kicker">WebAR — No App Required</div>
+    <div class="ar-title">リキッドユニバース・ポータル <span class="en">Liquid Universe Portal &mdash; from Dalian to Kirishima</span></div>
+    <div class="ar-desc">
+      <span class="ja">お手元のスマートフォンで、リキッドユニバースの生命体をその場に呼び出せるAR作品です。ボタンからカメラを許可し、床のリングをタップして設置——歩いて近づくと、そのまま生命体の中に入れます。アプリのインストールは不要（iPhoneはSafari、AndroidはChrome推奨）。撮影した写真は端末内でのみ生成されます。</span>
+      <span class="en">Summon a Liquid Universe life-form into the room with your phone: allow the camera, tap the ring on the floor to place it, then walk right inside. No app required (Safari on iPhone, Chrome on Android). Photos are composed on your device only.</span>
+    </div>
+    <a class="ar-cta" href="https://liquid-universe-webar.vercel.app/" target="_blank" rel="noopener">AR体験をはじめる <span class="en" style="font-family:var(--serif-en)">Launch AR</span></a>
+    <div class="ar-url">liquid-universe-webar.vercel.app</div>
+  </div>
+</div>
+
 <!--WORKS-->
 <div class="mds" aria-hidden="true">
   <svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/></svg>
