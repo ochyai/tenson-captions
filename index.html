@@ -179,6 +179,31 @@ h1 .brk{color:var(--ink-soft);font-weight:600}
 }
 .tl-cta:hover{background:#fff}
 
+/* ============ installation gallery ============ */
+.igal{max-width:1060px;margin:0 auto;padding:3.4rem 1.4rem 1.4rem}
+.igal-head{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:.4rem}
+.igal-head h2{font-size:clamp(1.3rem,3.4vw,1.9rem);font-weight:700;letter-spacing:.18em}
+.igal-head .en{font-family:var(--serif-en);font-style:italic;color:var(--mute);font-size:.95rem;letter-spacing:.05em}
+.igal-lede{font-size:.85rem;color:var(--ink-soft);max-width:44em;margin-bottom:1.4rem}
+.igal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;grid-auto-flow:dense}
+@media (max-width:860px){.igal-grid{grid-template-columns:repeat(2,1fr)}}
+.igal-grid a{display:block;position:relative;border:1px solid var(--hair);overflow:hidden;background:var(--paper-deep);cursor:zoom-in}
+.igal-grid a.tall{grid-row:span 2}
+.igal-grid img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;transition:transform .35s ease;filter:contrast(1.02)}
+.igal-grid a.tall img{aspect-ratio:2/3}
+.igal-grid a:hover img{transform:scale(1.035)}
+.igal-note{font-size:.72rem;color:var(--mute);letter-spacing:.08em;margin-top:.8rem}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:2000;display:none;background:rgba(20,17,12,.94);cursor:zoom-out}
+.lb.open{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2.2rem 1rem 1.4rem}
+.lb img{max-width:min(96vw,1200px);max-height:78vh;object-fit:contain;box-shadow:0 8px 44px rgba(0,0,0,.5)}
+.lb .lb-cap{color:#e8e2d2;font-size:.86rem;letter-spacing:.06em;margin-top:1rem;text-align:center;max-width:40em}
+.lb .lb-cap .en{font-family:var(--serif-en);font-style:italic;color:#b7ac96;display:block;font-size:.82rem;margin-top:.15rem}
+.lb .lb-x{position:absolute;top:1rem;right:1.4rem;color:#e8e2d2;font-size:2rem;line-height:1;font-family:var(--serif-en);background:none;border:none;cursor:pointer}
+.lb .lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:none;border:none;color:#e8e2d2;font-size:2.6rem;font-family:var(--serif-en);cursor:pointer;padding:.6rem 1rem;opacity:.75}
+.lb .lb-nav:hover{opacity:1}
+.lb .lb-prev{left:.4rem}.lb .lb-next{right:.4rem}
+
 /* ============ related site ============ */
 .xlink{max-width:1060px;margin:0 auto;padding:2.2rem 1.4rem 3rem}
 .xlink-kicker{
@@ -481,6 +506,7 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
     <div class="zones">
       <a href="#floormap" style="font-family:var(--serif-ja);font-size:.78rem;letter-spacing:.1em">地図</a>
       <a href="#secA">A</a><a href="#secB">B</a><a href="#secC">C</a><a href="#secD">D</a><a href="#secE">E</a><a href="#secF">F</a>
+      <a href="#gallery" style="font-family:var(--serif-ja);font-size:.78rem;letter-spacing:.1em">写真</a>
     </div>
     <div class="langs">
       <button data-l="both" class="on">日英</button><button data-l="ja">日本語</button><button data-l="en">English</button>
@@ -1448,6 +1474,82 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
   <svg viewBox="0 0 20 20"><rect x="2.5" y="2.5" width="15" height="15"/></svg>
 </div>
 </main>
+
+<section class="igal" id="gallery">
+  <div class="igal-head">
+    <h2 class="ja">会場ギャラリー</h2><h2 class="en" style="font-style:normal;letter-spacing:.06em">Installation Views</h2>
+    <span class="en">Kirishima Open-Air Museum, 2026</span>
+  </div>
+  <p class="igal-lede">
+    <span class="ja">会場の記録写真から。タップで拡大できます。</span>
+    <span class="en" style="font-family:var(--serif-en)">Photographs from the exhibition floor. Tap to enlarge.</span>
+  </p>
+  <div class="igal-grid" id="igal-grid"></div>
+  <div class="igal-note">
+    <span class="ja">Photo: 展覧会記録（2026年7月）</span>
+    <span class="en" style="font-family:var(--serif-en)"> — Exhibition documentation, July 2026</span>
+  </div>
+</section>
+
+<div class="lb" id="lb">
+  <button class="lb-x" aria-label="close">×</button>
+  <button class="lb-nav lb-prev" aria-label="previous">‹</button>
+  <img id="lb-img" src="" alt="">
+  <div class="lb-cap" id="lb-cap"></div>
+  <button class="lb-nav lb-next" aria-label="next">›</button>
+</div>
+
+<script>
+const GAL = [
+  {n:'6430', ja:'神棚と、流れつづける映像。', en:'A household shrine, and images that never stop flowing.'},
+  {n:'6517', ja:'引っ越しの荷物が、展示室を満たす。', en:'Moving boxes fill the gallery.'},
+  {n:'6449', ja:'極彩色の神獣が、床に立つ。', en:'A polychrome guardian beast stands on the floor.'},
+  {n:'6443', ja:'丸窓のむこうに、坐す。', en:'Seated beyond the round window.', tall:true},
+  {n:'6446', ja:'面の壁。視線はこちらを向いている。', en:'A wall of masks, all facing this way.'},
+  {n:'6452', ja:'黒猫、三体。', en:'Three black cats.'},
+  {n:'6455', ja:'きのこの森の番人。', en:'Keeper of the mushroom grove.'},
+  {n:'6500', ja:'《10ⁿの人類史》— 土器からカメラまでが隣人になる板。', en:'Human History in Powers of Ten — where pottery and cameras become neighbors.'},
+  {n:'6525', ja:'人類と技術の年表。このサイトの年表の原版。', en:'The timeline panel — the printed original of the web timeline.'},
+  {n:'6509', ja:'青い光の底で。', en:'At the bottom of the blue light.'},
+  {n:'6543', ja:'結晶の部屋。世界がバグで生まれる瞬間。', en:'A crystalline room — the instant the world is born from a bug.'},
+  {n:'6547', ja:'神獣と、光の柱。', en:'The guardian beast and a column of light.'},
+  {n:'6514', ja:'見下ろすと、引っ越しのまっただなか。', en:'From above: a move in full swing.'},
+  {n:'6560', ja:'段ボールの街。どの箱にも記憶が入っている。', en:'A city of cardboard; every box holds a memory.'},
+  {n:'6472', ja:'黒電話は、まだつながっている。', en:'The rotary phone is still connected.'},
+  {n:'6561', ja:'天孫帰るってよ？', en:'Heard the divine kid’s heading home?'},
+];
+(function(){
+  const grid = document.getElementById('igal-grid');
+  grid.innerHTML = GAL.map((g,i) =>
+    `<a href="photos/p${g.n}.jpg" data-i="${i}"${g.tall?' class="tall"':''}><img src="photos/t${g.n}.jpg" alt="${g.ja}" loading="lazy"></a>`).join('');
+  const lb = document.getElementById('lb'), lbImg = document.getElementById('lb-img'), lbCap = document.getElementById('lb-cap');
+  let cur = 0;
+  function show(i){
+    cur = (i + GAL.length) % GAL.length;
+    const g = GAL[cur];
+    lbImg.src = 'photos/p' + g.n + '.jpg';
+    lbImg.alt = g.ja;
+    lbCap.innerHTML = '<span class="ja">' + g.ja + '</span><span class="en">' + g.en + '</span>';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function hide(){ lb.classList.remove('open'); document.body.style.overflow = ''; }
+  grid.addEventListener('click', e => {
+    const a = e.target.closest('a'); if (!a) return;
+    e.preventDefault(); show(+a.dataset.i);
+  });
+  lb.addEventListener('click', e => { if (e.target === lb || e.target === lbImg) hide(); });
+  lb.querySelector('.lb-x').addEventListener('click', hide);
+  lb.querySelector('.lb-prev').addEventListener('click', e => { e.stopPropagation(); show(cur-1); });
+  lb.querySelector('.lb-next').addEventListener('click', e => { e.stopPropagation(); show(cur+1); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') hide();
+    if (e.key === 'ArrowLeft') show(cur-1);
+    if (e.key === 'ArrowRight') show(cur+1);
+  });
+})();
+</script>
 
 <section class="xlink">
   <div class="xlink-kicker">Related Site / 関連サイト</div>
