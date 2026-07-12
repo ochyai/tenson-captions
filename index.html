@@ -145,6 +145,40 @@ h1 .brk{color:var(--ink-soft);font-weight:600}
 }
 .kv-cap .en{font-family:var(--serif-en);font-style:italic;letter-spacing:.06em}
 
+/* ============ visual gallery ============ */
+.vgal{max-width:1060px;margin:0 auto;padding:2.6rem 1.4rem 1rem}
+.vgal-kicker{font-family:var(--serif-en);font-size:.74rem;letter-spacing:.34em;color:var(--mute);text-transform:uppercase;margin-bottom:1rem}
+.vgal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem}
+@media (max-width:860px){.vgal-grid{grid-template-columns:repeat(2,1fr)}}
+.vgal-grid figure{margin:0}
+.vgal-grid .vf{border:1px solid var(--hair);overflow:hidden;background:var(--paper-deep);box-shadow:0 2px 14px rgba(31,27,21,.12)}
+.vgal-grid img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;filter:contrast(1.02)}
+.vgal-grid figcaption{font-size:.72rem;letter-spacing:.08em;color:var(--mute);padding-top:.4rem;line-height:1.6}
+
+/* ============ timeline band ============ */
+.tlband{max-width:1060px;margin:1.2rem auto 0;padding:0 1.4rem}
+.tlband-in{
+  background:#0b0b0b;color:#f0f0f0;border-radius:4px;
+  padding:1.6rem 1.7rem 1.5rem;position:relative;overflow:hidden;
+}
+.tlband-in::after{
+  content:"";position:absolute;left:0;right:0;bottom:26px;height:30px;pointer-events:none;
+  background:repeating-linear-gradient(90deg, rgba(255,255,255,.5) 0 1px, transparent 1px 26px),
+             repeating-linear-gradient(90deg, rgba(255,255,255,.35) 0 1px, transparent 1px 9px);
+  background-position: 0 0, 72% 0; background-size: 72% 100%, 28% 100%; background-repeat:no-repeat;
+  opacity:.35;
+}
+.tl-kicker{font-family:var(--serif-en);font-size:.7rem;letter-spacing:.3em;color:#9a9a9a;text-transform:uppercase}
+.tl-title{font-size:clamp(1.05rem,3vw,1.4rem);font-weight:700;letter-spacing:.1em;margin-top:.3rem}
+.tl-title .en{font-family:var(--serif-en);font-style:italic;font-weight:500;font-size:.85em;color:#cfcfcf;margin-left:.6em}
+.tl-desc{font-size:.85rem;color:#b9b9b9;margin-top:.5rem;max-width:44em;position:relative;z-index:1}
+.tl-cta{
+  display:inline-block;margin-top:.9rem;background:#f0f0f0;color:#000;text-decoration:none;
+  font-weight:700;letter-spacing:.12em;font-size:.85rem;padding:.55rem 1.3rem;border-radius:999px;
+  position:relative;z-index:1;
+}
+.tl-cta:hover{background:#fff}
+
 /* ============ related site ============ */
 .xlink{max-width:1060px;margin:0 auto;padding:2.2rem 1.4rem 3rem}
 .xlink-kicker{
@@ -421,10 +455,10 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 
 <figure class="kv">
   <div class="kv-frame">
-    <img src="keyvisual.webp" alt="天孫帰るってよ？ メインビジュアル — 高天原と書かれた段ボール、能面、仏像のある古い日本家屋" width="1338" height="747" loading="eager">
+    <img src="kv2.jpg" alt="天孫帰るってよ？ ポスターアート — 液体金属の渦の中心に開いた黒い穴、猫のスケッチと手書きのメモ" width="2000" height="959" loading="eager">
   </div>
   <figcaption class="kv-cap">
-    <span><span class="ja">「天孫帰るってよ？」メインビジュアル</span><span class="en">TENSO&#1048; &mdash; Key Visual</span></span>
+    <span><span class="ja">「天孫帰るってよ？」ポスターアートより</span><span class="en">From the TENSO&#1048; poster artwork</span></span>
     <span><span class="ja">霧島アートの森 2026</span><span class="en">Kirishima Open-Air Museum, 2026</span></span>
   </figcaption>
 </figure>
@@ -478,6 +512,20 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
     <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2.4"/><rect x="6" y="9" width="9" height="7" rx="1"/><circle cx="18.2" cy="11" r=".8"/><circle cx="18.2" cy="14" r=".8"/><path d="M8 3 L12 6 L16 2.4"/></svg>
     <!-- 鰻 -->
     <svg viewBox="0 0 24 24" class="shu-i"><path d="M3 16 Q6 10 9.5 13.5 Q13 17 16 13 Q18.4 10 20.6 12"/><circle cx="20.4" cy="11.4" r="1.5"/><circle cx="20.8" cy="11" r=".4" fill="currentColor" stroke="none"/></svg>
+  </div>
+</section>
+
+<section class="vgal">
+  <div class="vgal-kicker">Visual Notes / ビジュアルノート</div>
+  <div class="vgal-grid">
+    <figure><div class="vf"><img src="keyvisual.webp" alt="高天原と書かれた段ボールと能面のある古い日本家屋" loading="lazy"></div>
+      <figcaption><span class="ja">高天原、引っ越し中。</span><span class="en">Takamagahara, mid-move.</span></figcaption></figure>
+    <figure><div class="vf"><img src="g_handdrawn.jpg" alt="天孫帰るってよ？ 手描きの火山とデータの川の絵図" loading="lazy"></div>
+      <figcaption><span class="ja">火山どっかーん、データの川。</span><span class="en">The volcano sings; a river of data.</span></figcaption></figure>
+    <figure><div class="vf"><img src="g_sketch.jpg" alt="どこでもなくてどこにでもある — 黒猫と段ボール箱のスケッチ" loading="lazy"></div>
+      <figcaption><span class="ja">どこでもなくて、どこにでもある。</span><span class="en">Nowhere, and everywhere.</span></figcaption></figure>
+    <figure><div class="vf"><img src="g_room.jpg" alt="無数のブラウン管と黒猫たちの部屋、天井の裂け目に火山" loading="lazy"></div>
+      <figcaption><span class="ja">ねこは全部見ている。</span><span class="en">The cats see everything.</span></figcaption></figure>
   </div>
 </section>
 
@@ -566,6 +614,18 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
   </div>
 </div>
 
+<div class="tlband">
+  <div class="tlband-in">
+    <div class="tl-kicker">Web Companion — 2.5 Million Years</div>
+    <div class="tl-title">人類と技術の年表<span class="en">Timeline of Humanity &amp; Technology</span></div>
+    <div class="tl-desc">
+      <span class="ja">作品1《10ⁿの人類史》に対応するWeb版年表。石器の最初の一打から生成AIまで、加速する発明の系譜を全項目・日英・検索付きで。</span>
+      <span class="en" style="font-family:var(--serif-en);display:block;margin-top:.3rem">The web edition of Work 1, <i>Human History in Powers of Ten</i> — every entry from the first knapped stone to generative AI, searchable, in Japanese and English.</span>
+    </div>
+    <a class="tl-cta" href="https://kirishima-timeline.vercel.app/">年表をひらく <span class="en" style="font-family:var(--serif-en)">Open the Timeline</span></a>
+  </div>
+</div>
+
 <section class="zone" id="secA"><div class="zone-head"><span class="zone-letter">A</span><span class="zone-name"><span class="ja">1階 — 入口</span><span class="en">1st Floor — Entrance</span></span></div>
 <article class="work" id="n1">
 <div class="wnum">1</div>
@@ -576,6 +636,7 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="credit">製材：井上工務店<br>Lumber Milled by Inoue Koumuten Co., Ltd.</div>
 <div class="desc ja"><p>「一万年を，千年を，百年を，十年を，いまを，同じ目盛りの上に畳む対数の年表．言葉を持ちながら記号を保存しなかった世界から，物語の編纂へ，計算の外部化へ，複製と微分へ——そして人間がシンボル操作の頂点ではなくなる現在，歴史はヌルへ還流する．土器も，鏡も，算盤も，カメラも，計算機も，この一枚の上では隣人である．」</p></div>
 <div class="desc en"><p>"A logarithmic chronicle folding ten millennia, a millennium, a century, a decade, and the present onto a single scale. From a world that had words yet chose not to inscribe them, through the weaving of narratives, the externalization of computation, and the differentiation of the world into reproducible images—history flows back to Null as Homo sapiens ceases to stand at the summit of symbol manipulation. On this one board, pottery, mirrors, abacuses, cameras, and computers are neighbors.</p></div>
+<div style="margin-top:.6rem;font-size:.86rem"><a href="https://kirishima-timeline.vercel.app/" style="color:var(--shu);text-decoration-color:var(--hair)"><span class="ja">→ この年表の完全Web版「人類と技術の年表」をひらく</span><span class="en" style="font-family:var(--serif-en)">→ Open the full web edition: Timeline of Humanity &amp; Technology</span></a></div>
 <div class="subs"><div class="subs-title"><span class="ja">年表をかたちづくる資料</span><span class="en">Objects Composing the Chronicle</span></div>
 <div class="sub">
 <div class="sub-t"><span class="ja">質量化された幽体の共鳴 Ⅶ（縄文土器の欠片 Ⅰ）</span><span class="en">Materialized Phantom Resonance VII (Piece of Jomon Pottery I)</span></div>
