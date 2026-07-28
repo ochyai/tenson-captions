@@ -402,6 +402,42 @@ h3.tj{font-size:1.34rem;font-weight:700;letter-spacing:.05em;line-height:1.65}
 .mds{display:flex;justify-content:center;gap:1.6rem;padding:2.6rem 0 .4rem;opacity:.55}
 .mds svg{width:17px;height:17px;stroke:var(--ink-soft);fill:none;stroke-width:1.4}
 
+/* ================= FINDER ================= */
+.finder{
+  position:sticky;top:2.9rem;z-index:90;
+  max-width:1060px;margin:2.6rem auto 0;
+  background:color-mix(in srgb,var(--paper) 92%,transparent);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);
+  padding:.7rem 0 .65rem;
+}
+.finder-in{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap}
+.finder label{font-size:.76rem;letter-spacing:.22em;color:var(--shu-deep);white-space:nowrap}
+.finder label .en{font-family:var(--serif-en);letter-spacing:.12em;margin-left:.7em}
+.finder input{
+  flex:1;min-width:11rem;
+  font-family:var(--serif-ja);font-size:.94rem;letter-spacing:.06em;color:var(--ink);
+  background:transparent;border:none;border-bottom:1px solid var(--hair);
+  padding:.3rem .1rem;outline:none;
+}
+.finder input:focus{border-bottom-color:var(--shu)}
+.finder input::placeholder{color:var(--gin);letter-spacing:.1em}
+.finder .cnt{font-family:var(--serif-en);font-size:.8rem;color:var(--mute);letter-spacing:.1em;white-space:nowrap}
+.finder .clr{
+  font-family:var(--serif-ja);font-size:.76rem;letter-spacing:.1em;
+  background:none;border:1px solid var(--hair);color:var(--mute);
+  padding:.2rem .7rem;border-radius:2px;cursor:pointer;visibility:hidden;
+}
+.finder.on .clr{visibility:visible}
+.finder .clr:hover{border-color:var(--shu);color:var(--shu)}
+.work.hid,.zone.hid{display:none}
+.nohit{padding:2.6rem 0;color:var(--mute);font-size:.9rem;letter-spacing:.1em;display:none}
+.finder.none ~ .nohit{display:block}
+@media(max-width:640px){
+  .finder{top:2.7rem}
+  .finder label{display:none}
+}
+
 /* ================= FOOTER ================= */
 footer{
   border-top:2px solid var(--ink);
@@ -660,6 +696,20 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
   </div>
 </div>
 
+<div class="finder" id="finder">
+  <div class="finder-in">
+    <label for="q"><span class="ja">作品をさがす</span><span class="en">Find a work</span></label>
+    <input id="q" type="search" autocomplete="off" spellcheck="false"
+           placeholder="番号（例 43 / 64-76）または語句（鰻, 湿板写真, Liquid Universe…）"
+           aria-label="番号またはキーワードで絞り込む">
+    <span class="cnt" id="qc"></span>
+    <button class="clr" id="qx" type="button">解除 <span class="en">clear</span></button>
+  </div>
+</div>
+<div class="nohit" id="qz">
+  <span class="ja">該当する作品がありません。番号（1–118）か、作品名・素材・協力者の語句でお試しください。</span>
+  <span class="en" style="font-family:var(--serif-en)">No works matched. Try a catalogue number (1&ndash;118), or a word from a title, material, or credit.</span>
+</div>
 <section class="zone" id="secA"><div class="zone-head"><span class="zone-letter">A</span><span class="zone-name"><span class="ja">1階 — 入口</span><span class="en">1st Floor — Entrance</span></span></div>
 <span class="anum" id="n1" aria-hidden="true"></span>
 <article class="work" id="w1" data-num="1">
@@ -1759,6 +1809,52 @@ function setLang(l){
 const tb=document.getElementById('top-btn');
 addEventListener('scroll',()=>tb.classList.toggle('show',scrollY>900),{passive:true});
 tb.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+/* --- number / keyword finder --- */
+(function(){
+  const fin=document.getElementById('finder'),q=document.getElementById('q'),
+        cnt=document.getElementById('qc'),clr=document.getElementById('qx');
+  const items=[...document.querySelectorAll('article.work')].map(el=>({
+    el, nums:(el.dataset.num||'').split(',').map(Number),
+    text:el.textContent.toLowerCase().replace(/\s+/g,' ')
+  }));
+  const zones=[...document.querySelectorAll('section.zone')];
+  const total=items.reduce((s,it)=>s+it.nums.length,0);
+  const range=s=>{const m=s.match(/^(\d{1,3})\s*[-–~]\s*(\d{1,3})$/);
+    return m?[+m[1],+m[2]].sort((a,b)=>a-b):null};
+  function run(){
+    const raw=q.value.trim(), s=raw.toLowerCase();
+    fin.classList.toggle('on',!!raw);
+    if(!raw){
+      items.forEach(it=>it.el.classList.remove('hid'));
+      zones.forEach(z=>z.classList.remove('hid'));
+      fin.classList.remove('none'); cnt.textContent=''; return;
+    }
+    const r=range(raw), n=/^\d{1,3}$/.test(raw)?+raw:null;
+    let shown=0;
+    items.forEach(it=>{
+      const hit = n!==null ? it.nums.includes(n)
+                : r ? it.nums.some(x=>x>=r[0]&&x<=r[1])
+                : it.text.includes(s);
+      it.el.classList.toggle('hid',!hit);
+      if(hit) shown+=it.nums.length;
+    });
+    zones.forEach(z=>z.classList.toggle('hid',!z.querySelector('article.work:not(.hid)')));
+    fin.classList.toggle('none',shown===0);
+    cnt.textContent=shown?shown+' / '+total:'0';
+  }
+  let t; q.addEventListener('input',()=>{clearTimeout(t);t=setTimeout(run,120)});
+  q.addEventListener('keydown',e=>{
+    if(e.key!=='Enter')return;
+    e.preventDefault();
+    const first=document.querySelector('article.work:not(.hid)');
+    if(first)first.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  clr.addEventListener('click',()=>{q.value='';run();q.focus()});
+  /* a #wNN or #nNN link must not stay hidden behind an active filter */
+  addEventListener('hashchange',()=>{if(q.value){q.value='';run();
+    const t=document.getElementById(location.hash.slice(1));
+    if(t)t.scrollIntoView({block:'start'});}});
+})();
 </script>
 </body>
 </html>
