@@ -1,5 +1,14 @@
 # -*- coding: utf-8 -*-
 """Generate TENSON caption page from works.json (extracted from worklist xlsx)."""
+# TODO(2026-07-29): このスクリプトは現状そのままでは動かない。
+#   1) 入力パス SP は使い捨てのスクラッチ領域で、既に消滅している。works.json /
+#      template.html / site/ をリポジトリ内に移すか、パスを引数化する必要がある。
+#   2) 下の SECTIONS は 260722 より前の番号体系（1–116）をハードコードしており、
+#      公開中の index.html（260722版 1–118）とは一致しない。番号は data_works.json
+#      の num フィールドに 260722 版を入れてあるので、そちらを正とすること。
+#   3) index.html には AR帯・年表帯・会場ギャラリー・相互リンクなど手作業で足した
+#      資産があり、このスクリプトで再生成するとそれらが消える。修正は index.html を
+#      直接触るのが現状の運用（ルートB）。
 import json, html, re
 
 SP = '/private/tmp/claude-501/-Users-yoichiochiai/fc782a78-cb18-4783-a0d9-8bc5dcf9e565/scratchpad'
@@ -64,9 +73,9 @@ SECTIONS = [
         E('57–59', [132], tj='計算期自然の微睡み，潜在空間の夢 Ⅰ–Ⅲ', te='Slumber of Digital Nature, Dreams of Latent Spaces Ⅰ–Ⅲ'),
         E('60', [129]), E('61', [128], year='2026'),
         E('62–74', list(range(37,50)), tj='象徴と変転 − 十三支 / 子, 丑, とら, 卯, 辰, 未, へび, 午, さる, 酉, 戌, 亥, 貓',
-          te='Symbols and Transmutations – Thirteen Branches: Rat, Ox, Tiger, Rabbit, Dragon, Sheep, Snake, Horse, Monkey, Bird, Dog, Boa, Cat'),
+          te='Symbols and Transmutations – Thirteen Branches: Rat, Ox, Tiger, Rabbit, Dragon, Sheep, Snake, Horse, Monkey, Bird, Dog, Boar, Cat'),
         E('75–87', list(range(50,63)), tj='ﾇﾙ即是十三支 / 子, 丑, とら, 卯, 辰, 未, へび, 午, さる, 酉, 戌, 亥, 貓，生命の版木，計算機は浮世の夢を見る',
-          te='Null is the Thirteen Signs: Rat, Ox, Tiger, Rabbit, Dragon, Sheep, Snake, Horse, Monkey, Bird, Dog, Boa, Cat — Woodblock of Life, Computation Dreams of Ukiyo'),
+          te='Null is the Thirteen Signs: Rat, Ox, Tiger, Rabbit, Dragon, Sheep, Snake, Horse, Monkey, Bird, Dog, Boar, Cat — Woodblock of Life, Computation Dreams of Ukiyo'),
         E('88', [130]), E('89', [131]),
         E('90', [117], credit='協力：鹿児島県立埋蔵文化財センター'),
         E('91', [115], credit='協力：日置島津家・吉冨山大乗寺跡管理人 西郷隆文'),
