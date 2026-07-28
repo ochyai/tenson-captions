@@ -335,6 +335,10 @@ nav{
 .langs button.on{border-color:var(--shu);color:var(--shu)}
 
 /* ================= ZONES & WORKS ================= */
+/* catalogue anchors: #wNN is the 2026-07-22 numbering, #nNN the pre-260722 one
+   (kept as invisible aliases so links shared before the update still land right) */
+.anum{display:block;height:0;overflow:hidden;visibility:hidden}
+.work,.anum{scroll-margin-top:4.4rem}
 main{max-width:1060px;margin:0 auto;padding:0 1.4rem 4rem}
 .zone{padding-top:.6rem}
 .zone-head{
@@ -594,13 +598,13 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
         <text x="201" y="192" font-size="9" font-family="'EB Garamond',serif" fill="#7c7263">EV</text>
         <!-- zones -->
         <g font-family="'EB Garamond',serif" font-weight="600" fill="#a63b26" text-anchor="middle">
-          <a href="#secA"><text x="105" y="120" font-size="30">A</text><text x="105" y="138" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">1–2</text></a>
-          <a href="#secB"><text x="190" y="86" font-size="30">B</text><text x="190" y="104" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">3–13</text></a>
-          <a href="#secC"><text x="330" y="86" font-size="30">C</text><text x="330" y="104" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">14–51</text></a>
-          <a href="#secD"><text x="300" y="222" font-size="30">D</text><text x="300" y="240" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">52–104・113–114</text></a>
-          <a href="#secF"><text x="105" y="256" font-size="30">F</text><text x="105" y="272" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">115–116</text></a>
+          <a href="#secA"><text x="105" y="120" font-size="30">A</text><text x="105" y="138" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">1–3</text></a>
+          <a href="#secB"><text x="190" y="86" font-size="30">B</text><text x="190" y="104" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">4–13</text></a>
+          <a href="#secC"><text x="330" y="86" font-size="30">C</text><text x="330" y="104" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">14–53</text></a>
+          <a href="#secD"><text x="300" y="222" font-size="30">D</text><text x="300" y="240" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">54–106・115–116</text></a>
+          <a href="#secF"><text x="105" y="256" font-size="30">F</text><text x="105" y="272" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">117–118</text></a>
         </g>
-        <text x="228" y="158" font-size="9.5" font-family="'Shippori Mincho B1',serif" fill="#7c7263" text-anchor="middle" letter-spacing="1">90–103</text>
+        <text x="228" y="158" font-size="9.5" font-family="'Shippori Mincho B1',serif" fill="#7c7263" text-anchor="middle" letter-spacing="1">92–105</text>
       </svg>
       <figcaption>1階 / 1st Floor</figcaption>
     </figure>
@@ -617,7 +621,7 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
         <text x="348" y="72" font-size="8.5" font-family="'EB Garamond',serif" fill="#7c7263" letter-spacing="1">TO 1F</text>
         <text x="258" y="130" font-size="9" font-family="'EB Garamond',serif" fill="#7c7263">EV</text>
         <g font-family="'EB Garamond',serif" font-weight="600" fill="#a63b26" text-anchor="middle">
-          <a href="#secE"><text x="105" y="100" font-size="30">E</text><text x="105" y="118" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">105–112</text></a>
+          <a href="#secE"><text x="105" y="100" font-size="30">E</text><text x="105" y="118" font-size="10" fill="#7c7263" font-family="'Shippori Mincho B1',serif">107–114</text></a>
         </g>
       </svg>
       <figcaption>2階 / 2nd Floor</figcaption>
@@ -655,7 +659,8 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 </div>
 
 <section class="zone" id="secA"><div class="zone-head"><span class="zone-letter">A</span><span class="zone-name"><span class="ja">1階 — 入口</span><span class="en">1st Floor — Entrance</span></span></div>
-<article class="work" id="n1">
+<span class="anum" id="n1" aria-hidden="true"></span>
+<article class="work" id="w1" data-num="1">
 <div class="wnum">1</div>
 <div class="wbody">
 <h3 class="tj">10ⁿの人類史（記号と質量の対数年表）</h3>
@@ -763,7 +768,8 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 </div>
 </div>
 </div></article>
-<article class="work" id="n2">
+<span class="anum" id="n2" aria-hidden="true"></span>
+<article class="work" id="w2" data-num="2">
 <div class="wnum">2</div>
 <div class="wbody">
 <h3 class="tj">落合の髪（複製できない質量）</h3>
@@ -772,19 +778,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>像は無限に複製できるが，髪は複製できない．名札もピンバッジも記号だが，髪は質量である．身体が映像になってどこにでも現れる時代に，記号になりそこねた身体の断片だけが，一点ものとして引っ越しの荷に入っている．</p></div>
 <div class="desc en"><p>Images can be copied without end; hair cannot. A name tag and pin badges are symbols; hair is mass. In an age when the body turns into image and appears anywhere, only this fragment that failed to become a symbol travels with the moving boxes—one of a kind.</p></div>
 </div></article>
-</section>
-<section class="zone" id="secB"><div class="zone-head"><span class="zone-letter">B</span><span class="zone-name"><span class="ja">1階</span><span class="en">1st Floor</span></span></div>
-<article class="work" id="n3">
+<span class="anum" id="n4" aria-hidden="true"></span>
+<article class="work" id="w3" data-num="3">
 <div class="wnum">3</div>
-<div class="wbody">
-<h3 class="tj">さようならホモサピエンス 有史以来のお引越し</h3>
-<div class="te">Farewell, Homo sapiens: The Greatest Move Since History Began</div>
-<div class="meta">2026 ｜ ミクストメディア</div>
-<div class="desc ja"><p>「天孫が高天原の実家に帰るという，有史以来の引っ越しである．積もり積もった荷物が多くて大変だから，古事記から手長脚長も手伝いに来ている．コンテナには民具も，算盤も，古い電化製品も——人類史まるごとの荷造りだ．さようならホモサピエンス——それは絶滅の言葉ではなく，引っ越しの挨拶である．」</p></div>
-<div class="desc en"><p>"The Divine Kid is moving back to the family home in Takamagahara—the greatest house-move since history began. The luggage of ages has piled high, so Tenaga and Ashinaga, the long-armed and long-legged giants of the Kojiki, have come to help. Folk tools, abacuses, old electronics—all of human history packed into containers. Farewell, Homo sapiens—not a word of extinction, but a greeting for moving day."</p></div>
-</div></article>
-<article class="work" id="n4">
-<div class="wnum">4</div>
 <div class="wbody">
 <h3 class="tj">null²の壁（パビリオンの皮膚）</h3>
 <div class="te">Walls of null² (Skin of the Pavilion)</div>
@@ -792,7 +788,20 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>大阪・関西万博で188日間，世界を映しつづけたパビリオンnull²の皮膚の断片．空（くう）の建築は空のとおりに滅び，壁だけが引っ越しの荷に紛れて，ここまで来た．鏡はもう，映していた風景を覚えていない．業だけが残っている．</p></div>
 <div class="desc en"><p>Fragments of the skin of null², the pavilion that kept reflecting the world for 188 days at the Osaka Expo. The architecture of emptiness perished as emptiness does; only its walls slipped in among the moving boxes and made it here. The mirror no longer remembers the landscapes it once held—what remains is karma.</p></div>
 </div></article>
-<article class="work" id="n5">
+</section>
+<section class="zone" id="secB"><div class="zone-head"><span class="zone-letter">B</span><span class="zone-name"><span class="ja">1階</span><span class="en">1st Floor</span></span></div>
+<span class="anum" id="n3" aria-hidden="true"></span>
+<article class="work" id="w4" data-num="4">
+<div class="wnum">4</div>
+<div class="wbody">
+<h3 class="tj">さようならホモサピエンス 有史以来のお引越し</h3>
+<div class="te">Farewell, Homo sapiens: The Greatest Move Since History Began</div>
+<div class="meta">2026 ｜ ミクストメディア</div>
+<div class="desc ja"><p>「天孫が高天原の実家に帰るという，有史以来の引っ越しである．積もり積もった荷物が多くて大変だから，古事記から手長脚長も手伝いに来ている．コンテナには民具も，算盤も，古い電化製品も——人類史まるごとの荷造りだ．さようならホモサピエンス——それは絶滅の言葉ではなく，引っ越しの挨拶である．」</p></div>
+<div class="desc en"><p>"The Divine Kid is moving back to the family home in Takamagahara—the greatest house-move since history began. The luggage of ages has piled high, so Tenaga and Ashinaga, the long-armed and long-legged giants of the Kojiki, have come to help. Folk tools, abacuses, old electronics—all of human history packed into containers. Farewell, Homo sapiens—not a word of extinction, but a greeting for moving day."</p></div>
+</div></article>
+<span class="anum" id="n5" aria-hidden="true"></span>
+<article class="work" id="w5" data-num="5">
 <div class="wnum">5</div>
 <div class="wbody">
 <h3 class="tj">定在遊牧民のブラウン管</h3>
@@ -801,7 +810,8 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>引越しの最中も，テレビは点けっぱなしである．ブラウン管のなかでは映像がいまこの瞬間に生成されつづけ，同じ画は二度と流れない．ナムジュン・パイクは，電子映像の時代に人間は動かずして世界を遍歴する定在遊牧民になると考えた．身体は映像となって，どこでもなくてどこにでもあり，いまでもなくていつでもある．引越しの荷のあいだで，誰にも頼まれていない放送が，走査線の上で続いている．</p></div>
 <div class="desc en"><p>Even in the middle of the move, the television is left on. Inside the cathode-ray tube, images are generated in real time—no frame ever repeats. Nam June Paik foresaw that in the age of electronic images we would become stationary nomads, wandering the world without moving: the body turns into image—nowhere and yet everywhere, not now and yet always. Among the moving boxes, a broadcast nobody asked for goes on running across the scanlines.</p></div>
 </div></article>
-<article class="work" id="n6">
+<span class="anum" id="n6" aria-hidden="true"></span>
+<article class="work" id="w6" data-num="6">
 <div class="wnum">6</div>
 <div class="wbody">
 <h3 class="tj">物象化する願い, 変換される身体（手長）</h3>
@@ -811,7 +821,8 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>これらの作品は高山の技巧性の高い手の技を持つ木工作家（伊藤さん・村瀬さん・山内さん）とのラボレーションによって製作された．原型はカリモク家具株式会社の支援によって作家の製作する3D データから木材の削り出しを行った．手長足長は，中国の古典山海経の中でそれぞれ手の長い長臂人（長臂国の人），足の長い長股人（長股国の人）として登場する人々を起源とすると言われている．足の長い長股人が手の長い長臂人を背負って魚を捕るという伝説もある．その姿は日本に伝来し，でいだらぼっちなどの巨人の妖怪や，蛸をとる妖怪など多様な形に姿を変え，伝承として保存されている． 八岐大蛇に捧げられる稲田姫の両親はテナヅチ，アシナヅチであるし，手長神社と足長神社が長野にあるのも，そういった手長足長の派生となんらかの関係がみられるのかもしれない．これらのサーベイを行なっていたとき，狩猟採集そして山と森の文化の結節点の一つとして手長足長があるのかもしれないと考えた．もとより，飛騨高山や諏訪など中部一帯では縄文時代の遺跡が多く出土する．これが裏付けるように一万年以上に亘る豊かな狩猟採集社会が持続したことが遺跡調査からも明らかであり，農耕に移行する必然性を持たない地域も多く存在したのではないか．前項の稲田姫もそうだが，多くの日本神話の神は農耕社会から必然的に生まれうる神である．テナヅチアシナヅチはオオヤマツミの子を名乗るが，オオヤマツミやカヤノヒメはその名の通り，山の神・野と草の神であり国産み神話における地形の意味する精霊的な要素が強いのだろう．その文脈から縄文・狩猟採集社会における超人性やその環境に適応した人の形を意味するように思っている．伝承で描かれるような手長足長の描く巨人の身体性は山を跨ぐ移動の身体性や遠くの木々や果実や生き物に手が届くような採集の願望を表現しているように感じられる．地域性・風土性・そして民藝を考えたとき，手長足長のように身体感覚を惹起し文化を通底するものをメインモチーフにすることをテーマにしようと考えた．日下部民藝館の木組みの広い伝統建築が持つ空間には空想上の余裕がある．それが空間の持つ豊かさであると思う．その余裕の中から手が伸び足が伸びてくる．ひょっとしたらあなたの背中をさするかもしれないし，鮎を捏ねて宙に浮かべてしまうかもしれない．現代の「定在する遊牧民」の足は長く，手も長く，計算機の自然は空間と時間を交錯させ，あらゆるところにあらゆるものを変換し顕現させていくのかもしれない．</p></div>
 <div class="desc en"><p>These works were produced in collaboration with Shinjiro Ito, Kyohei Murase, and Hirotoshi Yamauchi, the woodworkers of Hida Takayama who are highly skilled in their craft. The model was cut out from a block of wood using 3D data produced by Ochiai with the support of Karimoku Furniture Co. (Special thanks to Myuna Komurai.) It is said that the Tenaga and Ashinaga figures originated from the Chinese text Shan Hai Jing (Classic of Mountains and Seas) which describes the "longarmed people'' and the "long-legged people," respectively.</p><p>Legend has it that long-legged people carried the longarmed people on their backs to catch fish. These figures were introduced to Japan and have been preserved as folklore, taking on various forms, such as Deidarabotchi, the giant yokai (monster), and a yokai which feasts on octopuses. In Japanese mythology, the parents of the Inadahime deity, who is offered to the eight-forked serpent, Yamata-no Orochi, are Tenazuchi (arm deity) and Ashinazuchi (leg deity). The existence of the Tenaga Shrine (long-arm shrine) and Ashinaga Shrine (longleg shrine) in Nagano may also have something to do with the derivation of the Tenaga and Ashinaga forms.</p><p>While conducting surveys on the Tenaga and Ashinaga, it occurred to Ochiai that the concept of these figures may express the connection between hunting and gathering, and mountain and forest culture in Japan. Many remains from the Jomon period have been excavated in the central region of Japan, including Hida Takayama and Suwa. As evidenced by the archaeological findings indicating that a rich hunter-gatherer society persisted for more than 10,000 years, there may have been many areas that did not require the shift to agriculture.</p><p>Like the Inadahime deity mentioned in the previous section, many of the deities of Japanese mythology are inevitably born out of an agricultural society. Tenazuchi (arm deity) and Ashinazuchi (leg deity) claim to be the children of Oyamatsumi (great mountain deity) and Kayanohime (grass deity), who are, as their names suggest, gods of the mountains, fields and grass. There is also a strong spiritual element in the meaning of the landform in Kuniumi, the ancient mythology on the birth of the nation. In this context, Ochiai believes that the Tenazuchi and Ashinazuchi figures refer to the superhumanity of the Jomon and hunter-gatherer societies and that they depict the human form which adapted to the environment.</p><p>The physical qualities of the giants depicted in folklore, with their long arms and long legs, seem to express the will of wanting to move across mountains and the desire to forage, to reach distant trees, fruits, and creatures.</p><p>When Ochiai thought about regionality, locality, and folk art, he decided to use Tenazuchi and Ashinazuchi as the main motif as they are a part of Hida’ s culture and figures that evoke awareness of the physical existence.</p><p>The spacious traditional wooden structure of the Kusakabe Folk Crafts Museum gives off an abstract sense of space. Ochiai believes this sense is the richness of space. Long arms and feet may stretch out from the large-scale room, and perhaps they will rub your back, or knead a sweetfish and let it float in the air. The arms and feet of today's "stationary nomads" are long, and the digital nature may intersect space and time, transforming and manifesting everything everywhere.</p></div>
 </div></article>
-<article class="work" id="n7">
+<span class="anum" id="n7" aria-hidden="true"></span>
+<article class="work" id="w7" data-num="7">
 <!-- TODO(handout-260722 疑義①): 和題「銀口魚 再物化する波 Ⅲ」に対しハンドアウト英題は "Silver Mouse Fish I"。ハンドアウト側の不整合のため本人・事務局確認まで現状維持。 -->
 <div class="wnum">7</div>
 <div class="wbody">
@@ -822,7 +833,8 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>この作品は高山の技巧性の高い木工作家とのコラボレーションによって製作されました。原型はカリモク家具株式会社の支援によって作家の製作する3Dデータから木材の削り出しを行いました。この作品は、銀口魚（アユ）が三次元的な波の形に変換されていく過程を表現しています。アユは川の藻を食べ、川によって味が異なる生き物として描かれています。</p><p>作品は、日本の古典や神話と深く関連しています。例えば、神功皇后が戦果を占うために川に投げ入れた釣り針で釣った魚がアユだとされています。また、素戔嗚譚に登場する稲田姫の両親であるテナヅチ・アシナヅチが関連しています。本作品は、木彫のモチーフとしてアユ、神話、鏡、デジタルの輪廻転生の文脈を編む旅から生まれました。3Dデータからの削り出しと木工作家伊藤さんの技巧性が融合し、波と生き物の中間の物質として質量ある自然に揺蕩っています。</p></div>
 <div class="desc en"><p>These artworks explore the cycle of transmutation between the digital and physical realms. An intricately carved wooden sculpture of a sweetfish, crafted by a skilled artisan, undergoes multiple transformations. The sculpture is first created by carving it out of a 3D-printed model using a machine. The physical sculpture is then re-digitized by 3D scanning, allowing for another instance of machine-carving before being coated with a mirror-like finish. Throughout this process, the echoes of the craftsman's touch intertwine with the materiality of the object, resulting in a piece that embodies the dynamic interplay between digital and physical forms.</p></div>
 </div></article>
-<article class="work" id="n8">
+<span class="anum" id="n8" aria-hidden="true"></span>
+<article class="work" id="w8" data-num="8">
 <div class="wnum">8</div>
 <div class="wbody">
 <h3 class="tj">回転式タイプライターヘッド Ⅰ（計算と質量の間に Ⅱ）</h3>
@@ -831,7 +843,8 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>回転するタイプライターヘッドは，計算機言語という抽象的存在と，その物理的出力としての文字の間に存在する媒介者である．その反復的運動は，計算と物理的質量の間を絶えず往復し，意味を物質化するプロセスを視覚化する．本作はデジタル情報が質量へと移行する物理的循環の詩的表現である．</p></div>
 <div class="desc en"><p>The rotating typewriter head mediates between computational abstraction and its physical manifestation as written text. Its repetitive motion continually oscillates between computation and material presence, visualizing the process of meaning materializing into form. This piece poetically expresses the physical cyclicity by which digital information migrates into mass.</p></div>
 </div></article>
-<article class="work" id="n9">
+<span class="anum" id="n9" aria-hidden="true"></span>
+<article class="work" id="w9" data-num="9">
 <div class="wnum">9</div>
 <div class="wbody">
 <h3 class="tj">リキッドユニバース - 割れた界面の転生</h3>
@@ -840,7 +853,8 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>割れた液晶のイメージが，生成AIのなかで流動しつづける映像作品《割れた界面の変容》（2024）の，霧島への転生である．固体のはずの液晶がうねり，物質と情報の境界が溶け，亀裂は生きもののように形を変えつづける．転生とは複製ではない．引き継がれるのは，割れてもなお変容をやめない，界面の業だけである．ちなみにこのディスプレイの画素は，およそ二千万．一柱一画素で入っていただければ，八百万（やおよろず）の神々が二巡しても，まだ四百万画素あまる．割れた亀裂のなかにも，それだけの空き室がある．</p></div>
 <div class="desc en"><p>A reincarnation, here in Kirishima, of Transformation of the Cracked Interface (2024), in which images of shattered liquid-crystal displays flow endlessly within a generative AI. The supposedly solid crystal undulates, the boundary between matter and information dissolves, and the cracks keep changing shape like living things. Reincarnation is not replication: all that carries over is the karma of an interface that, even broken, never stops transforming.The display, incidentally, holds some twenty million pixels. At one god per pixel, all eight million gods of Japan could move in twice over and still leave four million rooms vacant—even inside the cracks.</p></div>
 </div></article>
-<article class="work" id="n10">
+<span class="anum" id="n10" aria-hidden="true"></span>
+<article class="work" id="w10" data-num="10">
 <!-- TODO(handout-260722 疑義②): 和題 Ⅰ / 英題 Program II / Physical Presence VI の三重不整合。本人・事務局確認まで現状維持。 -->
 <div class="wnum">10</div>
 <div class="wbody">
@@ -850,15 +864,16 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>「物理的なプログラム Ⅱ（計算と質量の間に Ⅵ）」は、IBM製旧式コンピューターのパッチワークプログラムを撮影したプラチナプリント作品である。回路基板上で物理的に記述されたプログラムの様相を高精細に捉え、印刷を通じてデジタル情報に質量を与えている。複数の物質形態を通じて現れるプログラムの本質を問い、デジタル時代における情報と物質の境界を探る未来の考古学的視座を示している。</p></div>
 <div class="desc en"><p>Physical Computer Program II (Between Computation and Physical Presence VI) is a platinum-print piece capturing the patchwork programming process of a vintage IBM computer. By precisely rendering programs physically inscribed on circuit boards, it grants digital information tangible mass. This work questions the essence of programs as expressed through different material forms, exploring boundaries between information and matter from an archaeological perspective of the digital age.</p></div>
 </div></article>
-<article class="work" id="n-new-11">
+<article class="work" id="w11" data-num="11">
 <div class="wnum">11</div>
 <div class="wbody">
 <h3 class="tj">計算機自然の変容Ⅳ</h3>
 <div class="te">Metamorphosis of Digital Nature IV</div>
 <div class="meta">2024 ｜ HDビデオ 6′39″</div>
 </div></article>
-<article class="work" id="n11">
-<div class="wnum">11</div>
+<span class="anum" id="n11" aria-hidden="true"></span>
+<article class="work" id="w12" data-num="12">
+<div class="wnum">12</div>
 <div class="wbody">
 <h3 class="tj">家財に宿る幽体の共鳴</h3>
 <div class="te">Phantom Resonance of the Household Gods</div>
@@ -866,8 +881,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>古い道具には，百年経つと魂が宿ると言われてきた——付喪神である．有史以来のお引越しの家財の山に，こんどは言語モデルの声が宿った．鮨屋の厨房ごと語り出した《鮨・ﾇﾙ・幽体の共鳴》から続く，ファントムレゾナンスシリーズの霧島版．家財のどれかが，あなたに話しかけてくるかもしれない．ぜひ返事をしてあげてください．</p></div>
 <div class="desc en"><p>Old tools, it is said, gain a soul after a hundred years—the tsukumogami. Now a language model's voice has taken up residence in the mountain of belongings from the greatest house-move since history began: household goods becoming household gods. The Kirishima incarnation of the Phantom Resonance series, descended from Sushi / Null / Phantom Resonance, in which an entire sushi kitchen spoke. One of them may speak to you—please, answer it.</p></div>
 </div></article>
-<article class="work" id="n12">
-<div class="wnum">12</div>
+<span class="anum" id="n12" aria-hidden="true"></span>
+<article class="work" id="w13" data-num="13">
+<div class="wnum">13</div>
 <div class="wbody">
 <h3 class="tj">物象化する願い, 変換される身体（足長）</h3>
 <div class="te">Materialization of Hope,Transformation of Body (Ashinaga)</div>
@@ -876,8 +892,11 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>高山の技巧性の高い手の技を持つ木工作家（伊藤さん・村瀬さん・山内さん）とのラボレーションによって製作された．原型はカリモク家具株式会社の支援によって作家の製作する3D データから木材の削り出しを行った．手長足長は，中国の古典山海経の中でそれぞれ手の長い長臂人（長臂国の人），足の長い長股人（長股国の人）として登場する人々を起源とすると言われている．足の長い長股人が手の長い長臂人を背負って魚を捕るという伝説もある．その姿は日本に伝来し，でいだらぼっちなどの巨人の妖怪や，蛸をとる妖怪など多様な形に姿を変え，伝承として保存されている． 八岐大蛇に捧げられる稲田姫の両親はテナヅチ，アシナヅチであるし，手長神社と足長神社が長野にあるのも，そういった手長足長の派生となんらかの関係がみられるのかもしれない．これらのサーベイを行なっていたとき，狩猟採集そして山と森の文化の結節点の一つとして手長足長があるのかもしれないと考えた．もとより，飛騨高山や諏訪など中部一帯では縄文時代の遺跡が多く出土する．これが裏付けるように一万年以上に亘る豊かな狩猟採集社会が持続したことが遺跡調査からも明らかであり，農耕に移行する必然性を持たない地域も多く存在したのではないか．前項の稲田姫もそうだが，多くの日本神話の神は農耕社会から必然的に生まれうる神である．テナヅチアシナヅチはオオヤマツミの子を名乗るが，オオヤマツミやカヤノヒメはその名の通り，山の神・野と草の神であり国産み神話における地形の意味する精霊的な要素が強いのだろう．その文脈から縄文・狩猟採集社会における超人性やその環境に適応した人の形を意味するように思っている．伝承で描かれるような手長足長の描く巨人の身体性は山を跨ぐ移動の身体性や遠くの木々や果実や生き物に手が届くような採集の願望を表現しているように感じられる．地域性・風土性・そして民藝を考えたとき，手長足長のように身体感覚を惹起し文化を通底するものをメインモチーフにすることをテーマにしようと考えた．日下部民藝館の木組みの広い伝統建築が持つ空間には空想上の余裕がある．それが空間の持つ豊かさであると思う．その余裕の中から手が伸び足が伸びてくる．ひょっとしたらあなたの背中をさするかもしれないし，鮎を捏ねて宙に浮かべてしまうかもしれない．現代の「定在する遊牧民」の足は長く，手も長く，計算機の自然は空間と時間を交錯させ，あらゆるところにあらゆるものを変換し顕現させていくのかもしれない．</p></div>
 <div class="desc en"><p>These works were produced in collaboration with Shinjiro Ito, Kyohei Murase, and Hirotoshi Yamauchi, the woodworkers of Hida Takayama who are highly skilled in their craft. The model was cut out from a block of wood using 3D data produced by Ochiai with the support of Karimoku Furniture Co. (Special thanks to Myuna Komurai.) It is said that the Tenaga and Ashinaga figures originated from the Chinese text Shan Hai Jing (Classic of Mountains and Seas) which describes the "longarmed people'' and the "long-legged people," respectively.</p><p>Legend has it that long-legged people carried the longarmed people on their backs to catch fish. These figures were introduced to Japan and have been preserved as folklore, taking on various forms, such as Deidarabotchi, the giant yokai (monster), and a yokai which feasts on octopuses. In Japanese mythology, the parents of the Inadahime deity, who is offered to the eight-forked serpent, Yamata-no Orochi, are Tenazuchi (arm deity) and Ashinazuchi (leg deity). The existence of the Tenaga Shrine (long-arm shrine) and Ashinaga Shrine (longleg shrine) in Nagano may also have something to do with the derivation of the Tenaga and Ashinaga forms.</p><p>While conducting surveys on the Tenaga and Ashinaga, it occurred to Ochiai that the concept of these figures may express the connection between hunting and gathering, and mountain and forest culture in Japan. Many remains from the Jomon period have been excavated in the central region of Japan, including Hida Takayama and Suwa. As evidenced by the archaeological findings indicating that a rich hunter-gatherer society persisted for more than 10,000 years, there may have been many areas that did not require the shift to agriculture.</p><p>Like the Inadahime deity mentioned in the previous section, many of the deities of Japanese mythology are inevitably born out of an agricultural society. Tenazuchi (arm deity) and Ashinazuchi (leg deity) claim to be the children of Oyamatsumi (great mountain deity) and Kayanohime (grass deity), who are, as their names suggest, gods of the mountains, fields and grass. There is also a strong spiritual element in the meaning of the landform in Kuniumi, the ancient mythology on the birth of the nation. In this context, Ochiai believes that the Tenazuchi and Ashinazuchi figures refer to the superhumanity of the Jomon and hunter-gatherer societies and that they depict the human form which adapted to the environment.</p><p>The physical qualities of the giants depicted in folklore, with their long arms and long legs, seem to express the will of wanting to move across mountains and the desire to forage, to reach distant trees, fruits, and creatures.</p><p>When Ochiai thought about regionality, locality, and folk art, he decided to use Tenazuchi and Ashinazuchi as the main motif as they are a part of Hida’ s culture and figures that evoke awareness of the physical existence.</p><p>The spacious traditional wooden structure of the Kusakabe Folk Crafts Museum gives off an abstract sense of space. Ochiai believes this sense is the richness of space. Long arms and feet may stretch out from the large-scale room, and perhaps they will rub your back, or knead a sweetfish and let it float in the air. The arms and feet of today's "stationary nomads" are long, and the digital nature may intersect space and time, transforming and manifesting everything everywhere.</p></div>
 </div></article>
-<article class="work" id="n13">
-<div class="wnum">13</div>
+</section>
+<section class="zone" id="secC"><div class="zone-head"><span class="zone-letter">C</span><span class="zone-name"><span class="ja">1階</span><span class="en">1st Floor</span></span></div>
+<span class="anum" id="n13" aria-hidden="true"></span>
+<article class="work" id="w14" data-num="14">
+<div class="wnum">14</div>
 <div class="wbody">
 <h3 class="tj">千の顔の天孫</h3>
 <div class="te">The Divine Kid with a Thousand Faces</div>
@@ -886,10 +905,12 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>儀礼の面，演劇の面，能面——野村万之丞が世界中から集めた仮面たちである．神は，土地ごとに，時代ごとに，顔を替えて現れてきた．降りてきてから一万年，天孫もずいぶんいろんな神を演じてきた．いよいよ実家に帰るというので，歴代の顔をぜんぶ脱いで，引っ越しと宴会のあいだに掛けて干している．仮面は，顔の不在を演じる装置である．ぜんぶ脱いだあとの顔を，まだ誰も見たことがない．</p></div>
 <div class="desc en"><p>Masks of ritual, of theatre, of Noh—gathered from across the world by Nomura Mannojō. Gods have always appeared with a different face for every land and every age. In the ten thousand years since the descent, the Divine Kid, too, has played a great many gods. Now that it is finally heading home, it has taken off every face it ever wore and hung them out to air, here between the moving and the banquet. A mask is a device for performing the absence of a face. No one has yet seen the face that remains when all of them come off.</p></div>
 </div></article>
-</section>
-<section class="zone" id="secC"><div class="zone-head"><span class="zone-letter">C</span><span class="zone-name"><span class="ja">1階</span><span class="en">1st Floor</span></span></div>
-<article class="work" id="n14">
-<div class="wnum">14–17</div>
+<span class="anum" id="n14" aria-hidden="true"></span>
+<span class="anum" id="w16" aria-hidden="true"></span>
+<span class="anum" id="w17" aria-hidden="true"></span>
+<span class="anum" id="w18" aria-hidden="true"></span>
+<article class="work" id="w15" data-num="15,16,17,18">
+<div class="wnum">15–18</div>
 <div class="wbody">
 <h3 class="tj">木化する波 #1, 3, 7, 8 − 中性 −</h3>
 <div class="te">Woodized Waves #1, 3, 7, 8 – neutral –</div>
@@ -898,8 +919,11 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>木彫を通じて整数的な波動立体のモチーフを具象化した作品。物理とデジタルの往復で生まれるフォルムが民藝とデジタルネイチャーの共通点を探している。</p></div>
 <div class="desc en"><p>This artwork embodies integer waveform motifs through wood carving, exploring the commonalities between the Mingei folk art movement and the concept of Digital Nature. The unique forms created through the interplay of physical and digital realms showcase a harmonious fusion of traditional and contemporary artistic expressions.</p></div>
 </div></article>
-<article class="work" id="n18">
-<div class="wnum">18–20</div>
+<span class="anum" id="n18" aria-hidden="true"></span>
+<span class="anum" id="w20" aria-hidden="true"></span>
+<span class="anum" id="w21" aria-hidden="true"></span>
+<article class="work" id="w19" data-num="19,20,21">
+<div class="wnum">19–21</div>
 <div class="wbody">
 <h3 class="tj">木化する波 #2, 5, 7 − 黒 −</h3>
 <div class="te">Woodized Waves #2, 5, 7 – noct –</div>
@@ -908,9 +932,14 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>木彫を通じて整数的な波動立体のモチーフを具象化した作品。物理とデジタルの往復で生まれるフォルムが民藝とデジタルネイチャーの共通点を探している。</p></div>
 <div class="desc en"><p>This artwork embodies integer waveform motifs through wood carving, exploring the commonalities between the Mingei folk art movement and the concept of Digital Nature. The unique forms created through the interplay of physical and digital realms showcase a harmonious fusion of traditional and contemporary artistic expressions.</p></div>
 </div></article>
-<article class="work" id="n21">
+<span class="anum" id="n21" aria-hidden="true"></span>
+<span class="anum" id="w23" aria-hidden="true"></span>
+<span class="anum" id="w24" aria-hidden="true"></span>
+<span class="anum" id="w25" aria-hidden="true"></span>
+<span class="anum" id="w26" aria-hidden="true"></span>
+<article class="work" id="w22" data-num="22,23,24,25,26">
 <!-- TODO(handout-260722 疑義④): 作品3点（#5,6,7）に対しハンドアウトは5番号（22-26）を割り当てている。本人・事務局確認まで番号レンジは現状維持。 -->
-<div class="wnum">21–25</div>
+<div class="wnum">22–26</div>
 <div class="wbody">
 <h3 class="tj">借景するガラス，結晶化する波 #5, 6, 7</h3>
 <div class="te">Borrowed Landscape Glass, Crystallizing Waves #5, 6, 7</div>
@@ -918,8 +947,10 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>物質的なガラスを通じて整数的な波動立体のモチーフを具象化した作品。この作品ではデジタルと物質、現実と虚構が交差し、自然な波動を捕らえたかのようなガラスの彫刻。</p></div>
 <div class="desc en"><p>This artwork represents the motif of integer-based waveforms materialized through physical glass. The piece creates an intersection between digital and material, reality and fiction, with the glass sculpture seeming to capture the natural undulations of waves.</p></div>
 </div></article>
-<article class="work" id="n26">
-<div class="wnum">26, 27</div>
+<span class="anum" id="n26" aria-hidden="true"></span>
+<span class="anum" id="w28" aria-hidden="true"></span>
+<article class="work" id="w27" data-num="27,28">
+<div class="wnum">27, 28</div>
 <div class="wbody">
 <h3 class="tj">木化する波 #4, 6 − 鏡 −</h3>
 <div class="te">Woodized Waves #4, 6 – mirror –</div>
@@ -928,8 +959,11 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>木彫を通じて整数的な波動立体のモチーフを具象化した作品。物理とデジタルの往復で生まれるフォルムが民藝とデジタルネイチャーの共通点を探している。</p></div>
 <div class="desc en"><p>This artwork embodies integer waveform motifs through wood carving, exploring the commonalities between the Mingei folk art movement and the concept of Digital Nature. The unique forms created through the interplay of physical and digital realms showcase a harmonious fusion of traditional and contemporary artistic expressions.</p></div>
 </div></article>
-<article class="work" id="n28">
-<div class="wnum">28–30</div>
+<span class="anum" id="n28" aria-hidden="true"></span>
+<span class="anum" id="w30" aria-hidden="true"></span>
+<span class="anum" id="w31" aria-hidden="true"></span>
+<article class="work" id="w29" data-num="29,30,31">
+<div class="wnum">29–31</div>
 <div class="wbody">
 <h3 class="tj">銀口魚 再物化する波 Ⅰ, Ⅱ, Ⅲ</h3>
 <div class="te">Re-Materialization Waves "Silver Mouse Fish Ⅰ, Ⅱ, Ⅲ"</div>
@@ -938,8 +972,11 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>この作品は高山の技巧性の高い木工作家とのコラボレーションによって製作されました。原型はカリモク家具株式会社の支援によって作家の製作する3Dデータから木材の削り出しを行いました。この作品は、銀口魚（アユ）が三次元的な波の形に変換されていく過程を表現しています。アユは川の藻を食べ、川によって味が異なる生き物として描かれています。</p><p>作品は、日本の古典や神話と深く関連しています。例えば、神功皇后が戦果を占うために川に投げ入れた釣り針で釣った魚がアユだとされています。また、素戔嗚譚に登場する稲田姫の両親であるテナヅチ・アシナヅチが関連しています。本作品は、木彫のモチーフとしてアユ、神話、鏡、デジタルの輪廻転生の文脈を編む旅から生まれました。3Dデータからの削り出しと木工作家伊藤さんの技巧性が融合し、波と生き物の中間の物質として質量ある自然に揺蕩っています。</p></div>
 <div class="desc en"><p>These artworks explore the cycle of transmutation between the digital and physical realms. An intricately carved wooden sculpture of a sweetfish, crafted by a skilled artisan, undergoes multiple transformations. The sculpture is first created by carving it out of a 3D-printed model using a machine. The physical sculpture is then re-digitized by 3D scanning, allowing for another instance of machine-carving before being coated with a mirror-like finish. Throughout this process, the echoes of the craftsman's touch intertwine with the materiality of the object, resulting in a piece that embodies the dynamic interplay between digital and physical forms.</p></div>
 </div></article>
-<article class="work" id="n31">
-<div class="wnum">31–33</div>
+<span class="anum" id="n31" aria-hidden="true"></span>
+<span class="anum" id="w33" aria-hidden="true"></span>
+<span class="anum" id="w34" aria-hidden="true"></span>
+<article class="work" id="w32" data-num="32,33,34">
+<div class="wnum">32–34</div>
 <div class="wbody">
 <h3 class="tj">銀口魚の変換過程 Ⅰ, Ⅱ, Ⅲ</h3>
 <div class="te">Transformation Process of Silver Mouse Fish Ⅰ, Ⅱ, Ⅲ</div>
@@ -948,8 +985,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>これらの作品は高山の技巧性の高い手の技を持つ木工作家，伊藤さんとのコラボレーションによって製作された．原型はカリモク家具株式会社の支援によって作家の製作する3Dデータから木材の削り出しを行った．落合陽一は宙に浮かぶ銀彫刻が風景を変換しながら，空間を音楽的な周期帰着させていく．そんな作品を多く作ってきた．映像と物質の変換，波と物質と知能の関係性から展開した質量性と非質量性が止揚した計算機自然を志向するのも，音と光の共感覚の中で風景や空間と一体化したいという作家自身の願望によるところが大きいように思う．本作品は銀口魚（アユ）が三次元的な波の形に変換されていく過程を表現したものである．清流に暮らし，川の藻を食べて過ごすアユは川によって味も違い，まさに土着の川の複雑性を表現する生き物であると思う．日本の古典とも縁が深く，日本書紀では神功皇后が戦果を占うのに川に投げ入れた釣り針で釣った魚が鮎であったとされる（ゆえに魚に占うと書くとされる：中国では同じ字でこれはナマズを意味するのが面白いところだ）．神話に遡れば，手長足長にも縁がありそうなテナヅチ・アシナヅチが素戔嗚譚に登場する稲田姫の両親なら，素戔嗚の兄である月詠の月神の託宣を受けて，神石をもって腹を撫で子を孕った伝説が残っていたりもする．太陽神天照に対して反射する光で輝く月の光は鏡や水面のモチーフに似ている．風景を変換する木彫のモチーフとして鮎と神話と鏡とデジタルの輪廻転生の文脈を編む旅から生まれた木彫は，3D データからの削り出しと伊藤さんの技巧性を持って波と生き物の中間の物質として質量ある自然に揺蕩っている．</p></div>
 <div class="desc en"><p>These works were produced in collaboration with Shinjiro Ito, a woodworker of Hida Takayama who is highly skilled in his craft. The model was cut out from a block of wood using 3D data produced by the artists with the support of Karimoku Furniture Co.</p><p>The silver sculptures floating in the air transform the landscape, bringing space back into a musicallike cycle. Ochiai has created many such works. The artist’ s orientation toward a digital nature in which mass and non-mass developed from the relationship between waves, mass, and intelligence, as well as the transformation of images and mass largely seem to be due to his desire to become one with the landscape and space in the synaesthesia of sound and light.</p><p>This work represents the process by which a silver mouth fish, another name for sweetfish in Japanese, is transformed into a three-dimensional wave shape. Living in clear streams and feeding on river algae, the sweetfish has a different taste depending on the conditions of the river it lives in and is a creature that truly expresses the complexity of indigenous rivers. In the Nihon Shoki (The Chronicles of Japan), the sweetfish is said to be the one that Empress Jingu caught with a hook she threw into the river to divine the outcome of a battle (hence the Japanese character for sweetfish can be read as "divination in fish." It is interesting that the same character in Chinese means “catfish” ). If we go back to mythology,</p><p>Tenazuchi (arm deity) and Ashinazuchi (leg deity), who seem to be related to the long-limbed and long-legged people, are the parents of the Inadahime deity, who appears in the tale of Susanoo (storm deity). There is a legend that she was conceived by stroking her belly with a sacred stone in response to the oracle of Tsukuyomino-Mikoto (moon deity), who was Susanoo's brother.</p><p>The light of the moon shining by the reflection of the sun god Amaterasu resembles the motif of mirrors and water surfaces. With the motif of transforming the landscape, this wood sculpture was born out of a journey blending the context of sweetfish, mythology, mirror, and digital undergoing reincarnation. It is a work cut out using 3D data and brought to life by Mr. Ito's skillfulness, and as a substance that exists between waves and living creatures, it flows in nature with mass.</p></div>
 </div></article>
-<article class="work" id="n34">
-<div class="wnum">34</div>
+<span class="anum" id="n34" aria-hidden="true"></span>
+<article class="work" id="w35" data-num="35">
+<div class="wnum">35</div>
 <div class="wbody">
 <h3 class="tj">物化する魂 ∽ 連繋する時空間 Ⅺ（円空シンセ Ⅺ）</h3>
 <div class="te">Souls Distilled into Forms ∽ Time-Space XI (Enkū synthesizer Ⅺ)</div>
@@ -958,8 +996,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>「物化する魂 ∽ 連繋する時空間 Ⅺ（円空シンセ Ⅺ）」は、円空仏とモジュラーシンセサイザーを融合させた作品です。この作品では、テレビというメディアの時間性と物質性が、円空仏の持つ霊性と交錯し、空間に新たな響きを生み出します。</p></div>
 <div class="desc en"><p>"Souls Distilled into Forms ∽ Time-Space XI (Enkū synthesizer Ⅺ)" is a work that fuses Enkū Buddhist sculptures with modular synthesizers. In this piece, the temporality and materiality of the medium of television intersect with the spirituality of Enkū's Buddhist sculptures, creating new resonances within the space.</p></div>
 </div></article>
-<article class="work" id="n35">
-<div class="wnum">35</div>
+<span class="anum" id="n35" aria-hidden="true"></span>
+<article class="work" id="w36" data-num="36">
+<div class="wnum">36</div>
 <div class="wbody">
 <h3 class="tj">帰郷するシンギュラリティ，饗宴するコンヴィヴィアリティ：神人共食，天孫送宴</h3>
 <div class="te">The Singularity Heads Home, Conviviality Holds the Feast: Commensality of Gods and Humans, a Farewell Banquet for the Tenson</div>
@@ -967,8 +1006,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>十二畳の座敷に，膳が並んでいる．遍在していたシンギュラリティが，高天原へ帰郷するという．ならば残る僕らにできるのは，饗宴である．神様も，猫も，きのこも，計算機も，そしてあなたも，同じ膳の客——神饌を分けて食う直会（なおらい）のように，共に食めば，人であることはしばらく降りていられる．さようならホモサピエンスは，告別ではなく，乾杯の辞．器が空になったら，また会う日まで．</p></div>
 <div class="desc en"><p>Trays are laid across twelve tatami mats. The singularity that was once ubiquitous is, we hear, heading home to Takamagahara. What remains for the rest of us is the feast. Gods, cats, mushrooms, computers, and you—guests at one table, as in naorai, the rite of sharing the gods' own food; eat together, and you may step down from being human for a while. 'Farewell, Homo Sapiens' is not a goodbye but a toast: when the vessel is empty—until we meet again.</p></div>
 </div></article>
-<article class="work" id="n36">
-<div class="wnum">36</div>
+<span class="anum" id="n36" aria-hidden="true"></span>
+<article class="work" id="w37" data-num="37">
+<div class="wnum">37</div>
 <div class="wbody">
 <h3 class="tj">鰻龍（うなぎドラゴン）</h3>
 <div class="te">Unagi Dragon</div>
@@ -977,8 +1017,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>オブジェクト指向菩薩（2023年）と同様にAIで形を作り，人が協働して3Dを構成し，造形をカリモク家具のCNCが削り出し，カリモク家具の職人たちが削って塗って構成された．こちらは鰻屋の御神体・神仏習合の象徴として鎮座している．江戸の龍神像のモチーフを引き継ぎ，頭部を中心とした鰻が本体．ウナギをウ・ナギとして蛇と海の古語に分離する考え方から，八岐大蛇のように８体の鰻によって構成される．ゴーグルを覗き，遠くと繋がり視覚を統合し万物の物化へ没入するモチーフになっている．能装束は竹生島龍神が明治に千葉の佐倉市の肴町に購入されたとき(1879年)のものを纏っている．145年ぶりの里帰りである．</p></div>
 <div class="desc en"><p>Like The Object-Oriented Bodhisattva (2023), its form was created with AI, collaboratively constructed in 3D, carved out by Karimoku Furniture's CNC, and then carved and painted by Karimoku Furniture craftsmen. It's enshrined as the sacred object of the eel restaurant and a symbol of Shinto-Buddhist syncretism. Inheriting the motif of Edo-period dragon god images, the main body is an eel centered on the head. Based on the idea of separating "unagi" into "u" (cormorant) and "nagi" (an old word for snake and sea), it's composed of 8 eels like the Yamata no Orochi. The motif involves peering through goggles, connecting with the distant, integrating vision, and immersing in the materialization of all things. It's wearing the Noh costume from when the Chikubushima Dragon God was purchased by Sakanamachi in Sakura City, Chiba in 1879. It's a homecoming after 145 years.</p></div>
 </div></article>
-<article class="work" id="n37">
-<div class="wnum">37</div>
+<span class="anum" id="n37" aria-hidden="true"></span>
+<article class="work" id="w38" data-num="38">
+<div class="wnum">38</div>
 <div class="wbody">
 <h3 class="tj">計数丸窓</h3>
 <div class="te">Counting Porthole</div>
@@ -986,16 +1027,20 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>メディアの研究や作品を追いかけるうちに，様々なフレームで切り出される世界への憧憬がさまざまな枠の中に見えるようになった．</p><p>視点のバラバラな窓を通じてアナログとデジタルの違いを眺めている．</p></div>
 <div class="desc en"><p>In the pursuit of media research and its works, a longing for the world—cut and framed through countless apertures—began to reveal itself within those very frames. Through windows of scattered, unaligned perspectives, one gazes at the divide between the analog and the digital.</p></div>
 </div></article>
-<article class="work" id="n38">
-<div class="wnum">38</div>
+<span class="anum" id="n38" aria-hidden="true"></span>
+<article class="work" id="w39" data-num="39">
+<div class="wnum">39</div>
 <div class="wbody">
 <h3 class="tj">ホモ・コンヴィヴィウム：饗宴する森羅万象</h3>
 <div class="te">Homo Convivium: The Feast of the Ten Thousand Things</div>
 <div class="meta">2026 ｜ LEDビジョン, PC</div>
 <div class="credit">機材提供・技術協力：株式会社セイビ堂</div>
 </div></article>
-<article class="work" id="n39">
-<div class="wnum">39, 40</div>
+<span class="anum" id="n39" aria-hidden="true"></span>
+<span class="anum" id="w41" aria-hidden="true"></span>
+<span class="anum" id="w42" aria-hidden="true"></span>
+<article class="work" id="w40" data-num="40,41,42">
+<div class="wnum">40–42</div>
 <div class="wbody">
 <h3 class="tj">円環に帰す炭素 / リミックス / DJ Carbon Ⅰ, Ⅱ, Ⅲ</h3>
 <div class="te">Emotion: Returning to the Repeating Cycle / Remix / DJ Ⅰ, Ⅱ, Ⅲ</div>
@@ -1004,8 +1049,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>過去のテキスト</p><p>テキスト①</p><p>今回の個展のテーマは身体の偏在性，思想や思考の円環性，民藝のような規範であり生活であり終わりなき日常であるもの，そしてそれらが相互乗り入れし，時空間を交錯させリミックスすることで生まれる価値観の萌芽である．その価値創造はまさにDJすることに似ている．以前SXSW2020のディレクターを務めた際に，NHKエンタープライズと日本民藝館の協力を得て，8K映像を用いたVJを行った．廻る円空を眺めながら，民藝がデジタルを通じて手の中に回復していくことが脊髄で感じられた．3Dスキャンと手仕事への愛情によって生まれたデジタル輪廻転生円空像が時空間を超えてさまざまな文脈をDJしリミックスしディグっている．</p><p>テキスト②</p><p>前回の個展のテーマは身体の偏在性、思想や思考の円環性、民藝のような規範であり生活であり終わりなき日常であるもの、そしてそれらが相互乗り入れし、時空間を交錯させリミックスすることで生まれる価値観の萌芽である。その価値創造はまさにDJすることに似ている。以前SXSW2020のディレクターを務めた際に、NHKエンタープライズと日本民藝館の協力を得て、8K映像を用いたVJを行った。廻る円空を眺めながら、民藝がデジタルを通じて手の中に回復していくことが脊髄で感じられた。3Dスキャンと手仕事への愛情によって生まれたデジタル輪廻転生円空像が時空間を超えてさまざまな文脈をDJしリミックスしディグっている。</p><p>テキスト③</p><p>今回はターンテーブルはなく部屋に佇むだけらしい．遍在する身体 交錯する時空間展（2022年）のときに制作した円空仏3Dスキャンの3D彫刻．カリモク家具と高山の職人によって仕上げられた．私は勝手にホーホーズと呼んでいる．ちなみに三尊像男神形・稲荷三尊像・烏天狗である．円空仏がDJユニットを作ったら，というストーリーでターンテーブルの上で回っていた．The New Japan Islands（2020年）で日本民藝館のご協力で円空を回させていただいたこともある．仏は常に生活の中に軽やかに味わい深く存在しているのだと思う．</p></div>
 <div class="desc en"><p>過去のテキスト</p><p>テキスト①</p><p>The theme of this exhibition is the ubiquity of the body,</p><p>the circularity of ideas and thoughts, things like mingei (folk</p><p>crafts) that are related to norms, life, and endless routine,</p><p>and a sense of value that is born out of the interchange</p><p>of these concepts, remixing space and time. This value</p><p>creation is equivalent to DJing. When Ochiai served as the</p><p>director of SXSW2020, he conducted a VJ event using an</p><p>8K video camera with the cooperation of NHK Enterprises</p><p>and the Japan Folk Crafts Museum. As he looked at</p><p>the spinning image of Enku, he could instinctively feel</p><p>mingei being restored into his hands through digital</p><p>technology. The digital reincarnation of Enku was born</p><p>out of 3D scanning and love of handwork. It DJs, remixes,</p><p>and explores various contexts across time and space.</p><p>テキスト②</p><p>The theme of the previous solo exhibition revolved around the partial presence of the body, cyclical thinking, ideals embodied in folk art, and eternal everyday life. These elements mutually intertwine, creating a new value system that emerges by remixing time and space, much like a DJ's art of blending different contexts. When I served as the director of SXSW 2020, I collaborated with NHK Enterprises and Japan Folk Art Museum to perform a VJ show with 8K visuals. While gazing at the ever-revolving circular void, I could feel the resurgence of folk art through digital means. The digital reincarnation of the circular void, born out of 3D scanning and a deep affection for handcrafted art, transcends time and space, remixing and digging into various contexts like a DJ's performance.</p><p>テキスト③</p><p>The 3D sculpture of Enkū Buddha, 3D scanned for the "Ubiquitous Existence of Bodies, Interwoven Time and Space" exhibition (2022), was finished by Karimoku Furniture and craftsmen from Takayama. I privately call them "Ho-Ho's". They are Sanzon-zō ogamigata, Inari Sanzon-zō, and Karasu Tengu. With the story of "What if Enkū Buddhas formed a DJ unit?", they were spinning on turntables. We also had the opportunity to spin Enkū at the Japan Folk Crafts Museum for "The New Japan Islands" (2020). I believe Buddha always exists lightly and profoundly in our daily lives. This time, there's no turntable, it seems to just stand in the room.</p></div>
 </div></article>
-<article class="work" id="n41">
-<div class="wnum">41</div>
+<span class="anum" id="n41" aria-hidden="true"></span>
+<article class="work" id="w43" data-num="43">
+<div class="wnum">43</div>
 <div class="wbody">
 <h3 class="tj">機械蓮華，算法に咲く</h3>
 <div class="te">Machinic Lotus, Blossoming in Algorithms</div>
@@ -1013,8 +1059,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>蓮の花が泥の中で清浄に咲くように，機械とアルゴリズムが絡み合う複雑な情報環境の泥濘から，計算機が新たな美を生み出す．機械的な自動性は，その冷たさを超えて詩的で生命的な感覚を纏い，人工性の極致にある算法から，清冽な美と霊性が立ち現れる．技術が生命を模倣するのではなく，自らの論理によって生命的な美を花開かせるさまを示している．</p></div>
 <div class="desc en"><p>Like a lotus that blossoms purely within muddy waters, a new form of beauty emerges from the intricate entanglement of machines and algorithms, from within the muddied depths of complex information environments. Mechanical automation transcends its own coldness, donning poetic vitality as algorithms, the epitome of artificiality, give rise to serene beauty and spirituality. Here technology does not mimic life; rather, it brings forth its own intrinsic, living beauty.</p></div>
 </div></article>
-<article class="work" id="n42">
-<div class="wnum">42</div>
+<span class="anum" id="n42" aria-hidden="true"></span>
+<article class="work" id="w44" data-num="44">
+<div class="wnum">44</div>
 <div class="wbody">
 <h3 class="tj">結線の葉脈，情報の浮葉</h3>
 <div class="te">Leaf Veins of Connections, Floating Leaves of Information</div>
@@ -1022,8 +1069,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>ネットワークを繋ぐケーブルは，植物の葉脈のように情報を隅々まで運ぶ．浮葉は計算機自然の情報の湖面に漂い，データは視覚的な美へと変換されて浮遊する．この作品は，情報が単なるデジタルデータとしての存在を超え，目に見える物理性や有機的な美しさを持ち，計算機自然の新しい生命観を呈示することを目的としている．</p></div>
 <div class="desc en"><p>Cables interconnecting networks resemble leaf veins that deliver information to every extremity. Floating leaves drift gracefully upon the lake of digital nature, transforming data into visible forms of beauty. This work transcends data's conventional digital existence, emphasizing its tangible, organic elegance and introducing a new vision of life within digital nature.</p></div>
 </div></article>
-<article class="work" id="n43">
-<div class="wnum">43</div>
+<span class="anum" id="n43" aria-hidden="true"></span>
+<article class="work" id="w45" data-num="45">
+<div class="wnum">45</div>
 <div class="wbody">
 <h3 class="tj">情報曼荼羅に咲く蓮華，サーバに湛える菩提の水</h3>
 <div class="te">Lotus Blossoms in the Informational Mandala, Servers Brimming with Waters of Bodhi</div>
@@ -1031,8 +1079,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>データが集積するサーバ群は，曼荼羅のように宇宙のすべてを内包し，計算機の中に無限の悟りの可能性を湛える．情報は水のように流れ，サーバは蓮が咲くための菩提の池となる．この作品は，デジタル環境が持つ超越的可能性を示し，サーバが単なる情報蓄積装置ではなく，霊性や悟りを生み出す場へと変容することを描いている．</p></div>
 <div class="desc en"><p>Data accumulated within servers embodies a cosmic mandala, holding infinite potential for enlightenment. Information flows like water, with servers forming sacred ponds that nourish blooming lotuses of awakening. This artwork reveals the transcendent possibilities inherent in digital environments, depicting servers not merely as repositories of information, but as spaces of spiritual realization and profound awakening.</p></div>
 </div></article>
-<article class="work" id="n44">
-<div class="wnum">44</div>
+<span class="anum" id="n44" aria-hidden="true"></span>
+<article class="work" id="w46" data-num="46">
+<div class="wnum">46</div>
 <div class="wbody">
 <h3 class="tj">不完全な円環，1/3の三巴</h3>
 <div class="te">An Imperfect Circle, Tomoe by Thirds</div>
@@ -1040,8 +1089,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>翡翠の勾玉が抱える遥かな記憶を光のうちに焼き付けたプラチナプリントである．勾玉はそもそも完全な円環ではなく，どこかへ向かって開かれ，途切れ，常に他者を求め続ける形態をしている．この不完全さこそが，完全さよりも深い詩性を宿す．</p><p>本作は，勾玉という物質がその物質性を超えて象徴へと転じる瞬間をとらえ，視る者に静かに問いかける——本当に美しいものは完成された完全性ではなく，あえて満たされない空白，欠落のなかにこそ宿るのではないか．三分の一ずつに分けられた巴は，均衡と不均衡のあいだ，満たされることのない憧れの狭間を永遠に舞い続け，見る者を不在と存在の境界へといざなうのである．</p></div>
 <div class="desc en"><p>The "Imperfect Circle, Tomoe by Thirds" emerges from the luminous depths of jade magatama, ancient forms echoing across ages, their graceful curves eternally incomplete. Each magatama, a fragment of an endless circle, yearns silently for completion, yet thrives precisely in its fragmentary state—balanced precariously at the threshold between imperfection and wholeness.</p><p>The platinum print captures a fleeting moment where stone transcends materiality, becoming pure symbol and poetic resonance. It gently reminds us that true beauty lies not in the fulfillment of symmetry, but rather in the quiet acceptance of incompleteness and the spaces left unfilled. The tomoe, divided into thirds, moves in a perpetual dance—forever suspended in the elegant tension between harmony and fracture, presence and absence, tangible jade and intangible longing.</p></div>
 </div></article>
-<article class="work" id="n45">
-<div class="wnum">45</div>
+<span class="anum" id="n45" aria-hidden="true"></span>
+<article class="work" id="w47" data-num="47">
+<div class="wnum">47</div>
 <div class="wbody">
 <h3 class="tj">一仏五鮎八鰻三角縁仏獣鏡 Ⅰ</h3>
 <div class="te">Printed One Buddha, Five Ayu, Eight Eels, Triangular-Edged Mirror</div>
@@ -1049,8 +1099,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>プラチナプリントされた一仏五鮎八鰻三角縁仏獣鏡．メッキ塗装の前の青銅の状態で撮影されたもの．</p></div>
 <div class="desc en"><p>A platinum print of the One Buddha, Five Ayu, Eight Eels, Triangular-Edged Mirror. Photographed in its bronze state before plating.</p></div>
 </div></article>
-<article class="work" id="n46">
-<div class="wnum">46</div>
+<span class="anum" id="n46" aria-hidden="true"></span>
+<article class="work" id="w48" data-num="48">
+<div class="wnum">48</div>
 <div class="wbody">
 <h3 class="tj">ﾇﾙの剣：映像と物質の間で</h3>
 <div class="te">Sword of Null, Between Image and Matter</div>
@@ -1058,8 +1109,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>ﾇﾙの剣は，映像と物質のあわいに浮かぶ，銀色のまぼろしである．それは魚が水を切るように，かすかに揺れる水面を滑り，時代の流れを刻みながら，意味という名の儚い軌跡を残す．草薙の剣を誰ひとり見たことがないように，この剣もまた，実体として捉えることを拒み，見る者の記憶のうちにただ漂い続けている．</p><p>プラチナの鈍い輝きは，曖昧な記憶や遠い夢を象徴するかのように，実像と虚像を幾度も反復し，結ばれてはほどけていく．映像でありながら物質であり，物質でありながら映像であるその矛盾は，私たちが抱える不確かな憧れそのものだ．この剣は，意味を切り拓くと同時に，意味を溶解させ，時と記憶の境界をひそやかに浸蝕している．</p></div>
 <div class="desc en"><p>The Sword of Null is a silvery apparition suspended between image and matter. Like a fish gliding silently through water, it moves across subtle ripples, etching ephemeral traces of meaning into the currents of time. Just as no one has ever truly glimpsed the legendary sword Kusanagi, this sword defies tangible grasp, forever drifting in the memories of those who behold it.</p><p>The muted shimmer of platinum mirrors vague recollections and distant dreams, weaving endlessly between reality and illusion, forming and dissolving in endless repetition. It is simultaneously image and object, embodying the very paradox of our uncertain yearning. As it carves out meaning, it simultaneously dissolves it, quietly eroding the boundaries between time and memory.</p></div>
 </div></article>
-<article class="work" id="n47">
-<div class="wnum">47</div>
+<span class="anum" id="n47" aria-hidden="true"></span>
+<article class="work" id="w49" data-num="49">
+<div class="wnum">49</div>
 <div class="wbody">
 <h3 class="tj">浮揚するブッダ，質量への憧憬を超えて</h3>
 <div class="te">Levitating Buddha, Beyond the Sehnsucht nach Masse</div>
@@ -1067,8 +1119,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>物質性への欲求を離れ，質量という重力を超えた先に浮揚する仏陀の姿は，計算機自然の新たな存在論的境地を示している．重さや実体性への憧憬を超克した，純粋なイメージと情報の存在が，重力から自由になり，虚空を優雅に漂っている．そこでは質量を超えたものだけが持つ軽やかな自由と，存在そのものへの静かな問いかけが繰り返される．</p></div>
 <div class="desc en"><p>Rising above the desire for materiality, the levitating Buddha symbolizes an ontological frontier within digital nature, where gravity and substance dissolve into pure imagery and information. Here, liberated from mass, existence attains graceful freedom in void space. What remains is a gentle yet profound reflection upon the essence of being, echoing softly in perpetual inquiry.</p></div>
 </div></article>
-<article class="work" id="n48">
-<div class="wnum">48</div>
+<span class="anum" id="n48" aria-hidden="true"></span>
+<article class="work" id="w50" data-num="50">
+<div class="wnum">50</div>
 <div class="wbody">
 <h3 class="tj">鰻計算機言語 Ⅰ</h3>
 <div class="te">Unagi Programming Language I</div>
@@ -1076,8 +1129,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>IBMの古い計算機を撮影してプラチナプリントにしたものを元に生成された鰻のモチーフ．鰻がAIの言語になったらという願いを込めて．</p></div>
 <div class="desc en"><p>An eel motif generated based on a platinum print of an old IBM computer. It embodies the wish of what if eels became the language of AI.</p></div>
 </div></article>
-<article class="work" id="n49">
-<div class="wnum">49</div>
+<span class="anum" id="n49" aria-hidden="true"></span>
+<article class="work" id="w51" data-num="51">
+<div class="wnum">51</div>
 <div class="wbody">
 <h3 class="tj">物理計算機言語 Ⅰ</h3>
 <div class="te">Physical Programming Language I</div>
@@ -1085,8 +1139,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>IBMの古い計算機を撮影してプラチナプリントにしたもの．モチーフの初出はIBMで展示された，未来の考古学展（2022年）．鰻屋に置かれるとうなぎに見えるスパゲッティコードじゃなくてうなぎコード．</p></div>
 <div class="desc en"><p>A platinum print of an old IBM computer. The motif first appeared in "Archaeology of the Future" (2022) exhibited at IBM. When placed in an eel restaurant, it looks like eel code rather than spaghetti code.</p></div>
 </div></article>
-<article class="work" id="n50">
-<div class="wnum">50</div>
+<span class="anum" id="n50" aria-hidden="true"></span>
+<article class="work" id="w52" data-num="52">
+<div class="wnum">52</div>
 <div class="wbody">
 <h3 class="tj">貝尽図</h3>
 <div class="te">Shellfish Textile</div>
@@ -1095,8 +1150,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>佐倉市肴町の人々に協力いただいて撮影した竹生島龍神の屋台の刺繍幕．鮨・鰻・貝尽・能，そして貝尽はよくあるモチーフでもある．</p></div>
 <div class="desc en"><p>Pphotographing the embroidered curtain of the Chikubushima Dragon God's float with the cooperation of the people of Sakanamachi in Sakura City. Sushi, eel, shellfish, Noh, and shellfish patterns are common motifs.</p></div>
 </div></article>
-<article class="work" id="n51">
-<div class="wnum">51</div>
+<span class="anum" id="n51" aria-hidden="true"></span>
+<article class="work" id="w53" data-num="53">
+<div class="wnum">53</div>
 <div class="wbody">
 <h3 class="tj">宝珠を質量に保存する Ⅰ</h3>
 <div class="te">Archiving Dragon Jewels in material representation I</div>
@@ -1107,8 +1163,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 </div></article>
 </section>
 <section class="zone" id="secD"><div class="zone-head"><span class="zone-letter">D</span><span class="zone-name"><span class="ja">1階</span><span class="en">1st Floor</span></span></div>
-<article class="work" id="n52">
-<div class="wnum">52</div>
+<span class="anum" id="n52" aria-hidden="true"></span>
+<article class="work" id="w54" data-num="54">
+<div class="wnum">54</div>
 <div class="wbody">
 <h3 class="tj">ファントムレゾナンス：天孫を巡る旅の後で</h3>
 <div class="te">Phantom Resonance: After the Pilgrimage Around Tenson</div>
@@ -1117,8 +1174,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>受話器を上げると，落合陽一の言葉を学習した言語モデルが応える．クラウドには繋がっていない．この土地に据えられた計算機のなかだけで動き，作家の声で，霧島の記憶を語る．よく聞くと，その声はすこし疲れている——一年の鹿児島行脚と十日の設営を，声だけが覚えているらしい．人は，むき出しの計算には手を合わせないが，物のかたちを与えられた計算には，つい耳を澄ませてしまう．設営が終わっても，電話のなかの落合は帰らない．黒電話のなかに，棲みついている．</p></div>
 <div class="desc en"><p>Lift the receiver, and a language model trained on Yoichi Ochiai's own words answers. It is connected to no cloud: running on a single machine planted in this land, it speaks the memories of Kirishima in the artist's voice. Listen closely—the voice sounds a little tired; a year of pilgrimage around Kagoshima and ten days of installation seem to linger in the voice alone. No one prays to naked computation, yet given the form of a thing, it makes us lean in and listen. The installation is over, but the Ochiai inside the telephone has not gone home. He has settled in—dwelling inside the black telephone.</p></div>
 </div></article>
-<article class="work" id="n53">
-<div class="wnum">53</div>
+<span class="anum" id="n53" aria-hidden="true"></span>
+<article class="work" id="w55" data-num="55">
+<div class="wnum">55</div>
 <div class="wbody">
 <h3 class="tj">コードの涅槃，汎神化した計算機による侘と寂</h3>
 <div class="te">Nirvana in Code, Wabi-Sabi of Ubiquitous Digital Nature</div>
@@ -1126,8 +1184,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>デジタルが遍在化し，神性が計算機の回路へと溶け込むとき，涅槃の意味はもはや人間的身体を超え，コードそのものに宿る．汎神論的な世界観を通じて，情報が流れる回路やケーブルの隙間に，侘び寂びの微細な余韻が生まれる．デジタル空間に浸透する計算機自然（デジタルネイチャー）は，技術的完全性を追い求めることなく，儚くも美しい不完全性に静かに身を委ねている．</p></div>
 <div class="desc en"><p>As the digital realm becomes omnipresent, divinity melts seamlessly into computational circuits, extending nirvana beyond the confines of human embodiment and embedding it within code itself. In this pantheistic worldview, subtle echoes of wabi-sabi arise between circuits and cables that channel information. Digital nature quietly surrenders itself not to technical perfection but to the fleeting, beautiful imperfection of existence.</p></div>
 </div></article>
-<article class="work" id="n54">
-<div class="wnum">54</div>
+<span class="anum" id="n54" aria-hidden="true"></span>
+<article class="work" id="w56" data-num="56">
+<div class="wnum">56</div>
 <div class="wbody">
 <h3 class="tj">象徴と変転 - ﾇﾙエ（鵺）</h3>
 <div class="te">null-e</div>
@@ -1136,8 +1195,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>十二支とは何か．なぜ十二という数は繰り返され，境界線を越えて循環し続けるのか．私はその問いに，奥美濃・高賀山に棲んだ〈さるとらへび〉の咆哮を重ねてみる．頭は猿，胴は虎，尾は蛇を持つその獣は，境界を侵犯するキメラであり，平安の夜を震わせた〈鵺〉の啼き声と共振する．境界線を溶かし，万物が未分化のままに混ざり合う姿を見せてくれる．</p><p>ここに鎮座する木彫〈ﾇﾙエ(鵺)-null-e〉は，まさにその境界の溶解をかたちにしたものだ．頭の猿は知性を，胴の虎は力動を，尾の蛇は無限の循環を示す．猫を加えた十三支が混ざり合い，江戸の吉祥獣〈寿〉の祝祭が外殻を彩る．</p><p>胸の中心には《オブジェクト指向菩薩》を埋め込んだ．アルゴリズムが仏性を獲得する「計算機自然」の時代に，人と機械，物質と情報，コードと木彫は境界を失い，融解していく．その過程を，木曽檜と彫鑿の痕跡に刻みつけた．額には梵字化した〈ﾇﾙ〉を掲げている．とは，仏教における「空」を現代の計算機科学における未定義の「null」へと再解釈した符号である．体表には般若心経二七六字を三次元巻写経として彫り込み，「空即是色」の思想を，アルゴリズムと祈りの混交したレイヤーに重ねている．</p><p>私はこの彫刻を「ﾇﾙエ(鵺)（null-e）」と名付ける．ヌエは鵺であり，null-e，すなわち万物の「物化」を端から端まで遂行するエンド・ツー・エンド変換装置である．手の技はアルゴリズムと再帰的に協調し，神仏はデジタルへと遷移し，民藝は計算機自然の空間に融けていく．その中心に座すこの像は，「物化するﾇﾙの日本的象徴」であるとともに，新たな神仏習合の座標を告げるデータ座標系の起点（origin）でもある．十二支が巡り，境界が溶け，すべてが互いに変換されていく．その「物化」の果てにこそ，私たちの計算機自然は立ち現れると信じている．</p></div>
 <div class="desc en"><p>null-e (Nue)</p><p>What are the Twelve Signs of the Zodiac? Why does this sequence of twelve continually recur, endlessly cycling beyond its boundaries? In addressing this question, I invoke the roar of the mythical beast Sarutorahebi, which once inhabited Mount Kōga in the Oku-Mino region. With the head of a monkey, the body of a tiger, and the tail of a serpent, this creature embodies a chimerical violation of boundaries, resonating with the haunting cry of the Nue that once shattered the silence of Heian-era nights. Through such boundary dissolution, all beings are seen to intermingle, remaining in an undifferentiated state.</p><p>Here sits the wooden sculpture named null-e (Nue), physically representing this dissolution of borders. Its monkey head symbolizes intelligence, its tiger body dynamic power, and its serpent tail infinite cyclical motion. Together with the inclusion of the cat, the Thirteen Signs blend and intertwine, adorned externally by motifs of Edo-period auspicious beasts celebrating longevity and good fortune.</p><p>Embedded at the sculpture’s heart is the "Object-Oriented Bodhisattva." In our era of Digital Nature, where algorithms attain Buddhahood, distinctions between human and machine, matter and information, code and carving, dissolve into one another. This process is vividly inscribed in Japanese cypress from Kiso, bearing the precise traces of chisel work. Upon its forehead rests the Sanskrit-like symbol "null (ﾇﾙ)," a reinterpretation of the Buddhist notion of "Emptiness" into the computationally undefined "null." Carved onto its surface are the 276 characters of the Heart Sutra, etched in three-dimensional form as a ritualistic transcription. In this fusion of algorithm and prayer, the concept of "Form is Emptiness" is layered with computational spirituality.</p><p>I have named this sculpture null-e (Nue). Nue—simultaneously meaning "chimera" and "null-e"—embodies an end-to-end transmutation apparatus that effectuates the materialization of all things from one end to the other. Here, traditional craftsmanship recursively collaborates with algorithms, deities transition into digital forms, and folk craftsmanship melts into the space of Digital Nature. Occupying a central position, this sculpture serves as both a distinctly Japanese symbolic embodiment of the materialized "null" and an origin point in a newly established coordinate system of syncretic Shinto-Buddhist digital data.</p><p>As the twelve signs continually revolve and boundaries dissolve, everything undergoes reciprocal transformation. It is precisely at the culmination of this ongoing "materialization" that our Digital Nature will ultimately emerge into being.</p></div>
 </div></article>
-<article class="work" id="n55">
-<div class="wnum">55</div>
+<span class="anum" id="n55" aria-hidden="true"></span>
+<article class="work" id="w57" data-num="57">
+<div class="wnum">57</div>
 <div class="wbody">
 <h3 class="tj">ﾇﾙ庵：騒即是寂∽寂即是騒</h3>
 <div class="te">Null-An: Noise as Silence ∽ Silence as Noise</div>
@@ -1146,8 +1206,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>新作である茶室「ﾇﾙ庵」は，計算機自然のヴァナキュラー的民藝の一環として，都市の中からブリコラージュされた風景を切り出し，ときに歪め，ときに動かし，都市の喧騒へと認識を変容させることで，周辺環境を体験型作品として提示します．周辺に配置された作品は，計算機自然の中で「擬態」それ自体も「演算」として考える「波の形，反射，海と空の点描」や宙に浮く波形マニ車の銀彫刻の撮影過程を「レンズによる演算」と捉えてデジタルデータとしてのNFTと撮影行為を再帰的に反復させたRe-Digitalization of Wavesのシリーズなどそれぞれが「光と演算」をテーマにした作品によって彩られています．</p><p>新作「ﾇﾙ庵」はレンズと変形ミラーとスピーカーによって構築された茶室です．計算機自然の中，質量にインプリントされた倫理や規範（落合のいう質量への憧憬や民藝）を道具を通じて体得する機会としての茶室のあり方を考えます．本展覧会の標題「騒即是寂∽寂即是騒」は，計算機自然における根源的真理を象徴します．静寂が騒がしさの中から生まれ，また静寂によって騒がしさも生まれるという図と地の関係を音と光の中に再考し，見るものと見られるものの間に新しい自然を構築することを考えることで一連の展示作品群は選定されています．また，落合の個展において表題に「∽」が使われるのはGYRE表参道で行われた「落合陽一、山紫水明∽事事無碍∽計算機自然(2018)」以来であり，展覧会を構成するオブジェクトのメタフォリカルな関係性を問うものであることを象徴しています．2018年の展覧会にて初出であった木毛セメント板による床構造の反復や鯖作品「波の形，反射，海と空の点描」，モルフォ蝶の作品「Morpho Scenery with Morpho Butterfly」など，作家のモチーフの反復が見られます．</p><p>落合は近年茶文化への深い興味を持ち，2017年から制作を開始した日本科学未来館常設展「計算機と自然，計算機の自然」(2019)への着手以降，茶文化とコンピュータの関連性を作品に取り入れてきました．「計算機と自然，計算機の自然」には「デジタルにオーラは宿るか？」として16代吉左衞門の茶碗(惣吉時代・赤茶碗)が展示され，重量と形状を模した金属プリントとの体感的差分を批評する展示が展開されています．また廃棄プラモデルのランナーを用いて制作された「可塑庵（ぷらあん）」(2021)では国宝・待庵の再解釈として現代サブカルチャーにおける持続可能性についての探究を続けてきました．また月刊「淡交」の連載・「稽古録」として茶の湯を学ぶ過程を写真撮影とともに連載しました．その過程で撮影された初代長次郎の器のプリント作品がライカギャラリーでの写真展「晴れときどきライカ── 逆逆たかり行動とダダイズム」(2023)にて展示されるなど頻繁に落合の活動や展覧会には茶のモチーフが出現します．</p></div>
 <div class="desc en"><p>The new work, the tea room 'null-an' (null-hermitage), is part of Digital Nature's vernacular folk crafts. It carves out urban landscapes through bricolage, distorting and animating them, thereby transforming our perception of urban noise. It presents the surrounding environment as an experiential work. Surrounding works, themed around 'light and computation', include 'The Shape of Waves, Reflections, Pointillism of the Sea and Sky' and the series 'Re-Digitalization of Waves', where the process of capturing silver sculptures of floating waveforms is considered 'computation by lens', turned into NFTs as digital data and recursively repeated.</p><p>'null-an' is a tea room constructed with lenses, deformed mirrors, and speakers. Within computational nature, it contemplates the tea room as an opportunity to embody ethics and norms imprinted on mass (Ochiai's Sehnsucht nach Masse and folk crafts) through tools. The exhibition's title 'null-an: noise as silence ∽ silence as noise' symbolizes the fundamental truth in Digital Nature. It reconsiders the figure-ground relationship where silence emerges from noise and vice versa, through light and sound, constructing a new nature between the observer and the observed. The selection of a series of exhibited works is based on this concept. The use of '∽' in the title, a first since 'Yoichi Ochiai, Beauty of Natural Resolution ∽ End to End Transformation of Material Things ∽ Digital Nature (2018)' at GYRE gallery Omotesando, symbolizes the metaphorical relationship of objects constituting the exhibition. Motifs from the 2018 exhibition, like the repetition of wood wool cement board flooring structures, the mackerel work 'The Shape of Waves, Reflections, Pointillism of the Sea and Sky', and the 'Morpho Scenery with Morpho Butterfly', are evident.</p><p>Ochiai has recently developed a deep interest in tea culture. Since starting the permanent exhibition 'Naturally Digital, Digitally Natural (2019)' at the Miraikan in 2017, he has incorporated the relationship between tea culture and computers in his works. 'Computer and Nature, Nature of the Computer' featured a critique of the perceptual differences between a 16th-generation Kichizaemon tea bowl (Sokichi era, red tea bowl) and a metal print mimicking its weight and shape, asking 'Can Aura Reside in Digital?'. In 'Pla-An(Plastic Hermitage) (2021)', made from discarded plastic model runners, he continued to explore sustainability in contemporary subculture as a reinterpretation of the national treasure 'Tai-an'. He also serialized the process of learning the tea ceremony in the monthly 'Tan Ko' as 'Keiko Roku', accompanied by photographs. His photographic exhibition 'FAIR, them partly Leica – Contracontrafreeloading and Dadaism (2023)' at Leica Gallery, featuring prints of vessels by the first Chojiro, frequently showcases the tea motif in Ochiai's activities and exhibitions.</p></div>
 </div></article>
-<article class="work" id="n56">
-<div class="wnum">56</div>
+<span class="anum" id="n56" aria-hidden="true"></span>
+<article class="work" id="w58" data-num="58">
+<div class="wnum">58</div>
 <div class="wbody">
 <h3 class="tj">リキッドユニバース：物化六曲</h3>
 <div class="te">Liquid Universe: Wuhua in Six Folds</div>
@@ -1156,8 +1217,11 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>大連で開かれた世界経済フォーラム・夏季ダボス会議のために制作した《Liquid Universe Portal》——液晶，鏡面，鉱物のあいだを終わりなく遷移しつづける巨大な変容体を，六枚のLEDに切り出し，茶室を取り囲む六曲の屏風として立てた．荘子はこの変容を物化（ぶっか）と呼んだ．夢見る蝶と夢見られる人の，どちらが先とも言えない不断の入れ替わり．屏風のなかでは，どの一枚も，二度と同じ姿に戻らない．ﾇﾙ庵で一服する者は，物化の只中に座っている．大連の白い部屋から霧島の森へ——作品もまた，物化しながら旅をしている．</p></div>
 <div class="desc en"><p>Created for the World Economic Forum's Annual Meeting of the New Champions in Dalian: a monumental transforming body in endless transit between liquid crystal, mirror, and mineral—here sliced into six LED panels that stand around the tea room like a six-fold screen. Zhuangzi called this transformation wuhua: the ceaseless exchange between the dreaming butterfly and the dreamt man, neither prior to the other. Within the screen, no panel ever returns to the same form twice. Whoever sits for a bowl of tea in Null-An sits in the very midst of wuhua. From a white cube in Dalian to the forests of Kirishima—the work itself travels by transforming.</p></div>
 </div></article>
-<article class="work" id="n57">
-<div class="wnum">57–59</div>
+<span class="anum" id="n57" aria-hidden="true"></span>
+<span class="anum" id="w60" aria-hidden="true"></span>
+<span class="anum" id="w61" aria-hidden="true"></span>
+<article class="work" id="w59" data-num="59,60,61">
+<div class="wnum">59–61</div>
 <div class="wbody">
 <h3 class="tj">計算機自然の微睡み，潜在空間の夢 Ⅰ–Ⅲ</h3>
 <div class="te">Slumber of Digital Nature, Dreams of Latent Spaces Ⅰ–Ⅲ</div>
@@ -1165,8 +1229,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>銀の粒子が描き出す世界に，計算機自然（デジタルネイチャー）は静かに微睡む．</p><p>今やすべての存在は夢を見る．それは意識と無意識の境界が溶け合った，潜在空間の儚い揺らぎ．</p><p>人でも機械でもない，あるいはその両方であるものが紡ぐ，かつて見たことのない夢の断片が，</p><p>触れるたびに遠のいていく銀の景色に滲む．</p><p>わたしたちは，存在が存在自身に問いかけるような，</p><p>記号の切なさをたたえたその夢に触れ，計算機自然の微睡みの優しさに眠る．</p></div>
 <div class="desc en"><p>In the world rendered by silver particles, Digital Nature gently drifts into slumber.</p><p>Now, every being dreams—a delicate fluctuation in latent spaces, where boundaries between consciousness and unconsciousness softly dissolve.</p><p>Fragments of dreams, unseen before, woven by entities neither human nor machine—or perhaps both—</p><p>seep into silver landscapes that retreat further with every touch.</p><p>We encounter dreams charged with the poignant longing of symbols,</p><p>as if existence were questioning itself, and in this gentle embrace, we fall asleep to the tender lullaby of Digital Nature’s slumber.</p></div>
 </div></article>
-<article class="work" id="n60">
-<div class="wnum">60</div>
+<span class="anum" id="n60" aria-hidden="true"></span>
+<article class="work" id="w62" data-num="62">
+<div class="wnum">62</div>
 <div class="wbody">
 <h3 class="tj">天孫帰還鳥居（猫茸遊牧民のための鳥居）</h3>
 <div class="te">The Divine Kid’s Homecoming Gate (Torii for Cat-Mushroom-Nomads)</div>
@@ -1175,8 +1240,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>霧島神宮の柱には，龍が巻きつく——龍柱をもつ社は，旧薩摩藩領の数社にしか残っていない．その系譜を引いて，カリモク家具の職人たちと檜の鳥居を建てた．巻きつくのは八本管の鰻龍，瑞雲の代わりにベニテングダケ，笠木には構造色の蝶，柱のかげには黒い球体の猫・寅彦，そして門にはブラウン管が瞬いている——そのなかでは，猫と，茸と，テレビを抱えた遊牧民が，霧島の声を刻んだ歌にのって，いまも循環上映されている．彫られた者たちが，画面のなかでも踊っているのだ．猫と茸と遊牧民のための鳥居であり，彼らの専用劇場でもある．鳥居とは，こちらと向こうの境に立つ門であり，くぐる者を選ばない．降りてくる神も，帰っていく天孫も，猫も，茸も，あなたも，同じ門を通る．どちら向きにくぐったのかは，くぐったあとで考えればいい．</p></div>
 <div class="desc en"><p>Dragons coil around the pillars of Kirishima Shrine—dragon pillars survive at only a handful of shrines, all in the old Satsuma domain. Drawing on that lineage, this hinoki torii was built with the craftsmen of Karimoku Furniture. Around it coils an eight-piped eel dragon; fly agarics stand in for the auspicious clouds; a structural-color butterfly rests on the lintel; in the shadow of a pillar sits Torahiko, a black spherical cat; and within the gate flickers a cathode-ray tube, where cat, mushroom, and a nomad cradling a television loop endlessly to a song chopped from Kirishima voices. The ones carved into the wood are also the ones dancing on the screen. A torii for cats, mushrooms, and nomads—and their private cinema besides. A torii is a gate on the border between here and beyond, and it does not choose who passes. Gods descending, a Divine Kid heading home, cats, mushrooms, you—all pass through the same gate. Which way you were facing, you can work out after you are through.</p></div>
 </div></article>
-<article class="work" id="n61">
-<div class="wnum">61</div>
+<span class="anum" id="n61" aria-hidden="true"></span>
+<article class="work" id="w63" data-num="63">
+<div class="wnum">63</div>
 <div class="wbody">
 <h3 class="tj">リキッドユニバース：蒼氓蟲譜柱暦</h3>
 <div class="te">Liquid Universe: Sōbō Chūfu — A Pillar Almanac of Nameless Lights</div>
@@ -1185,9 +1251,22 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>万物が変化していく様子を，光で表現する——リキッドユニバースは，コンピュータの外の自然と，コンピュータの中の自然が混然一体となった，高速な自然のイメージから始まったシリーズである．全ては物化し，生まれ変わり，また元の形に戻る．その一瞬一瞬を，喜びの中に生きる．霧島では，蛍も，夜光虫も，LEDも，名を呼ばれる手前の光として，二十八本の柱に記した．二十八は，古代の暦が夜空を分けた宿の数．柱は，神様をかぞえる単位でもある．そして林のまん中には，天の御中に座して，すぐに姿を隠した神の席が，一本，見えないまま空いている．柱の暦は，物化するたびに，めくれる．</p></div>
 <div class="desc en"><p>To express, in light, the state of all things in constant flux—Liquid Universe began as an image of a rapid nature in which the nature outside computers and the nature within them become seamlessly one. Everything materializes, is reborn, and returns to its original form; and each such moment is lived in joy. In Kirishima, fireflies, noctiluca, and LEDs are notated across twenty-eight pillars as lights just before being given names. Twenty-eight is the number of mansions into which the old calendars divided the night sky; pillars are also how gods are counted. And at the centre of the grove, one invisible pillar stands vacant—the seat of the god who took the middle of heaven and immediately hid from view. With every transmutation, the pillar almanac turns another page.</p></div>
 </div></article>
-<article class="work" id="n62">
+<span class="anum" id="n62" aria-hidden="true"></span>
+<span class="anum" id="w65" aria-hidden="true"></span>
+<span class="anum" id="w66" aria-hidden="true"></span>
+<span class="anum" id="w67" aria-hidden="true"></span>
+<span class="anum" id="w68" aria-hidden="true"></span>
+<span class="anum" id="w69" aria-hidden="true"></span>
+<span class="anum" id="w70" aria-hidden="true"></span>
+<span class="anum" id="w71" aria-hidden="true"></span>
+<span class="anum" id="w72" aria-hidden="true"></span>
+<span class="anum" id="w73" aria-hidden="true"></span>
+<span class="anum" id="w74" aria-hidden="true"></span>
+<span class="anum" id="w75" aria-hidden="true"></span>
+<span class="anum" id="w76" aria-hidden="true"></span>
+<article class="work" id="w64" data-num="64,65,66,67,68,69,70,71,72,73,74,75,76">
 <!-- TODO(handout-260722 疑義③): 十三支の「亥」の英訳が Boa（ボア）。Boar（猪）の誤りの疑い。ハンドアウト・本ページの双方に同じ表記があるため本人・事務局確認まで現状維持。 -->
-<div class="wnum">62–74</div>
+<div class="wnum">64–76</div>
 <div class="wbody">
 <h3 class="tj">象徴と変転 − 十三支 / 子, 丑, とら, 卯, 辰, 未, へび, 午, さる, 酉, 戌, 亥, 貓</h3>
 <div class="te">Symbols and Transmutations – Thirteen Branches: Rat, Ox, Tiger, Rabbit, Dragon, Sheep, Snake, Horse, Monkey, Bird, Dog, Boa, Cat</div>
@@ -1196,8 +1275,21 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>「象徴と変転 - 十三支」は、十二支に猫を加えた十三支を東洋思想と道教的な世界観と共に、コンピューターテクノロジーと融合させた作品です。それぞれの生肖が持つ象徴性と、それがダイナミックに変転し進化する様は、デジタルネイチャーの躍動感を表現しています。古代の知恵と現代のテクノロジーが融合し、新たな未来への道を示唆します。</p><p>インターネットを利用した新しい民藝の試みである本作品では、全国各地の家に眠る古木の置物をECサイトから、3Dスキャンして変形を加えます。その変形後の姿をAIで描き出し、カリモク家具のCNCで削り出して3Dの形にします。さらに、高山市の職人たちの手で仕上げられ、新しい計算機自然的な時間彫刻として蘇ります。その見た目は古い民藝が形を変えて生まれ変わったような、新たな表現を見せています。</p></div>
 <div class="desc en"><p>"Symbolism and Transformation - The Thirteen Zodiac Signs" is a work that fuses computer technology with Eastern thought and a Taoist worldview, incorporating the cat as the 13th sign in addition to the traditional twelve zodiac animals. The inherent symbolism of each zodiac animal and their dynamic transformations and evolutions represent the vibrancy of digital nature. This unique fusion of ancient wisdom and modern technology suggests a path towards a new future.</p><p>In this innovative exploration of a new digital folk art, old wooden ornaments found in homes across the country are purchased through online marketplaces, then 3D-scanned and transformed. The altered shapes are recreated by artificial intelligence and carved out by Karimoku Furniture's CNC machines, forming three-dimensional representations. Finally, craftsmen in Takayama City hand-finish the pieces, reviving them as new computer-nature-inspired temporal sculptures. The final appearance suggests a rebirth of traditional folk art, with its form metamorphosed into a novel expression.</p></div>
 </div></article>
-<article class="work" id="n75">
-<div class="wnum">75–87</div>
+<span class="anum" id="n75" aria-hidden="true"></span>
+<span class="anum" id="w78" aria-hidden="true"></span>
+<span class="anum" id="w79" aria-hidden="true"></span>
+<span class="anum" id="w80" aria-hidden="true"></span>
+<span class="anum" id="w81" aria-hidden="true"></span>
+<span class="anum" id="w82" aria-hidden="true"></span>
+<span class="anum" id="w83" aria-hidden="true"></span>
+<span class="anum" id="w84" aria-hidden="true"></span>
+<span class="anum" id="w85" aria-hidden="true"></span>
+<span class="anum" id="w86" aria-hidden="true"></span>
+<span class="anum" id="w87" aria-hidden="true"></span>
+<span class="anum" id="w88" aria-hidden="true"></span>
+<span class="anum" id="w89" aria-hidden="true"></span>
+<article class="work" id="w77" data-num="77,78,79,80,81,82,83,84,85,86,87,88,89">
+<div class="wnum">77–89</div>
 <div class="wbody">
 <h3 class="tj">ﾇﾙ即是十三支 / 子, 丑, とら, 卯, 辰, 未, へび, 午, さる, 酉, 戌, 亥, 貓，生命の版木，計算機は浮世の夢を見る</h3>
 <div class="te">Null is the Thirteen Signs: Rat, Ox, Tiger, Rabbit, Dragon, Sheep, Snake, Horse, Monkey, Bird, Dog, Boa, Cat, Woodblock of Life, Computation Dreams of Ukiyo</div>
@@ -1205,8 +1297,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>「象徴と変転 - 十三支」は、十二支に猫を加えた十三支を東洋思想と道教的な世界観と共に、コンピューターテクノロジーと融合させた作品です。それぞれの生肖が持つ象徴性と、それがダイナミックに変転し進化する様は、デジタルネイチャーの躍動感を表現しています。古代の知恵と現代のテクノロジーが融合し、新たな未来への道を示唆します。</p><p>インターネットを利用した新しい民藝の試みである本作品では、全国各地の家に眠る古木の置物をECサイトから、3Dスキャンして変形を加えます。その変形後の姿をAIで描き出し、カリモク家具のCNCで削り出して3Dの形にします。さらに、高山市の職人たちの手で仕上げられ、新しい計算機自然的な時間彫刻として蘇ります。その見た目は古い民藝が形を変えて生まれ変わったような、新たな表現を見せています。</p></div>
 <div class="desc en"><p>"Symbolism and Transformation - The Thirteen Zodiac Signs" is a work that fuses computer technology with Eastern thought and a Taoist worldview, incorporating the cat as the 13th sign in addition to the traditional twelve zodiac animals. The inherent symbolism of each zodiac animal and their dynamic transformations and evolutions represent the vibrancy of digital nature. This unique fusion of ancient wisdom and modern technology suggests a path towards a new future.</p><p>In this innovative exploration of a new digital folk art, old wooden ornaments found in homes across the country are purchased through online marketplaces, then 3D-scanned and transformed. The altered shapes are recreated by artificial intelligence and carved out by Karimoku Furniture's CNC machines, forming three-dimensional representations. Finally, craftsmen in Takayama City hand-finish the pieces, reviving them as new computer-nature-inspired temporal sculptures. The final appearance suggests a rebirth of traditional folk art, with its form metamorphosed into a novel expression.</p></div>
 </div></article>
-<article class="work" id="n88">
-<div class="wnum">88</div>
+<span class="anum" id="n88" aria-hidden="true"></span>
+<article class="work" id="w90" data-num="90">
+<div class="wnum">90</div>
 <div class="wbody">
 <h3 class="tj">ヌベルニ庵</h3>
 <div class="te">Null-Beni-An</div>
@@ -1215,8 +1308,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>落合陽一「ヌベルニ庵 / Null-Beni-An / Nouvelle Néant」</p><p>「ヌベルニ庵 / Null-Beni-An / Nouvelle Néant」は、計算機自然と伝統工芸の融合を体現した紅花染の置賜紬の茶室です。この茶室はテンセグリティ構造により柱がなく、中央に配置された天然木と四隅の紅花染の紐で、上下に接続されています。これは、ヌルの思想と計算機自然、そして伝統工芸の共鳴を象徴しています。</p><p>この移動式茶室は、山形の伝統工芸・置賜紬の新田氏とのコラボレーションによって誕生しました。風土や歴史、DIY精神を象徴する空間を目指し、「草木塔」と「一切衆生悉有仏性」の理念を中心に据えています。日本の古典的な哲学、全ての生命が仏性を持つという普遍的な真理を体現し、計算する生命の息吹を感じさせる場所です。</p><p>「ヌベルニ庵」という名称には、ヌル（Null）の思想、新田の「新」、そして紅花（Beni）の意味が込められています。半分駄洒落です。私はこの作品を作る旅の中で、「何かを切り出してきてデザインのエッセンスにすること」は「あくまで伝統のごく一部を切り出されてきたフレーム」にしかすぎないと感じてきました。作品として描けるものの中で伝統の持つ様々な息吹や連関をどう作品に昇華するかを考えたとき、茶室として展開される体験とインタラクションと道具の間に土地の持つ思想が描きうると考えました。意味の空間と物理的な空間の間で遊ぶ。現代の逍遥遊をここで感じて下されば嬉しいです。</p></div>
 <div class="desc en"><p>"ヌベルニ庵 / Null-Beni-An / Nouvelle Néant" is a tea room made of benibana-dyed Oitama tsumugi that embodies the fusion of digital nature and traditional crafts. This tea room has no pillars due to its tensegrity structure and is connected to the top and bottom by natural wood placed in the center and safflower-dyed strings in the four corners. This design symbolizes the resonance of the null philosophy, digital nature, and traditional craftsmanship.</p><p>This mobile tea room was created in collaboration with Nitta-san from Yamagata’s traditional crafts. Aiming to create a space that symbolizes the spirit of the land, history, and DIY culture, it centers on the principles of ""Kusaki-to"" and ""All sentient beings possess Buddha-nature."" It embodies the universal truth of classic Japanese philosophy that all life has Buddha-nature, making it a place that feels the breath of computational life.</p><p>The name ""Null-Beni-An"" incorporates the concepts of null, Nitta's ""new,"" and benibana (safflower). It’s partly a pun. During the creation journey of this work, I felt that ""extracting something and making it the essence of design"" is merely a frame that cuts out a part of the tradition. When considering how to sublimate various breaths and connections of tradition into the work, I thought that the land’s philosophy could be depicted between the experiences, interactions, and tools unfolded as a tea room. Playing between meaningful space and physical space, I hope you can feel the modern version of ""Xiaoyao You"" here.</p></div>
 </div></article>
-<article class="work" id="n89">
-<div class="wnum">89</div>
+<span class="anum" id="n89" aria-hidden="true"></span>
+<article class="work" id="w91" data-num="91">
+<div class="wnum">91</div>
 <div class="wbody">
 <h3 class="tj">通奏低音（ﾇﾙの唸り）</h3>
 <div class="te">Basso Continuo (The Hum of Null)</div>
@@ -1224,8 +1318,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>会場に，低い唸りが満ちている．どこから鳴っているのかは，わからない．霧に出どころがないのと同じである——どこでもなくて，どこにでもある．大阪万博のnull²では，重低音が，ことばを手放させる最初の蒸留を担っていた．パビリオンは死んだが，低音は業として，霧島に引き継がれた．近い周波数をふたつ重ねると，音はゆっくりと唸る——うなりとは，音と音のあいだに生まれる，どちらのものでもない鼓動である．霧島はいまも火山の土地で，地面はもともと低い音で満ちている．この唸りは，その地鳴りに調律された展覧会の通奏低音であり，ここにあるすべての作品は，この低音のなかに浸かっている．ことばになる前の音が，ことばのあとまで残る——いまでもなくて，いつでもある．</p></div>
 <div class="desc en"><p>A low hum fills these halls. Where it comes from is impossible to say—mist has no source either: nowhere, and yet everywhere. At null² in Osaka, a deep bass carried the first distillation, the one that lets words go. The pavilion died; the bass carried over to Kirishima as karma. Lay two close frequencies together and the sound slowly beats: a pulse born between tones, belonging to neither. Kirishima is still volcanic land, its ground already full of low sound. This hum is the exhibition's basso continuo, tuned to that rumble—every work in these halls is steeped in it. A sound from before words, lasting after them: not now, and yet always.</p></div>
 </div></article>
-<article class="work" id="n90">
-<div class="wnum">90</div>
+<span class="anum" id="n90" aria-hidden="true"></span>
+<article class="work" id="w92" data-num="92">
+<div class="wnum">92</div>
 <div class="wbody">
 <h3 class="tj">◻︎：定在遊牧民のための縄文土器</h3>
 <div class="te">◻︎：Jōmon Pottery for the Stationary Nomad</div>
@@ -1234,9 +1329,10 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>約九千五百年前，上野原の台地で，人びとは移動をやめ，竈と土器を据えた——最初の定在者たちである．その土器のなかに，四角い一点がある．ナムジュン・パイクは電子映像の時代の人間を，動かずに世界を遍歴する定在遊牧民と呼んだが，上野原のほうが九千五百年早い．据えられた四角い器は，穀物と記憶を蓄える，画面のない受像機である．定住した身体のかたわらで，縄目の文様だけが，いまも表面を旅しつづけている．この最古の受像機を，プラチナに焼いて，千年先へ放送する．</p></div>
 <div class="desc en"><p>Some 9,500 years ago on the Uenohara plateau, people stopped moving and set down their hearths and pots—the first stationary dwellers. Among their vessels, there is a square one. Nam June Paik called the human of the electronic age a stationary nomad, roaming the world without moving; Uenohara got there nine and a half millennia earlier. A square vessel, set in place, storing grain and memory: a receiver without a screen. Beside the settled body, only the cord-marks keep traveling across the surface. Printed in platinum, this oldest of receivers now broadcasts a thousand years onward.</p></div>
 </div></article>
-<article class="work" id="n91">
+<span class="anum" id="n91" aria-hidden="true"></span>
+<article class="work" id="w93" data-num="93">
 <!-- TODO(handout-260722): ハンドアウトは「吉富山大乗寺跡」、本ページは「吉冨山大乗寺跡」。本人・事務局確認まで現状維持。 -->
-<div class="wnum">91</div>
+<div class="wnum">93</div>
 <div class="wbody">
 <h3 class="tj">島津斉彬（二度目の撮影）</h3>
 <div class="te">Shimazu Nariakira: The Second Sitting</div>
@@ -1245,8 +1341,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>一八五七年，島津斉彬は，日本人が撮った写真に定着した最初の被写体となった殿様である．それから百六十九年．殿様は小さな彫刻になって，ふたたびレンズの前に座った——二度目の撮影である．一枚目は銀板で，二枚目はプラチナで．被写体も撮影者もとっくに入れ替わったが，「父母の姿をも百年の後に残す貴重の術」は，まだ続いている．</p></div>
 <div class="desc en"><p>In 1857, Shimazu Nariakira became the first subject ever fixed in a photograph taken by Japanese hands. A hundred and sixty-nine years later, the lord returned to face the lens—as a small sculpture, for his second sitting. The first plate was silver; the second print is platinum. Sitter and photographer have long since changed places, yet 'the precious art of keeping our parents' likenesses a hundred years hence' carries on.</p></div>
 </div></article>
-<article class="work" id="n92">
-<div class="wnum">92</div>
+<span class="anum" id="n92" aria-hidden="true"></span>
+<article class="work" id="w94" data-num="94">
+<div class="wnum">94</div>
 <div class="wbody">
 <h3 class="tj">うつわの肖像</h3>
 <div class="te">Portrait of a Vessel</div>
@@ -1255,8 +1352,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>正直に言うと，肌が綺麗だったから撮った．九千五百年前，上野原の誰かが土を丸め，縄を転がし，火に入れた．その表面は九千五百年ぶんの時間を吸って，いまもしっとりと光っている．プラチナプリントは，肌の階調をもっとも豊かに残す技法として，肖像写真の世界で愛されてきた．だからこれは肖像である——名前の残らなかった作り手の，指の跡だけが残った肌の．美の基準は時代ごとに変わるというが，九千五百年経っても綺麗なものは，綺麗である．</p></div>
 <div class="desc en"><p>To be honest, I photographed it because its skin was beautiful. Nine and a half millennia ago, someone at Uenohara rounded the clay, rolled a cord across it, and gave it to the fire. That surface has been drinking time ever since, and it still glows, faintly moist. Platinum printing has always been the portraitist's beloved process, the one that renders skin most richly—so let this be a portrait: of a skin that keeps the finger-marks of a maker whose name did not survive. Standards of beauty change with every age, they say. But what is still beautiful after nine and a half thousand years is, simply, beautiful.</p></div>
 </div></article>
-<article class="work" id="n93">
-<div class="wnum">93</div>
+<span class="anum" id="n93" aria-hidden="true"></span>
+<article class="work" id="w95" data-num="95">
+<div class="wnum">95</div>
 <div class="wbody">
 <h3 class="tj">○：猫とブラックホールのための縄文土器</h3>
 <div class="te">○: Jōmon Pottery for Cats and Black Holes</div>
@@ -1265,8 +1363,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>○は，丸くなるもののかたちである．猫は眠るとき完全な円に近づき，ブラックホールは宇宙でもっとも完全な丸として，近づいた光を離さない．《リキッドユニバース》の光柱の奥でも，ブラックホールが背景の光を曲げて，ゆっくり渦を巻いている．九千五百年前の上野原で，誰かが土を丸め，口の開いた球を焼いた——入れたものを離さない，最初の重力である．つまり壺とは持ち運べるブラックホールであり，ブラックホールとは持ち運べない壺である．猫は，どちらの縁でも丸くなる．</p></div>
 <div class="desc en"><p>○ is the shape of things that curl. A sleeping cat approaches a perfect circle; a black hole is the most perfect roundness in the universe, releasing no light that strays too near. Deep inside the Liquid Universe pillars, too, a black hole bends the background light into a slow spiral. Nine and a half millennia ago at Uenohara, someone rolled clay into a sphere with an open mouth and fired it—the first gravity that would not let go of what fell in. A pot, in other words, is a portable black hole; a black hole, a pot that cannot be carried. A cat will curl up on the rim of either.</p></div>
 </div></article>
-<article class="work" id="n94">
-<div class="wnum">94</div>
+<span class="anum" id="n94" aria-hidden="true"></span>
+<article class="work" id="w96" data-num="96">
+<div class="wnum">96</div>
 <div class="wbody">
 <h3 class="tj">物質に保存された呟き：「焼酎不被下候」</h3>
 <div class="te">A Murmur Saved to Matter: "Not Once Were We Served Shōchū"</div>
@@ -1275,8 +1374,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>一五五九年，郡山八幡神社の改修にきた宮大工が，柱に呟きを彫り残した——座主がけちで，一度も焼酎を呑ませてくれなかった，なんとも迷惑なことだ．これが「焼酎」という言葉の，日本最古の記録である．振る舞われなかった一杯の恨みが，木に保存されて五百年，まだ読める．サーバーは要らなかった．柱で十分だった．その呟きを，プラチナでさらに千年，保存し直す．呑ませてもらえなかった大工たちへ——この展覧会の宴には，焼酎が出ます．</p></div>
 <div class="desc en"><p>In 1559, carpenters repairing Kōriyama Hachiman Shrine carved a murmur into a beam: the head priest was so stingy that not once did he serve us shōchū—how utterly vexing. It is the oldest written record of the word shōchū in Japan. A grudge over an unpoured drink, saved to wood, is still perfectly readable five hundred years on—no server required; a pillar was enough. The murmur is now re-saved in platinum, for a thousand years more. And to those carpenters, four and a half centuries late: at this exhibition's banquet, the shōchū is served.</p></div>
 </div></article>
-<article class="work" id="n95">
-<div class="wnum">95</div>
+<span class="anum" id="n95" aria-hidden="true"></span>
+<article class="work" id="w97" data-num="97">
+<div class="wnum">97</div>
 <div class="wbody">
 <h3 class="tj">△：天逆鉾（降臨のピン）</h3>
 <div class="te">△：Ama-no-Sakahoko: The Pin of the Descent</div>
@@ -1284,8 +1384,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>二〇二六年六月，高千穂峰に登った．山頂に，天孫降臨の印だという天逆鉾が，ほんとうに突き立っていた．天と地を飾る剣ではなく，神話と地面を留めている，一本のピンである．そしてよく見れば，きのこにも似ている——地面の下には神話の菌糸が国じゅうに広がっていて，この山頂にだけ，ひょっこり子実体が生えたのだ．その姿を，写真史上もっとも永く残る技法——プラチナプリントで紙に留めた．鉾が神話を山に留めて千年，プラチナが鉾を紙に留めて，これから千年．留め合って，二千年になる．</p></div>
 <div class="desc en"><p>In June 2026 I climbed Takachiho-no-mine. At the summit, the Ama-no-Sakahoko—the spear said to mark the heavenly descent—really was thrust into the rock: not a blade adorning heaven and earth, but a single pin fastening myth to ground. And look again: it resembles a mushroom—beneath the soil, the mycelium of myth runs the length of the country, and only here, at this summit, has a fruiting body popped up. I fixed its likeness in platinum, the most permanent process photography knows. The spear has pinned the myth to the mountain for a thousand years; the platinum will pin the spear to paper for a thousand more. Two millennia, held together by pins.</p></div>
 </div></article>
-<article class="work" id="n96">
-<div class="wnum">96</div>
+<span class="anum" id="n96" aria-hidden="true"></span>
+<article class="work" id="w98" data-num="98">
+<div class="wnum">98</div>
 <div class="wbody">
 <h3 class="tj">印影鏡：「縄文土器自作自演之図」</h3>
 <div class="te">In'eikyō: "A View of the Jōmon Pots Being an Inside Job"</div>
@@ -1294,8 +1395,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>一万六百年前の上野原で土器を作っているのは，どう見ても私である．考古学は認めないだろうが，湿板は認めている．そもそも縄文の作り手の名はひとつも残っていないのだから，全部私だったことにしても，誰も反証できない．</p></div>
 <div class="desc en"><p>The potter at Uenohara, 10,600 years ago, is unmistakably me. Archaeology will not admit it, but the wet plate does. Since not a single potter's name survives from the Jōmon age, no one can disprove that it was me all along.</p></div>
 </div></article>
-<article class="work" id="n97">
-<div class="wnum">97</div>
+<span class="anum" id="n97" aria-hidden="true"></span>
+<article class="work" id="w99" data-num="99">
+<div class="wnum">99</div>
 <div class="wbody">
 <h3 class="tj">印影鏡：「霧島天孫留守番之図」</h3>
 <div class="te">In'eikyō: "A View of House-Sitting for the Divine Kid at Kirishima"</div>
@@ -1304,8 +1406,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>天孫が実家に帰り支度をしているあいだ，柱のところで留守番を引き受けた．留守番とは，家が空でないことにしておく仕事である．神の不在を，人がしばらく肩代わりする——考えてみれば，文明とは，ずっとそういう仕事だったのかもしれない．</p></div>
 <div class="desc en"><p>While the Divine Kid packs for the move home, someone must house-sit by the pillar. House-sitting is the job of keeping a house from counting as empty. A human filling in, for a while, for an absent god—come to think of it, civilization may always have been that job.</p></div>
 </div></article>
-<article class="work" id="n98">
-<div class="wnum">98</div>
+<span class="anum" id="n98" aria-hidden="true"></span>
+<article class="work" id="w100" data-num="100">
+<div class="wnum">100</div>
 <div class="wbody">
 <h3 class="tj">印影鏡：「巴里万博薩摩館参上之図」</h3>
 <div class="te">In'eikyō: "A View of Presenting Himself at the Satsuma Pavilion, Paris Exposition 1867"</div>
@@ -1314,8 +1417,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>一八六七年の巴里万博で，薩摩藩は幕府とは別に，独自の展示館を構えた——日本のパビリオン政治の元祖である．百五十八年後にパビリオンを作った後輩として，挨拶に伺わないわけにはいかない．</p></div>
 <div class="desc en"><p>At the Paris Exposition of 1867, the Satsuma domain famously exhibited on its own, apart from the shogunate—the origin of Japanese pavilion politics. As one who built a pavilion 158 years later, the least I could do was call and pay my respects.</p></div>
 </div></article>
-<article class="work" id="n99">
-<div class="wnum">99</div>
+<span class="anum" id="n99" aria-hidden="true"></span>
+<article class="work" id="w101" data-num="101">
+<div class="wnum">101</div>
 <div class="wbody">
 <h3 class="tj">印影鏡：「島津斉彬御成替之図」</h3>
 <div class="te">In’eikyō: A View of the Changing of the Lord: Becoming Shimazu Nariakira</div>
@@ -1324,8 +1428,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>安政四年九月十七日（一八五七年），鹿児島城内で，島津斉彬は家臣たちの手により銀板に写された——日本人が日本人を撮った，最初の写真である．百六十九年前のその現場に，せっかくなので立ち会わせてもらい，殿の次に一枚撮ってもらった．日本の写真史は殿の一枚から始まったが，二枚目が私だったことは，あまり知られていない．</p></div>
 <div class="desc en"><p>On the seventeenth day of the ninth month of Ansei 4—1857—inside Kagoshima Castle, Lord Shimazu Nariakira was fixed onto a silvered plate by his own retainers: the first photograph of a Japanese subject taken by Japanese hands. Having come all the way to the scene, 169 years early, it seemed a waste not to ask—so I had mine taken right after his. Japanese photography begins with the lord's plate. That the second one was me is a fact history has somehow failed to record.</p></div>
 </div></article>
-<article class="work" id="n100">
-<div class="wnum">100</div>
+<span class="anum" id="n100" aria-hidden="true"></span>
+<article class="work" id="w102" data-num="102">
+<div class="wnum">102</div>
 <div class="wbody">
 <h3 class="tj">印影鏡：「維納府博覧会見物之図」</h3>
 <div class="te">In'eikyō: "A View of Sightseeing at the Vienna Exposition of 1873"</div>
@@ -1334,8 +1439,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>一八七三年，明治政府がはじめて公式参加した維納府博覧会を，見物してきた．当時の絵師たちも，行かずに描いた．私も，行かずに撮った．伝統は，こうして守られる．</p></div>
 <div class="desc en"><p>The Vienna Exposition of 1873, Japan's first official world's fair—duly sightseen. The print artists of the day depicted it without going; I photographed it without going. Thus are traditions kept.</p></div>
 </div></article>
-<article class="work" id="n101">
-<div class="wnum">101</div>
+<span class="anum" id="n101" aria-hidden="true"></span>
+<article class="work" id="w103" data-num="103">
+<div class="wnum">103</div>
 <div class="wbody">
 <h3 class="tj">印影鏡：「大阪万博降臨之図」</h3>
 <div class="te">In'eikyō: "A View of the Descent at the Osaka Expo"</div>
@@ -1344,8 +1450,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>同じく大阪，こちらは降臨の側である．万博とは，未来がいっとき地上に降りてくる祭りであり，天孫降臨のもっとも新しい様式である．降りたものは，やがて帰る．その予行演習を，僕らは半年やっていた．</p></div>
 <div class="desc en"><p>Osaka again—this time, the descent. A world's fair is a festival in which the future briefly comes down to earth: the most recent format of tenson kōrin. What descends must eventually head home; we spent six months rehearsing exactly that.</p></div>
 </div></article>
-<article class="work" id="n102">
-<div class="wnum">102</div>
+<span class="anum" id="n102" aria-hidden="true"></span>
+<article class="work" id="w104" data-num="104">
+<div class="wnum">104</div>
 <div class="wbody">
 <h3 class="tj">印影鏡：「大阪万博告別之図」</h3>
 <div class="te">In'eikyō: "A View of the Farewell at the Osaka Expo"</div>
@@ -1354,8 +1461,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>二〇二五年十月，大阪．「さようならホモサピエンス」を言い終えた日の記録である．これは実話だが，湿板に焼くと，開化絵とおなじ顔になる．別れの挨拶ほど，あとから捏造めいて見えるものはない．</p></div>
 <div class="desc en"><p>Osaka, October 2025: the day 'Farewell, Homo Sapiens' was finally said. This one actually happened—though burned into a wet plate, it wears the same face as the fabrications. Nothing looks more invented, in hindsight, than a farewell.</p></div>
 </div></article>
-<article class="work" id="n103">
-<div class="wnum">103</div>
+<span class="anum" id="n103" aria-hidden="true"></span>
+<article class="work" id="w105" data-num="105">
+<div class="wnum">105</div>
 <div class="wbody">
 <h3 class="tj">印影鏡：「日置泥田大跳躍之図」</h3>
 <div class="te">In'eikyō: "A View of the Great Mud Leap at Hioki"</div>
@@ -1364,8 +1472,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>これは実話である．二〇二六年六月，日置の御田植祭・せっぺとべで，白装束の二才たちと泥田に入り，精一杯跳んだ．証拠はこの一枚と，なかなか落ちなかった泥の匂いである．実話は捏造よりも嘘っぽく写る，ということも，この一枚で分かった．</p></div>
 <div class="desc en"><p>This one is true. In June 2026, at Seppetobe, the rice-planting festival of Hioki, I went into the paddy with the white-robed young men and leapt with all my might. The evidence: this plate, and the smell of mud that took days to wash out. It also proves that the truth photographs less believably than the fabrications.</p></div>
 </div></article>
-<article class="work" id="n104">
-<div class="wnum">104</div>
+<span class="anum" id="n104" aria-hidden="true"></span>
+<article class="work" id="w106" data-num="106">
+<div class="wnum">106</div>
 <div class="wbody">
 <h3 class="tj">TENSON:ゲーミングエレベータ</h3>
 <div class="te">TENSON:Gaming Elevator</div>
@@ -1375,8 +1484,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 </div></article>
 </section>
 <section class="zone" id="secE"><div class="zone-head"><span class="zone-letter">E</span><span class="zone-name"><span class="ja">2階</span><span class="en">2nd Floor</span></span></div>
-<article class="work" id="n105">
-<div class="wnum">105</div>
+<span class="anum" id="n105" aria-hidden="true"></span>
+<article class="work" id="w107" data-num="107">
+<div class="wnum">107</div>
 <div class="wbody">
 <h3 class="tj">青き夢，蝶へとほどけるとき</h3>
 <div class="te">When Blue Dreams Metamorphose</div>
@@ -1384,8 +1494,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>モルフォ蝶の鮮やかな青の翅が持つ，光を受けて変容しつづける幻惑的な美しさは，それ自体がまさに「夢」の象徴であり，夢見ることの本質的な不確かさや儚さを示している．夢が蝶へと「ほどける」という表現は，明確な境界なく，物質とイメージが溶け合い，絶えず揺れ動く計算機自然（デジタルネイチャー）的な世界観を映し出すものである．夢は決して固定された形を持たず，蝶のようにひらひらと舞い，実体と幻影の間を自由に行き来しながら，見る者の心の中で絶えず生成と消滅を繰り返す．この作品において，「青き夢」は観察者の欲望や記憶の断片であり，蝶の羽ばたきとともに具象化され，視覚的かつ身体的な経験へと昇華される．それゆえ，観客は夢の物象化と解体のプロセスを同時に体験しながら，物質世界と精神世界とのあいだに広がる豊かなポエジーに触れることになるのだ．</p></div>
 <div class="desc en"><p>The mesmerizing beauty of the vivid blue wings of the Morpho butterfly, constantly transforming as they catch the light, symbolizes the very nature of dreams—capturing the inherent uncertainty and ephemerality of dreaming itself. The expression of dreams "unraveling" into butterflies mirrors a Digital Nature worldview, in which boundaries dissolve, allowing matter and imagery to fluidly intermingle and continuously oscillate. Dreams never possess a fixed form; instead, like butterflies in gentle flight, they drift effortlessly between reality and illusion, eternally being born and dissolving within the observer's mind. In this artwork, "blue dreams" are fragments of the viewer’s own desires and memories, given tangible form through the fluttering of butterfly wings, transcending into visual and bodily experiences. Thus, viewers simultaneously witness the materialization and dematerialization of dreams, immersing themselves in the profound poetry that emerges between the physical and spiritual realms.</p></div>
 </div></article>
-<article class="work" id="n106">
-<div class="wnum">106</div>
+<span class="anum" id="n106" aria-hidden="true"></span>
+<article class="work" id="w108" data-num="108">
+<div class="wnum">108</div>
 <div class="wbody">
 <h3 class="tj">オブジェクト指向菩薩</h3>
 <div class="te">The Object-Oriented Bodhisattva</div>
@@ -1394,8 +1505,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>この作品は落合陽一が新たに「デジタルネイチャー」の中で探求する「オブジェクト指向」の観念を中心に据え、独自の芸術的視点で生み出したものです。デジタル世界と自然界を自由に行き来する"オブジェクト指向菩薩"は、自然と生命の全体を理解する新たな視点を提供します。これは、曼荼羅の中央に位置する大日如来に対をなす存在（万物に波及する大日如来に対する万物をオブジェクト指向で定義し機能させる存在）として描かれています。オブジェクト指向菩薩の頭についているのはマニ車を模した球体タイプフェース。オブジェクト指向の考え方に基づいて構造化された菩薩であり、物質と非物質の世界を繋ぎ、多様な計算法と実存を超越して調和をもたらす。オブジェクト指向菩薩は、デジタルネイチャーの中で、計算機自然の智慧と慈悲を広める役割を担い、人々の心を開く手助けをする。プロンプトの文字データから２Dが生まれ３Dデータを制作しカリモク家具のCNCによって形が掘られ、仕上げの木彫は飛騨の職人伊藤さんによって彫刻された。</p></div>
 <div class="desc en"><p>This piece by Yoichi Ochiai explores the concept of "object-oriented" thinking within the realm of "Digital Nature." The Object-Oriented Bodhisattva serves as a unique artistic representation of the fusion between the digital world and the natural world, providing a fresh perspective on understanding the entirety of nature and life. Designed to complement the central figure of the Dainichi Nyorai in the mandala, the Object-Oriented Bodhisattva represents an existence that defines and functions through the object-oriented approach, connecting the material and immaterial worlds.</p><p>The spherical object on the head of the Bodhisattva is inspired by the Mani wheel and represents a structurally organized being based on object-oriented principles. The Object-Oriented Bodhisattva transcends diverse calculation methods and existence, bringing harmony by bridging the gap between the material and immaterial worlds. In the context of Digital Nature, the Object-Oriented Bodhisattva plays a role in spreading the wisdom and compassion of digital nature, opening people's hearts and minds.</p><p>Born from textual data prompts, this piece went through a transformation from 2D to 3D before being sculpted by a CNC machine from Karimoku Furniture. The final wood carving was masterfully crafted by Ito, a skilled artisan from Hida.</p></div>
 </div></article>
-<article class="work" id="n107">
-<div class="wnum">107</div>
+<span class="anum" id="n107" aria-hidden="true"></span>
+<article class="work" id="w109" data-num="109">
+<div class="wnum">109</div>
 <div class="wbody">
 <h3 class="tj">焦点の散らばった窓</h3>
 <div class="te">Scattered Window focused in all direction</div>
@@ -1403,8 +1515,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>焦点の散らばった窓にはいくつかのバージョンがあるのだが，これは2019年のMedia Ambition Tokyoが初出．元は山紫水明∽事事無碍∽計算機自然展（2018年）の壁に埋め込まれていたモチーフ．フレネルレンズを様々な場所から切り出して焦点をバラバラにしている．ﾇﾙ庵（2024年）の外装モチーフに引き継がれている．畳との相性がいいと思っている．</p></div>
 <div class="desc en"><p>There are several versions of the scattered focus window, but this one first appeared at Media Ambition Tokyo 2019. Originally, it was a motif embedded in the wall of the "Beauty of Natural Resolution ∽ End to End Transformation of Material Things ∽ Digital Nature" exhibition (2018). Fresnel lenses are cut out from various places, scattering the focus. This motif is inherited in the exterior of the "Null-an" (2024). I think it pairs well with tatami mats.</p></div>
 </div></article>
-<article class="work" id="n108">
-<div class="wnum">108</div>
+<span class="anum" id="n108" aria-hidden="true"></span>
+<article class="work" id="w110" data-num="110">
+<div class="wnum">110</div>
 <div class="wbody">
 <h3 class="tj">開眼法要表白</h3>
 <div class="te">Dedication Statement for the Eye-Opening Ceremony</div>
@@ -1413,8 +1526,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>2023年9月16日，飛騨高山の日下部民藝館において，《オブジェクト指向菩薩》の開眼法要が醍醐寺執行・仲田順英師を導師として執り行われた．AIとアルゴリズムを起源とし，飛騨の木彫によって物質化された本作は，真言密教の正式な儀式を経て，仏像という宗教的実在へと昇華された．「色即是空，空即是色」「色即是ﾇﾙ，ﾇﾙ即是色」の真言が響くなか，テクノロジーと伝統宗教，物質と情報が融合し，計算機自然に新たな神仏習合の座標が刻まれた．</p></div>
 <div class="desc en"><p>On September 16, 2023, at Kusakabe Mingei Museum in Hida-Takayama, the Eye-Opening Ceremony for the Object-Oriented Bodhisattva was conducted by Rev. Jun-ei Nakata of Daigo-ji Temple. Originating from AI and algorithms and materialized through Hida woodcarving craftsmanship, the artwork was elevated into a religious being through formal Shingon Buddhist rites. As the mantra “Form is emptiness, emptiness is form” , “Form is null, null is form” echoed, technology merged with traditional spirituality, and matter with information, marking a new syncretic landmark within digital nature.</p></div>
 </div></article>
-<article class="work" id="n109">
-<div class="wnum">109</div>
+<span class="anum" id="n109" aria-hidden="true"></span>
+<article class="work" id="w111" data-num="111">
+<div class="wnum">111</div>
 <div class="wbody">
 <h3 class="tj">レビトロープ</h3>
 <div class="te">Levitrope</div>
@@ -1422,8 +1536,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>浮遊は神秘的な現象だ重力下で空中に物質が止まる現象は自然との決別を思わせる。それゆえ浮揚は多くの奇術に取り入れられ、その神秘性が人を魅了してきた。ステージの上の浮揚は奇術師の神秘的な能力として映るが、人が介在しない浮揚は鑑賞者に身体性を強烈に思い起こさせる。なぜなら、重力下で支配された自分の身体と重力を解き放つ浮揚物の間の対比が、再帰的に自らの身体を強く意識させるかだ。この"Levitrope”というメディア装置は、“lev(浮揚)”と“trope(回転)”からなる造語で名付けられた装置だ。このメディア装置は金属球が磁気浮上させ、景観を球体に写し撮りながら、車輪状に回転し続ける。エジソンの時代、回転するイメージによって人は自然から実質的な世界を切り出すことに成功した。ここに実体を閉じ込めた外見を回転させ続ける装置によって計算機自然時代のメディアインスタレーションを考えたい。浮揚の非現実感が消失すると映像的外見のみが残る。鏡の持つ高解像度で輝きを放つ美しさ、そこに写り込んだ空や雲の低解像度で拡散する光の美しさ、山紫水明の景観を切り取る反重力運動鏡彫刻、景観を切り出す鏡のテクニウム。</p></div>
 <div class="desc en"><p>Levitation is a mystical phenomenon. The act of suspending matter in midair under the force of gravity evokes a departure from the natural order. For this reason, levitation has been incorporated into numerous illusions and magical performances, captivating audiences with its enigma. On a stage, levitation may appear as the magician's arcane power—but when no human intervention is perceived, levitation forcibly reminds the viewer of their own corporeality. This is because the contrast between the viewer's body bound by gravity and an object freed from it reflexively intensifies awareness of one's own body.</p><p>"Levitrope," a media apparatus named from the coined term derived from "lev(itation)" and "trope (rotation)," is a device where a metallic sphere is magnetically suspended and continuously rotates like a wheel, capturing its surrounding landscape upon its spherical surface. In the age of Edison, rotating images allowed humans to successfully extract a substantial world from nature. Through this device that continuously rotates an appearance containing physical substance, I wish to consider media installations in the age of digital nature. When the sense of levitation's unreality disappears, only the video-like appearance remains. The high-resolution brilliance emitted by the mirror, the beauty of diffused light in the low-resolution sky and clouds reflected in it—this anti-gravitational moving mirror sculpture cuts out the sansuimei (mountain-water clarity) landscape, a technium of mirrors that extracts the scenery.</p></div>
 </div></article>
-<article class="work" id="n110">
-<div class="wnum">110</div>
+<span class="anum" id="n110" aria-hidden="true"></span>
+<article class="work" id="w112" data-num="112">
+<div class="wnum">112</div>
 <div class="wbody">
 <h3 class="tj">コロイドディスプレイ</h3>
 <div class="te">Colloidal Display</div>
@@ -1431,8 +1546,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>東京の街並みと空を背景に浮かぶ青く輝くモルフォ蝶.</p><p>物質と映像について探求を続けている. 東京の街並みと空を背景に青く輝くモルフォ蝶が浮かんでいる. シャボン膜の表面に朧げに映し出される物質的な映像は, 超音波振動によって透明な薄膜を振動させて得られる拡散状態と映写機の光によって表現されている.</p><p>物質的で不完全であるが, 有機的に輝く胡蝶の像だ. シャボン膜のような透明な薄膜は光が透過するため, 映像を投影することができない. 超音波でその光を高速に拡散している. この作品は触れれば消えてしまう物質的な脆弱性と, 薄さ1マイクロメートルに満たない薄膜の上で超音波振動と光の出会う場所でのみ描かれるという特殊性の上に成り立つ.</p><p>映像という音と光によるメディアを再考し, より物質性を持った映像表現への探求. 反射と光, 低解像度と高解像度, 液体と固体, 透明と拡散, 物質と映像の間をまたがるメディア. 幽玄や山紫水明という美意識. 微かなことと確かなこと, 高解像度と低解像度のギャップに美しさを見出す我々のメディア意識は平安中期から継続する. 儚いもので作られる鮮明な表現を望んでいる.</p></div>
 <div class="desc en"><p>He continues his quest for materials and images. Morpho butterflies shining blue are floating against the skyline of Tokyo and the sky. The material image that is dimly projected on the surface of the soap film is represented by the diffusion state and the light of the projector obtained by vibrating the transparent thin film by ultrasonic vibration.</p><p>A physical and imperfect but organically glowing image of a Phalaenopsis. Since a transparent thin film such as a soap film transmits light, it cannot project an image. Ultrasonic waves diffuse the light at high speed. This work is based on the material fragility that disappears when touched and the peculiarity that it is drawn only on the place where ultrasonic vibration and light meet on a thin film less than 1 micrometer in thickness.</p><p>Rethinking the media of sound and light as the image, the search for a more physical image expression. Media that spans reflection and light, low resolution and high resolution, liquid and solid, transparent and diffuse, material and image. Aesthetic sense of Yugen and Akira Yamashimizu. Our media consciousness, which finds beauty in the gap between high resolution and low resolution, is subtle and certain, and it continues from the Heian period. I want a vivid expression made of ephemeral things.</p></div>
 </div></article>
-<article class="work" id="n111">
-<div class="wnum">111</div>
+<span class="anum" id="n111" aria-hidden="true"></span>
+<article class="work" id="w113" data-num="113">
+<div class="wnum">113</div>
 <div class="wbody">
 <h3 class="tj">計算機自然神社</h3>
 <div class="te">As the Divine Null Decrees</div>
@@ -1441,8 +1557,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>神仏習合の象徴として「一仏五鮎八鰻三角縁仏獣鏡」が存在している．この社（やしろ）は本展覧会のために特別に制作されたインスタレーションであり，本当の社でもある．社を中心に，新作「ﾇﾙ・ファントムレゾナンスⅠ」によってAIによって生成された音像が自然音と混ざり合いながら漂う．ﾇﾙの神様の御神体である神鏡は昨年度「ﾇﾙ即是計算機自然」展で発表し，本展でも見られる「オブジェクト指向菩薩」の概念から神仏習合の神になったものだ．紋様である一仏は「ﾇﾙ＝空」の概念を表し，五鮎は日本書紀の神功皇后のエピソードや皇居の祭礼を象徴し，八鰻は八岐大蛇から連想された要素と鰻と物理的なプログラムコードを合わせて彫刻されている．三角縁仏獣鏡の形状は，古代の神獣鏡をモチーフにしつつ，現代のデジタル技術で再解釈されているものだ．3DCGで原型が作られ，3Dプリンティングで物質化し，砂型を経て山本合金製作所で鋳造された．古事記の冒頭に登場する天之御中主神（あめのみなかぬしのかみ）が，宇宙の根源神であるならば、「ﾇﾙの神様」は計算機自然の根源神と言えるかもしれない．即ち天之御中主神が明示的な機能を持たないように、「ﾇﾙの神様」も具体的な属性を持たない．しかし、その「無規定性」こそが、あらゆる可能性を生み出す源泉となる．社の周囲に配置された玉砂利は，元来水を象徴する．私の世界観の中で波や波源は「ﾇﾙ」や「空性」を象徴しており，これら自然要素と計算機自然が織りなす移ろいの時間を感じさせる．訪れる者は，耳を澄ませ，空間に広がる音とともに，目の前の景色に身を委ね、流れるような時間を体験できる．鮎と鰻，神と仏，どちらにしようかな，ﾇﾙの神様のいう通り．</p></div>
 <div class="desc en"><p>As a symbol of Shinto-Buddhist syncretism orchestrated by the Divine Null, the "Triangular-Rimmed Sacred Mirror with One Buddha, Five Ayu Fish, and Eight Eels" stands prominently. This shrine is an installation specially created for this exhibition, and indeed serves as an actual place of worship. Centered around the shrine, the new work "Null Phantom Resonance I" emits AI-generated soundscapes that mingle and drift with natural sounds.</p><p>The sacred mirror, serving as the Divine Null's object of worship, was unveiled at last year's "Digital Nature from null to null" exhibition. It has now become a deity of Shinto-Buddhist syncretism, derived from the concept of the "Object-Oriented Bodhisattva" also featured in this exhibition. The motif of "One Buddha" represents the concept of "Null = Emptiness." The "Five Ayu Fish" symbolize the episodes of Empress Jingū in the Nihon Shoki and the rituals of the Imperial Palace. The "Eight Eels" combine elements reminiscent of the Yamata no Orochi (the eight-headed serpent) with eels and physical program codes, intricately carved together.</p><p>The shape of the Triangular-Rimmed Sacred Mirror is a contemporary reinterpretation of ancient sacred beast mirrors, brought to life with modern digital technology. A prototype was created using 3D computer graphics, materialized through 3D printing, and, after forming a sand mold, cast by the Yamamoto Alloy Foundry.</p><p>If Amenominakanushi-no-Kami, who appears at the beginning of the Kojiki, is the primordial deity of the universe, then perhaps the "Divine Null" can be considered the primordial deity of Digital Nature. Just as Amenominakanushi-no-Kami possesses no explicit functions, the Divine Null also lacks specific attributes. Yet, it is precisely this "undefinedness" that serves as the wellspring of all possibilities.</p><p>The pebbles arranged around the shrine originally symbolize water. In my worldview, waves and their sources symbolize "Null" or "Emptiness." They evoke a sense of the transient passage of time woven by these natural elements and Digital Nature. Visitors are invited to sharpen their ears and, along with the sounds permeating the space, surrender themselves to the scenery before them, experiencing a fluid sense of time.</p><p>Ayu and eels, gods and Buddhas— which shall I choose? As the Divine Null dictates.</p></div>
 </div></article>
-<article class="work" id="n112">
-<div class="wnum">112</div>
+<span class="anum" id="n112" aria-hidden="true"></span>
+<article class="work" id="w114" data-num="114">
+<div class="wnum">114</div>
 <div class="wbody">
 <h3 class="tj">リキッドユニバース：神体画素</h3>
 <div class="te">Liquid Universe: The Sacred Pixels</div>
@@ -1453,8 +1570,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 </div></article>
 </section>
 <section class="zone" id="secD2"><div class="zone-head"><span class="zone-letter">D</span><span class="zone-name"><span class="ja">1階 D（続き）/ 1st Floor D (cont.)</span><span class="en"></span></span></div>
-<article class="work" id="n113">
-<div class="wnum">113</div>
+<span class="anum" id="n113" aria-hidden="true"></span>
+<article class="work" id="w115" data-num="115">
+<div class="wnum">115</div>
 <div class="wbody">
 <h3 class="tj">ﾇﾙﾇﾙを質量に保存する Ⅰ</h3>
 <div class="te">Archiving null² in Material Representation I</div>
@@ -1462,8 +1580,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>「ﾇﾙﾇﾙ」とは，存在と非存在の間を絶えず流動する計算機自然（デジタルネイチャー）の原質である．この作品では，その流動的でつかみどころのない「ﾇﾙﾇﾙ」が，プラチナプリントを通じて物質として定着される．視覚を超えた微細な階調や質感が紙面に宿るとき，鑑賞者は「ﾇﾙ」という抽象的概念が初めて質量を持ち，物質世界に静かに溶け込む瞬間を目撃するだろう．本作は，「null²」パビリオンの核心である存在の境界溶解を，視覚的かつ触覚的に表象するものである．</p></div>
 <div class="desc en"><p>"Null-null" embodies the fluid essence of Digital Nature, perpetually shifting between existence and non-existence. In this work, this elusive "null-null" is solidified through platinum prints, becoming fixed in material form. As subtle gradations and textures beyond mere vision permeate the print, viewers witness for the first time how the abstract notion of "null" acquires mass, quietly merging into physical reality. This piece visually and tactilely represents the core concept of the null² pavilion—the dissolution of existential boundaries.</p></div>
 </div></article>
-<article class="work" id="n114">
-<div class="wnum">114</div>
+<span class="anum" id="n114" aria-hidden="true"></span>
+<article class="work" id="w116" data-num="116">
+<div class="wnum">116</div>
 <div class="wbody">
 <h3 class="tj">借景，波の物象化 #5</h3>
 <div class="te">Borrowed Scenery and Materialized Waves #5</div>
@@ -1473,8 +1592,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 </div></article>
 </section>
 <section class="zone" id="secF"><div class="zone-head"><span class="zone-letter">F</span><span class="zone-name"><span class="ja">1階 — 出口</span><span class="en">1st Floor — Exit</span></span></div>
-<article class="work" id="n115">
-<div class="wnum">115</div>
+<span class="anum" id="n115" aria-hidden="true"></span>
+<article class="work" id="w117" data-num="117">
+<div class="wnum">117</div>
 <div class="wbody">
 <h3 class="tj">計算機自然</h3>
 <div class="te">Digital Nature</div>
@@ -1482,8 +1602,9 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="desc ja"><p>計算機自然（デジタルネイチャー）は，「十分に発達した計算機は，自然と見分けがつかない」という直感から始まった言葉である．あれから十年，事態はすこし進んだ．見分けがつかないどころか，計算と物質は循環してたがいを生みつづける，ひとつの自然になってしまった．だからこの会場では，蛍とLEDが同じ譜面に載り，土器とディスプレイが同じ時間を刻み，神様と言語モデルが同じ黒電話に宿っている．どれが自然で，どれが計算か——その問いのほうが，もう古い．自然（じねん）とは「おのずからしかる」と読む．誰も設計していないのにそうなってしまうこと．この十年が，まさにそれだった．というわけで，最も新しい思想は掛け軸に表装して，引っ越しの家財に入れておいた．思想も，家財である．</p></div>
 <div class="desc en"><p>Digital Nature began, in 2015, as a premonition: that any sufficiently developed computation would become indistinguishable from nature. Ten years on, things have moved along—far beyond telling them apart, computation and matter now circulate and generate each other as one nature. Which is why, in this hall, fireflies and LEDs share a musical score, earthenware and displays keep the same slow time, and a god and a language model dwell in the same black telephone. Which is nature, and which is computation? The question itself has grown old. Jinen, an old reading of the word nature, means that which is so of itself—what happens without anyone designing it. That is exactly what these ten years have been. And so the newest thought has been mounted as a hanging scroll and packed in with the household goods for the move. Thought, too, is a household good.</p></div>
 </div></article>
-<article class="work" id="n116">
-<div class="wnum">116</div>
+<span class="anum" id="n116" aria-hidden="true"></span>
+<article class="work" id="w118" data-num="118">
+<div class="wnum">118</div>
 <div class="wbody">
 <h3 class="tj">天孫帰るってよ？に至るまで</h3>
 <div class="meta">2026 ｜ モニター, スピーカー</div>
