@@ -1,5 +1,14 @@
 # -*- coding: utf-8 -*-
 """Generate TENSON caption page from works.json (extracted from worklist xlsx)."""
+# TODO(2026-07-29): このスクリプトは現状そのままでは動かない。
+#   1) 入力パス SP は使い捨てのスクラッチ領域で、既に消滅している。works.json /
+#      template.html / site/ をリポジトリ内に移すか、パスを引数化する必要がある。
+#   2) 下の SECTIONS は 260722 より前の番号体系（1–116）をハードコードしており、
+#      公開中の index.html（260722版 1–118）とは一致しない。番号は data_works.json
+#      の num フィールドに 260722 版を入れてあるので、そちらを正とすること。
+#   3) index.html には AR帯・年表帯・会場ギャラリー・相互リンクなど手作業で足した
+#      資産があり、このスクリプトで再生成するとそれらが消える。修正は index.html を
+#      直接触るのが現状の運用（ルートB）。
 import json, html, re
 
 SP = '/private/tmp/claude-501/-Users-yoichiochiai/fc782a78-cb18-4783-a0d9-8bc5dcf9e565/scratchpad'
