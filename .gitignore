@@ -1,3 +1,4 @@
 .gstack/
 __pycache__/
 *.pyc
+logs/

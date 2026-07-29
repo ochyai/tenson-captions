@@ -398,6 +398,56 @@ h3.tj{font-size:1.34rem;font-weight:700;letter-spacing:.05em;line-height:1.65}
 .sub-d{font-size:.86rem;color:var(--ink-soft);line-height:1.95}
 .sub-d.en{font-family:var(--serif-en);color:var(--mute)}
 
+/* 見落としの個体に添える一行（物語は kirishima-graph/zukan-lines.json が正本） */
+.zukan .subs-title{color:var(--shu)}
+.zukan-lead{font-size:.86rem;color:var(--ink-soft);line-height:1.95;padding-bottom:.5rem}
+.zukan .sub{padding:.5rem 0}
+.zukan .sub-t{color:var(--shu-deep)}
+.zukan .sub-d{letter-spacing:.02em}
+.zukan .sub-d::before{content:"—　";color:var(--gin)}
+
+/* ================= 今日の問答 ================= */
+.mondou{
+  margin:2.6rem 0 .6rem;padding:1.9rem 1.7rem 1.6rem;
+  background:var(--paper-deep);box-shadow:inset 0 0 0 1px var(--hair);
+  border-left:3px solid var(--shu);border-radius:2px;
+}
+.mondou[hidden]{display:none}
+.mondou-kicker{font-size:.72rem;letter-spacing:.3em;color:var(--shu);margin-bottom:.5rem}
+.mondou-kicker .en{font-family:var(--serif-en);letter-spacing:.16em;margin-left:.9em;color:var(--mute)}
+.mondou-head{font-size:1.12rem;font-weight:700;letter-spacing:.06em;line-height:1.7}
+.mondou-head .en{
+  display:block;font-family:var(--serif-en);font-weight:400;
+  font-size:.92rem;color:var(--mute);letter-spacing:.03em;margin-top:.1rem;
+}
+.mondou-date{font-family:var(--serif-en);font-size:.8rem;letter-spacing:.14em;color:var(--gin);margin-top:.5rem}
+.mondou-text{
+  font-size:1.04rem;line-height:2.15;margin:.9rem 0 0;max-width:38em;
+  text-indent:-1em;padding-left:1em;
+}
+.mondou-text::before{content:"「"}
+.mondou-text::after{content:"」"}
+.mondou-facts{font-size:.74rem;letter-spacing:.1em;color:var(--gin);margin-top:.7rem}
+.mondou-facts .en{font-family:var(--serif-en);margin-left:.8em}
+.mondou-foot{margin-top:1.1rem;font-size:.84rem;color:var(--ink-soft);letter-spacing:.06em}
+.mondou-foot .en{font-family:var(--serif-en);color:var(--mute)}
+.mondou-foot a{color:var(--shu);text-decoration-color:var(--hair);margin-left:.6em;white-space:nowrap}
+
+/* ================= 一分で読む ================= */
+.nav-tools{display:flex;align-items:center;gap:.35rem}
+.brief-btn{
+  font-family:var(--serif-ja);font-size:.78rem;letter-spacing:.1em;
+  background:none;border:1px solid transparent;color:var(--mute);
+  padding:.2rem .6rem;cursor:pointer;border-radius:2px;white-space:nowrap;
+}
+.brief-btn.on{border-color:var(--shu);color:var(--shu)}
+.brief-btn .en{font-family:var(--serif-en);letter-spacing:.04em}
+body.lang-both .brief-btn .en{display:none}
+body.brief .desc p:not(:first-of-type),
+body.brief .brief-cut,
+body.brief .subs{display:none}
+body.brief .desc p.is-cut::after{content:attr(data-tail) " …";color:var(--gin)}
+
 /* ○△□ divider */
 .mds{display:flex;justify-content:center;gap:1.6rem;padding:2.6rem 0 .4rem;opacity:.55}
 .mds svg{width:17px;height:17px;stroke:var(--ink-soft);fill:none;stroke-width:1.4}
@@ -463,7 +513,8 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
   .wnum{font-size:1.15rem}
   .wnum::after{display:none}
   .zones a{padding:.12rem .4rem}
-  .nav-in{padding:.5rem .9rem}
+  .nav-in{padding:.5rem .9rem;flex-wrap:wrap;row-gap:.25rem}
+  .brief-btn{padding:.2rem .4rem}
   .zones .zl{display:none}
   .rakkan{top:-4.2rem;width:2.7rem;height:2.7rem;font-size:.9rem}
   .torii{display:none}
@@ -552,8 +603,14 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
       <a href="#gallery" style="font-family:var(--serif-ja);font-size:.78rem;letter-spacing:.1em">写真</a>
       <a href="https://tenson-shiori.vercel.app/" style="font-family:var(--serif-ja);font-size:.78rem;letter-spacing:.1em">ガイド↗</a>
     </div>
-    <div class="langs">
-      <button data-l="both" class="on">日英</button><button data-l="ja">日本語</button><button data-l="en">English</button>
+    <div class="nav-tools">
+      <button class="brief-btn" id="brief-btn" type="button" aria-pressed="false"
+              title="各作品の解説を最初の一文だけにします">
+        <span class="ja">一分で読む</span><span class="en">1-min read</span>
+      </button>
+      <div class="langs">
+        <button data-l="both" class="on">日英</button><button data-l="ja">日本語</button><button data-l="en">English</button>
+      </div>
     </div>
   </div>
 </nav>
@@ -970,6 +1027,25 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="credit">協力：カリモク家具株式会社</div>
 <div class="desc ja"><p>木彫を通じて整数的な波動立体のモチーフを具象化した作品。物理とデジタルの往復で生まれるフォルムが民藝とデジタルネイチャーの共通点を探している。</p></div>
 <div class="desc en"><p>This artwork embodies integer waveform motifs through wood carving, exploring the commonalities between the Mingei folk art movement and the concept of Digital Nature. The unique forms created through the interplay of physical and digital realms showcase a harmonious fusion of traditional and contemporary artistic expressions.</p></div>
+<div class="subs zukan ja">
+<div class="subs-title">一体ずつの一行</div>
+<div class="sub">
+<div class="sub-t">木化する波 #1</div>
+<div class="sub-d">中性 - 。波が木に変わる瞬間の、どちらでもない色。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">木化する波 #3</div>
+<div class="sub-d">中性 - 。同じ波形は二度と来ないのに、ここでは何度でも来る。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">木化する波 #7</div>
+<div class="sub-d">この番号は会場に二度ある。二度目を見つけた人だけが知っている。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">木化する波 #8</div>
+<div class="sub-d">中性 - 。止まった波の前では、あなたの方が流れている。<!-- 物語:要推敲 --></div>
+</div>
+</div>
 </div></article>
 <span class="anum" id="n18" aria-hidden="true"></span>
 <span class="anum" id="w20" aria-hidden="true"></span>
@@ -983,6 +1059,21 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="credit">協力：カリモク家具株式会社</div>
 <div class="desc ja"><p>木彫を通じて整数的な波動立体のモチーフを具象化した作品。物理とデジタルの往復で生まれるフォルムが民藝とデジタルネイチャーの共通点を探している。</p></div>
 <div class="desc en"><p>This artwork embodies integer waveform motifs through wood carving, exploring the commonalities between the Mingei folk art movement and the concept of Digital Nature. The unique forms created through the interplay of physical and digital realms showcase a harmonious fusion of traditional and contemporary artistic expressions.</p></div>
+<div class="subs zukan ja">
+<div class="subs-title">一体ずつの一行</div>
+<div class="sub">
+<div class="sub-t">木化する波 #2</div>
+<div class="sub-d">黒 - 。夜の波は音を吸う。木になっても吸っている。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">木化する波 #5</div>
+<div class="sub-d">黒 - 。焦げたのではない。夜を塗ったのである。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">木化する波 #7</div>
+<div class="sub-d">この番号は会場に二度ある。二度目を見つけた人だけが知っている。<!-- 物語:要推敲 --></div>
+</div>
+</div>
 </div></article>
 <span class="anum" id="n21" aria-hidden="true"></span>
 <span class="anum" id="w23" aria-hidden="true"></span>
@@ -998,6 +1089,19 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="meta">2023 ｜ ガラス</div>
 <div class="desc ja"><p>物質的なガラスを通じて整数的な波動立体のモチーフを具象化した作品。この作品ではデジタルと物質、現実と虚構が交差し、自然な波動を捕らえたかのようなガラスの彫刻。</p></div>
 <div class="desc en"><p>This artwork represents the motif of integer-based waveforms materialized through physical glass. The piece creates an intersection between digital and material, reality and fiction, with the glass sculpture seeming to capture the natural undulations of waves.</p></div>
+<div class="subs zukan ja">
+<div class="subs-title">三点に添えられた一行</div>
+<div class="zukan-lead">どの一行がどのガラスかは、会場で確かめるしかない。<!-- 導入文:zukan-lines.json 由来ではなく、十三支の姿勢に合わせて補った一行。要推敲 --></div>
+<div class="sub">
+<div class="sub-d">窓の外の森は借り物。ガラスの中の結晶は本物。どちらも作品である。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-d">借りた景色に波を混ぜる。返すときには少し変わっている。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-d">ガラスは固まった液体。つまりこれも、止まった波である。<!-- 物語:要推敲 --></div>
+</div>
+</div>
 </div></article>
 <span class="anum" id="n26" aria-hidden="true"></span>
 <span class="anum" id="w28" aria-hidden="true"></span>
@@ -1010,6 +1114,17 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="credit">協力：カリモク家具株式会社</div>
 <div class="desc ja"><p>木彫を通じて整数的な波動立体のモチーフを具象化した作品。物理とデジタルの往復で生まれるフォルムが民藝とデジタルネイチャーの共通点を探している。</p></div>
 <div class="desc en"><p>This artwork embodies integer waveform motifs through wood carving, exploring the commonalities between the Mingei folk art movement and the concept of Digital Nature. The unique forms created through the interplay of physical and digital realms showcase a harmonious fusion of traditional and contemporary artistic expressions.</p></div>
+<div class="subs zukan ja">
+<div class="subs-title">一体ずつの一行</div>
+<div class="sub">
+<div class="sub-t">木化する波 #4</div>
+<div class="sub-d">鏡 - 。波が波を見ている。見られた方が本物になる。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">木化する波 #6</div>
+<div class="sub-d">鏡 - 。あなたが映り込んだ瞬間だけ、この波は動く。<!-- 物語:要推敲 --></div>
+</div>
+</div>
 </div></article>
 <span class="anum" id="n28" aria-hidden="true"></span>
 <span class="anum" id="w30" aria-hidden="true"></span>
@@ -1023,6 +1138,21 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="credit">協力：カリモク家具株式会社</div>
 <div class="desc ja"><p>この作品は高山の技巧性の高い木工作家とのコラボレーションによって製作されました。原型はカリモク家具株式会社の支援によって作家の製作する3Dデータから木材の削り出しを行いました。この作品は、銀口魚（アユ）が三次元的な波の形に変換されていく過程を表現しています。アユは川の藻を食べ、川によって味が異なる生き物として描かれています。</p><p>作品は、日本の古典や神話と深く関連しています。例えば、神功皇后が戦果を占うために川に投げ入れた釣り針で釣った魚がアユだとされています。また、素戔嗚譚に登場する稲田姫の両親であるテナヅチ・アシナヅチが関連しています。本作品は、木彫のモチーフとしてアユ、神話、鏡、デジタルの輪廻転生の文脈を編む旅から生まれました。3Dデータからの削り出しと木工作家伊藤さんの技巧性が融合し、波と生き物の中間の物質として質量ある自然に揺蕩っています。</p></div>
 <div class="desc en"><p>These artworks explore the cycle of transmutation between the digital and physical realms. An intricately carved wooden sculpture of a sweetfish, crafted by a skilled artisan, undergoes multiple transformations. The sculpture is first created by carving it out of a 3D-printed model using a machine. The physical sculpture is then re-digitized by 3D scanning, allowing for another instance of machine-carving before being coated with a mirror-like finish. Throughout this process, the echoes of the craftsman's touch intertwine with the materiality of the object, resulting in a piece that embodies the dynamic interplay between digital and physical forms.</p></div>
+<div class="subs zukan ja">
+<div class="subs-title">一体ずつの一行</div>
+<div class="sub">
+<div class="sub-t">29</div>
+<div class="sub-d">再物化する波 - 。鮎が波に戻っていく最初の一歩。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">30</div>
+<div class="sub-d">再物化する波 - 。魚と波の中間報告。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">31</div>
+<div class="sub-d">再物化する波 - 。ほぼ波。まだ少し、泳いでいる。<!-- 物語:要推敲 --></div>
+</div>
+</div>
 </div></article>
 <span class="anum" id="n31" aria-hidden="true"></span>
 <span class="anum" id="w33" aria-hidden="true"></span>
@@ -1036,6 +1166,21 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="credit">協力：カリモク家具株式会社，伊藤慎次郎，小村井万友奈</div>
 <div class="desc ja"><p>これらの作品は高山の技巧性の高い手の技を持つ木工作家，伊藤さんとのコラボレーションによって製作された．原型はカリモク家具株式会社の支援によって作家の製作する3Dデータから木材の削り出しを行った．落合陽一は宙に浮かぶ銀彫刻が風景を変換しながら，空間を音楽的な周期帰着させていく．そんな作品を多く作ってきた．映像と物質の変換，波と物質と知能の関係性から展開した質量性と非質量性が止揚した計算機自然を志向するのも，音と光の共感覚の中で風景や空間と一体化したいという作家自身の願望によるところが大きいように思う．本作品は銀口魚（アユ）が三次元的な波の形に変換されていく過程を表現したものである．清流に暮らし，川の藻を食べて過ごすアユは川によって味も違い，まさに土着の川の複雑性を表現する生き物であると思う．日本の古典とも縁が深く，日本書紀では神功皇后が戦果を占うのに川に投げ入れた釣り針で釣った魚が鮎であったとされる（ゆえに魚に占うと書くとされる：中国では同じ字でこれはナマズを意味するのが面白いところだ）．神話に遡れば，手長足長にも縁がありそうなテナヅチ・アシナヅチが素戔嗚譚に登場する稲田姫の両親なら，素戔嗚の兄である月詠の月神の託宣を受けて，神石をもって腹を撫で子を孕った伝説が残っていたりもする．太陽神天照に対して反射する光で輝く月の光は鏡や水面のモチーフに似ている．風景を変換する木彫のモチーフとして鮎と神話と鏡とデジタルの輪廻転生の文脈を編む旅から生まれた木彫は，3D データからの削り出しと伊藤さんの技巧性を持って波と生き物の中間の物質として質量ある自然に揺蕩っている．</p></div>
 <div class="desc en"><p>These works were produced in collaboration with Shinjiro Ito, a woodworker of Hida Takayama who is highly skilled in his craft. The model was cut out from a block of wood using 3D data produced by the artists with the support of Karimoku Furniture Co.</p><p>The silver sculptures floating in the air transform the landscape, bringing space back into a musicallike cycle. Ochiai has created many such works. The artist’ s orientation toward a digital nature in which mass and non-mass developed from the relationship between waves, mass, and intelligence, as well as the transformation of images and mass largely seem to be due to his desire to become one with the landscape and space in the synaesthesia of sound and light.</p><p>This work represents the process by which a silver mouth fish, another name for sweetfish in Japanese, is transformed into a three-dimensional wave shape. Living in clear streams and feeding on river algae, the sweetfish has a different taste depending on the conditions of the river it lives in and is a creature that truly expresses the complexity of indigenous rivers. In the Nihon Shoki (The Chronicles of Japan), the sweetfish is said to be the one that Empress Jingu caught with a hook she threw into the river to divine the outcome of a battle (hence the Japanese character for sweetfish can be read as "divination in fish." It is interesting that the same character in Chinese means “catfish” ). If we go back to mythology,</p><p>Tenazuchi (arm deity) and Ashinazuchi (leg deity), who seem to be related to the long-limbed and long-legged people, are the parents of the Inadahime deity, who appears in the tale of Susanoo (storm deity). There is a legend that she was conceived by stroking her belly with a sacred stone in response to the oracle of Tsukuyomino-Mikoto (moon deity), who was Susanoo's brother.</p><p>The light of the moon shining by the reflection of the sun god Amaterasu resembles the motif of mirrors and water surfaces. With the motif of transforming the landscape, this wood sculpture was born out of a journey blending the context of sweetfish, mythology, mirror, and digital undergoing reincarnation. It is a work cut out using 3D data and brought to life by Mr. Ito's skillfulness, and as a substance that exists between waves and living creatures, it flows in nature with mass.</p></div>
+<div class="subs zukan ja">
+<div class="subs-title">一体ずつの一行</div>
+<div class="sub">
+<div class="sub-t">32</div>
+<div class="sub-d">変換過程 - 。形が形を手放すところを見てよい。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">33</div>
+<div class="sub-d">変換過程 - 。銀色は魚の名残か、波の予告か。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">34</div>
+<div class="sub-d">変換過程 - 。完成ではなく、変換の途中で額装された時間。<!-- 物語:要推敲 --></div>
+</div>
+</div>
 </div></article>
 <span class="anum" id="n34" aria-hidden="true"></span>
 <article class="work" id="w35" data-num="35">
@@ -1223,9 +1368,26 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="te">Phantom Resonance: After the Pilgrimage Around Tenson</div>
 <div class="meta">2026 ｜ 黒電話, PC, 大規模言語モデル, 生成AI</div>
 <div class="note"><span class="ja">＊受話器を上げてください</span><span class="en">* Pick up the handset</span></div>
+<div style="margin-top:.5rem;font-size:.84rem"><a href="https://tenson-shiori.vercel.app/tenson-mikuji/" style="color:var(--shu);text-decoration-color:var(--hair)"><span class="ja">→ 電話を切ったあとは、天孫みくじを一枚引いていく</span><span class="en" style="font-family:var(--serif-en)">→ After you hang up, draw a Tenson fortune slip</span></a></div>
 <div class="desc ja"><p>受話器を上げると，落合陽一の言葉を学習した言語モデルが応える．クラウドには繋がっていない．この土地に据えられた計算機のなかだけで動き，作家の声で，霧島の記憶を語る．よく聞くと，その声はすこし疲れている——一年の鹿児島行脚と十日の設営を，声だけが覚えているらしい．人は，むき出しの計算には手を合わせないが，物のかたちを与えられた計算には，つい耳を澄ませてしまう．設営が終わっても，電話のなかの落合は帰らない．黒電話のなかに，棲みついている．</p></div>
 <div class="desc en"><p>Lift the receiver, and a language model trained on Yoichi Ochiai's own words answers. It is connected to no cloud: running on a single machine planted in this land, it speaks the memories of Kirishima in the artist's voice. Listen closely—the voice sounds a little tired; a year of pilgrimage around Kagoshima and ten days of installation seem to linger in the voice alone. No one prays to naked computation, yet given the form of a thing, it makes us lean in and listen. The installation is over, but the Ochiai inside the telephone has not gone home. He has settled in—dwelling inside the black telephone.</p></div>
 </div></article>
+
+<!-- 今日の問答: mondou.json（毎晩17:00にminiが更新）があるときだけ現れる。
+     ファイルが無い・壊れている・空のときはセクションごと出さない。 -->
+<section class="mondou" id="mondou" hidden aria-labelledby="mondou-head">
+  <div class="mondou-kicker"><span class="ja">今日の問答</span><span class="en">Today&rsquo;s Exchange</span></div>
+  <h4 class="mondou-head" id="mondou-head"><span class="ja">黒電話は今日、こう答えた</span><span class="en">What the black telephone said today</span></h4>
+  <div class="mondou-date" id="mondou-date"></div>
+  <blockquote class="mondou-text" id="mondou-text"></blockquote>
+  <div class="mondou-facts" id="mondou-facts" hidden><span class="ja">この応答は、展示の記録を参照して話されました。</span><span class="en">Spoken with reference to the exhibition&rsquo;s records.</span></div>
+  <div class="mondou-foot">
+    <span class="ja">会場の黒電話に、あなたも一つ問えます。</span>
+    <span class="en">You may ask the black telephone one question of your own.</span>
+    <a href="#w54"><span class="ja">54へ</span><span class="en">to 54</span></a>
+  </div>
+</section>
+
 <span class="anum" id="n53" aria-hidden="true"></span>
 <article class="work" id="w55" data-num="55">
 <div class="wnum">55</div>
@@ -1330,6 +1492,62 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="credit">協力：カリモク家具株式会社，伊藤慎次郎，宮田英之，村瀬恭平，山内宏俊，山本翁</div>
 <div class="desc ja"><p>「象徴と変転 - 十三支」は、十二支に猫を加えた十三支を東洋思想と道教的な世界観と共に、コンピューターテクノロジーと融合させた作品です。それぞれの生肖が持つ象徴性と、それがダイナミックに変転し進化する様は、デジタルネイチャーの躍動感を表現しています。古代の知恵と現代のテクノロジーが融合し、新たな未来への道を示唆します。</p><p>インターネットを利用した新しい民藝の試みである本作品では、全国各地の家に眠る古木の置物をECサイトから、3Dスキャンして変形を加えます。その変形後の姿をAIで描き出し、カリモク家具のCNCで削り出して3Dの形にします。さらに、高山市の職人たちの手で仕上げられ、新しい計算機自然的な時間彫刻として蘇ります。その見た目は古い民藝が形を変えて生まれ変わったような、新たな表現を見せています。</p></div>
 <div class="desc en"><p>"Symbolism and Transformation - The Thirteen Zodiac Signs" is a work that fuses computer technology with Eastern thought and a Taoist worldview, incorporating the cat as the 13th sign in addition to the traditional twelve zodiac animals. The inherent symbolism of each zodiac animal and their dynamic transformations and evolutions represent the vibrancy of digital nature. This unique fusion of ancient wisdom and modern technology suggests a path towards a new future.</p><p>In this innovative exploration of a new digital folk art, old wooden ornaments found in homes across the country are purchased through online marketplaces, then 3D-scanned and transformed. The altered shapes are recreated by artificial intelligence and carved out by Karimoku Furniture's CNC machines, forming three-dimensional representations. Finally, craftsmen in Takayama City hand-finish the pieces, reviving them as new computer-nature-inspired temporal sculptures. The final appearance suggests a rebirth of traditional folk art, with its form metamorphosed into a novel expression.</p></div>
+<div class="subs zukan ja">
+<div class="subs-title">十三支の一行</div>
+<div class="zukan-lead">十三支は十二支に猫を足した落合の暦。どの一体がどの干支かは、会場で確かめるしかない。</div>
+<div class="sub">
+<div class="sub-t">子</div>
+<div class="sub-d">最初に数えられる者。小さいものから世界は始まる。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">丑</div>
+<div class="sub-d">急がない者。牛の歩みで千年を渡る。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">寅</div>
+<div class="sub-d">縞は警告であり、装飾である。強さは両方を持つ。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">卯</div>
+<div class="sub-d">跳ぶ前に耳で世界を測る。計算は耳からも入る。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">辰</div>
+<div class="sub-d">十三支でただ一体の空想。空想もまた干支に数えられた。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">巳</div>
+<div class="sub-d">脱いだ皮も自分である。バージョンの古い自分を憎むな。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">午</div>
+<div class="sub-d">走るために生まれた形。止まっている姿も走る形をしている。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">未</div>
+<div class="sub-d">群れの中で番号を持たない。それでも一頭ずつ違う。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">申</div>
+<div class="sub-d">人に一番近く、人でない。その距離が知性の置き場所。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">酉</div>
+<div class="sub-d">夜明けを知らせる係。誰かが最初に言わなければ朝は来ない。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">戌</div>
+<div class="sub-d">待つことを仕事にした最初の動物。忠誠は時間の形をしている。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">亥</div>
+<div class="sub-d">まっすぐしか走れない。それは欠点ではなく様式である。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">猫</div>
+<div class="sub-d">十三番目。干支に入れなかった伝説ごと、ここに祀られた。<!-- 物語:要推敲 --></div>
+</div>
+</div>
 </div></article>
 <span class="anum" id="n75" aria-hidden="true"></span>
 <span class="anum" id="w78" aria-hidden="true"></span>
@@ -1352,6 +1570,62 @@ footer .torii-s{width:44px;opacity:.65;margin-bottom:1rem}
 <div class="meta">2025 ｜ 和紙にUVプリント</div>
 <div class="desc ja"><p>「象徴と変転 - 十三支」は、十二支に猫を加えた十三支を東洋思想と道教的な世界観と共に、コンピューターテクノロジーと融合させた作品です。それぞれの生肖が持つ象徴性と、それがダイナミックに変転し進化する様は、デジタルネイチャーの躍動感を表現しています。古代の知恵と現代のテクノロジーが融合し、新たな未来への道を示唆します。</p><p>インターネットを利用した新しい民藝の試みである本作品では、全国各地の家に眠る古木の置物をECサイトから、3Dスキャンして変形を加えます。その変形後の姿をAIで描き出し、カリモク家具のCNCで削り出して3Dの形にします。さらに、高山市の職人たちの手で仕上げられ、新しい計算機自然的な時間彫刻として蘇ります。その見た目は古い民藝が形を変えて生まれ変わったような、新たな表現を見せています。</p></div>
 <div class="desc en"><p>"Symbolism and Transformation - The Thirteen Zodiac Signs" is a work that fuses computer technology with Eastern thought and a Taoist worldview, incorporating the cat as the 13th sign in addition to the traditional twelve zodiac animals. The inherent symbolism of each zodiac animal and their dynamic transformations and evolutions represent the vibrancy of digital nature. This unique fusion of ancient wisdom and modern technology suggests a path towards a new future.</p><p>In this innovative exploration of a new digital folk art, old wooden ornaments found in homes across the country are purchased through online marketplaces, then 3D-scanned and transformed. The altered shapes are recreated by artificial intelligence and carved out by Karimoku Furniture's CNC machines, forming three-dimensional representations. Finally, craftsmen in Takayama City hand-finish the pieces, reviving them as new computer-nature-inspired temporal sculptures. The final appearance suggests a rebirth of traditional folk art, with its form metamorphosed into a novel expression.</p></div>
+<div class="subs zukan ja">
+<div class="subs-title">十三支の一行</div>
+<div class="zukan-lead">十三支は十二支に猫を足した落合の暦。どの一体がどの干支かは、会場で確かめるしかない。</div>
+<div class="sub">
+<div class="sub-t">子</div>
+<div class="sub-d">最初に数えられる者。小さいものから世界は始まる。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">丑</div>
+<div class="sub-d">急がない者。牛の歩みで千年を渡る。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">寅</div>
+<div class="sub-d">縞は警告であり、装飾である。強さは両方を持つ。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">卯</div>
+<div class="sub-d">跳ぶ前に耳で世界を測る。計算は耳からも入る。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">辰</div>
+<div class="sub-d">十三支でただ一体の空想。空想もまた干支に数えられた。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">巳</div>
+<div class="sub-d">脱いだ皮も自分である。バージョンの古い自分を憎むな。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">午</div>
+<div class="sub-d">走るために生まれた形。止まっている姿も走る形をしている。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">未</div>
+<div class="sub-d">群れの中で番号を持たない。それでも一頭ずつ違う。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">申</div>
+<div class="sub-d">人に一番近く、人でない。その距離が知性の置き場所。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">酉</div>
+<div class="sub-d">夜明けを知らせる係。誰かが最初に言わなければ朝は来ない。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">戌</div>
+<div class="sub-d">待つことを仕事にした最初の動物。忠誠は時間の形をしている。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">亥</div>
+<div class="sub-d">まっすぐしか走れない。それは欠点ではなく様式である。<!-- 物語:要推敲 --></div>
+</div>
+<div class="sub">
+<div class="sub-t">猫</div>
+<div class="sub-d">十三番目。干支に入れなかった伝説ごと、ここに祀られた。<!-- 物語:要推敲 --></div>
+</div>
+</div>
 </div></article>
 <span class="anum" id="n88" aria-hidden="true"></span>
 <article class="work" id="w90" data-num="90">
@@ -1806,10 +2080,88 @@ const b=document.body,bs=document.querySelectorAll('.langs button');
 setLang(localStorage.getItem('tenson-lang')||'both');
 bs.forEach(x=>x.addEventListener('click',()=>setLang(x.dataset.l)));
 function setLang(l){
-  b.className='lang-'+l;
+  /* className の総入れ替えは brief などの状態まで消すので、言語クラスだけ差し替える */
+  b.classList.remove('lang-both','lang-ja','lang-en');
+  b.classList.add('lang-'+l);
   bs.forEach(x=>x.classList.toggle('on',x.dataset.l===l));
   try{localStorage.setItem('tenson-lang',l)}catch(e){}
 }
+/* --- 今日の問答: mondou.json が読めたときだけ黒電話カードの後ろに出す --- */
+(function(){
+  const sec=document.getElementById('mondou');
+  if(!sec||!window.fetch) return;
+  fetch('mondou.json',{cache:'no-store'})
+    .then(r=>r.ok?r.json():null)
+    .then(d=>{
+      if(!d||typeof d.text!=='string') return;
+      const text=d.text.trim();
+      if(!text||text.length>400) return;          /* 空・壊れている時は出さない */
+      document.getElementById('mondou-text').textContent=text;
+      const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(String(d.date||'').trim());
+      if(m) document.getElementById('mondou-date').textContent=m[1]+'.'+(+m[2])+'.'+(+m[3]);
+      if(d.facts_used===true) document.getElementById('mondou-facts').hidden=false;
+      sec.hidden=false;
+    })
+    .catch(()=>{});
+})();
+/* --- 一分で読む: 各解説を最初の一文だけにする --- */
+(function(){
+  const btn=document.getElementById('brief-btn');
+  if(!btn) return;
+  const SENT=/[。．！？]|[.!?](?=\s+[A-Z"“(]|\s*$)/g;
+  const ABBR=/(?:Mr|Mrs|Ms|Dr|St|No|Fig|vs|etc|Prof|Inc|Co|Ltd)$/;
+  const CLOSE={'「':'」','『':'』','（':'）','(':')','“':'”','"':'"'};
+  function breakAt(s){
+    SENT.lastIndex=0;
+    let m;
+    while((m=SENT.exec(s))){
+      if(m[0].length===1&&/[.!?]/.test(m[0])&&ABBR.test(s.slice(0,m.index))) continue;
+      return m.index+m[0].length;
+    }
+    return -1;
+  }
+  /* 二文目以降を span で包む。包めたら true（＝末尾に「…」を出す） */
+  function fold(p){
+    const walk=document.createTreeWalker(p,NodeFilter.SHOW_TEXT,null,false);
+    let node;
+    while((node=walk.nextNode())){
+      const at=breakAt(node.nodeValue);
+      if(at<0) continue;
+      const r=document.createRange();
+      r.setStart(node,at);
+      r.setEndAfter(p.lastChild);
+      if(!r.toString().trim()){r.detach&&r.detach();return false}
+      const span=document.createElement('span');
+      span.className='brief-cut';
+      span.appendChild(r.extractContents());
+      p.appendChild(span);
+      return true;
+    }
+    return false;
+  }
+  document.querySelectorAll('.desc').forEach(desc=>{
+    const ps=desc.querySelectorAll('p');
+    if(!ps.length) return;
+    const p=ps[0], open=p.textContent.trim().charAt(0);
+    const folded=fold(p);
+    if(!folded&&ps.length<2) return;
+    p.classList.add('is-cut');
+    /* 「で始まる段落を途中で切ると鉤括弧が開いたままになる */
+    if(!CLOSE[open]) return;
+    const shown=[].slice.call(p.childNodes)
+      .filter(n=>!(n.nodeType===1&&n.className==='brief-cut'))
+      .map(n=>n.textContent).join('');
+    if(shown.indexOf(CLOSE[open])<0) p.dataset.tail=CLOSE[open];
+  });
+  function setBrief(on){
+    document.body.classList.toggle('brief',on);
+    btn.classList.toggle('on',on);
+    btn.setAttribute('aria-pressed',on?'true':'false');
+    try{localStorage.setItem('tenson-brief',on?'1':'0')}catch(e){}
+  }
+  setBrief(localStorage.getItem('tenson-brief')==='1');
+  btn.addEventListener('click',()=>setBrief(!document.body.classList.contains('brief')));
+})();
 const tb=document.getElementById('top-btn');
 addEventListener('scroll',()=>tb.classList.toggle('show',scrollY>900),{passive:true});
 tb.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));

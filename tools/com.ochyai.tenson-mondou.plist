@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  「今日の問答」毎晩17:00更新（mac mini 用）。
+
+  設置:
+    1. 下の /Users/ochyai を mini の実際のホームに合わせる（3か所: スクリプトとログ2つ）。
+       スクリプトは自分の位置からリポジトリを解決するので、直すのはこのパスだけでよい。
+    2. cp tools/com.ochyai.tenson-mondou.plist ~/Library/LaunchAgents/
+    3. launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.ochyai.tenson-mondou.plist
+    4. 動作確認: launchctl kickstart -p gui/$(id -u)/com.ochyai.tenson-mondou
+    5. ログ: ~/Library/Logs/tenson-mondou.log（tail -f で確認）
+  停止:
+    launchctl bootout gui/$(id -u)/com.ochyai.tenson-mondou
+
+  push には origin への書き込み権（デプロイキー等）が要る。認証は別途設定する。
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.ochyai.tenson-mondou</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>/Users/ochyai/tenson-captions/tools/mondou_nightly.sh</string>
+  </array>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key><integer>17</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/ochyai/Library/Logs/tenson-mondou.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/ochyai/Library/Logs/tenson-mondou.log</string>
+
+  <key>ProcessType</key>
+  <string>Background</string>
+</dict>
+</plist>
