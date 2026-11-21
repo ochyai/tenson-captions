@@ -1,5 +1,14 @@
 # 天孫帰るってよ？ 作品解説 / TENSOИ Captions
 
+<!-- about -->
+> **このリポは何か**：展覧会「天孫帰るってよ？」の全作品の解説を、会場マップの番号順に日本語と英語で読める。
+>
+> **What this is**: This bilingual guide presents every TENSON exhibition caption in Japanese and English, following the venue map’s numbering.
+>
+> **まず開く / Start here**：`index.html`
+<!-- /about -->
+
+
 落合陽一 TENSON「天孫帰るってよ？」(2026.7.11–9.23) の全作品キャプション（日英）。
 番号・掲載順は会場配布マップに準拠。
 
